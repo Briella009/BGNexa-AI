@@ -1,0 +1,265 @@
+cases:
+  - id: ndpa-lawful-basis
+    framework_id: ndpa-2023
+    control_id: NDPA-25
+    expected_source: lawful_basis_register.txt
+  - id: ndpa-consent
+    framework_id: ndpa-2023
+    control_id: NDPA-26
+    expected_source: consent_management.txt
+  - id: ndpa-transparency
+    framework_id: ndpa-2023
+    control_id: NDPA-27
+    expected_source: privacy_notice.txt
+  - id: ndpa-dpia
+    framework_id: ndpa-2023
+    control_id: NDPA-28
+    expected_source: dpia.txt
+  - id: ndpa-processors
+    framework_id: ndpa-2023
+    control_id: NDPA-29
+    expected_source: processor_governance.txt
+  - id: ndpa-sensitive-data
+    framework_id: ndpa-2023
+    control_id: NDPA-30
+    expected_source: sensitive_data.txt
+  - id: ndpa-children
+    framework_id: ndpa-2023
+    control_id: NDPA-31
+    expected_source: children_data.txt
+  - id: ndpa-dpo
+    framework_id: ndpa-2023
+    control_id: NDPA-32
+    expected_source: dpo_governance.txt
+  - id: ndpa-access-rights
+    framework_id: ndpa-2023
+    control_id: NDPA-34
+    expected_source: dsar_procedure.txt
+  - id: ndpa-withdrawal
+    framework_id: ndpa-2023
+    control_id: NDPA-35
+    expected_source: consent_management.txt
+  - id: ndpa-objection
+    framework_id: ndpa-2023
+    control_id: NDPA-36
+    expected_source: objection_and_withdrawal.txt
+  - id: ndpa-automated-decision
+    framework_id: ndpa-2023
+    control_id: NDPA-37
+    expected_source: automated_decisions.txt
+  - id: ndpa-portability
+    framework_id: ndpa-2023
+    control_id: NDPA-38
+    expected_source: data_portability.txt
+  - id: ndpa-security
+    framework_id: ndpa-2023
+    control_id: NDPA-39
+    expected_source: data_security_schedule.txt
+  - id: ndpa-breach
+    framework_id: ndpa-2023
+    control_id: NDPA-40
+    expected_source: breach_response.txt
+  - id: ndpa-cross-border
+    framework_id: ndpa-2023
+    control_id: NDPA-41
+    expected_source: cross_border_transfer.txt
+  - id: ndpa-registration
+    framework_id: ndpa-2023
+    control_id: NDPA-44
+    expected_source: dcpmi_registration.txt
+  - id: gaid-programme
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-07
+    expected_source: privacy_compliance_program.txt
+  - id: gaid-dcpmi-assessment
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-08
+    expected_source: dcpmi_registration.txt
+  - id: gaid-registration
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-09
+    expected_source: dcpmi_registration.txt
+  - id: gaid-car
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-10
+    expected_source: compliance_audit_return.txt
+  - id: gaid-dpo-position
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-12
+    expected_source: dpo_governance.txt
+  - id: gaid-security-maintenance
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-29
+    expected_source: data_security_schedule.txt
+  - id: gaid-training
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-30
+    expected_source: privacy_training.txt
+  - id: gaid-breach
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-33
+    expected_source: breach_response.txt
+  - id: gaid-dpa
+    framework_id: ndpc-gaid-2025
+    control_id: GAID-34
+    expected_source: processor_governance.txt
+  - id: cbn-dmb-board
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-1.1-VIII
+    expected_source: cbn_board_governance.txt
+  - id: cbn-dmb-third-party
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-2.3
+    expected_source: cbn_third_party_risk.txt
+  - id: cbn-dmb-incident-reporting
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-5.0-V
+    expected_source: cbn_incident_reporting.txt
+  - id: cbn-ofi-threat-intel
+    framework_id: cbn-ofi-2022
+    control_id: CBN-OFI-6.1
+    expected_source: cbn_threat_intelligence.txt
+  - id: cbn-ofi-incident-reporting
+    framework_id: cbn-ofi-2022
+    control_id: CBN-OFI-7.6
+    expected_source: cbn_incident_reporting.txt
+  - id: iso-risk-planning
+    framework_id: iso-iec-27001-2022-amd1-2024
+    control_id: ISO-6
+    expected_source: iso_risk_management.txt
+  - id: iso-performance-evaluation
+    framework_id: iso-iec-27001-2022-amd1-2024
+    control_id: ISO-9
+    expected_source: iso_audit_review.txt
+  - id: cbn-dmb-ciso-governance
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-1.3-1.4
+    expected_source: cbn_ciso_governance.txt
+  - id: cbn-dmb-risk-treatment
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-2.1.4
+    expected_source: cbn_risk_treatment.txt
+  - id: cbn-dmb-recovery
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-3.5
+    expected_source: cbn_recovery.txt
+  - id: cbn-dmb-access-control
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-1.1
+    expected_source: cbn_access_control.txt
+  - id: cbn-dmb-pam
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-1.2
+    expected_source: cbn_pam.txt
+  - id: cbn-dmb-secure-configuration
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-1.5
+    expected_source: cbn_secure_configuration.txt
+  - id: cbn-dmb-application-security
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-1.6
+    expected_source: cbn_application_security.txt
+  - id: cbn-dmb-cloud-security
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-1.8
+    expected_source: cbn_cloud_security.txt
+  - id: cbn-dmb-patch-management
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-1.9
+    expected_source: cbn_patch_management.txt
+  - id: cbn-dmb-soc-monitoring
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-2.1
+    expected_source: cbn_soc_monitoring.txt
+  - id: cbn-dmb-ir-exercises
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP3-3
+    expected_source: cbn_ir_exercises.txt
+  - id: cbn-dmb-ai-security
+    framework_id: cbn-dmb-psb-2024
+    control_id: CBN-DMBPSB-APP4-AI
+    expected_source: cbn_emerging_ai.txt
+  - id: gdpr-lawful-basis
+    framework_id: gdpr-2016-679
+    control_id: GDPR-6
+    expected_source: lawful_basis_register.txt
+  - id: gdpr-transparency
+    framework_id: gdpr-2016-679
+    control_id: GDPR-12-14
+    expected_source: privacy_notice.txt
+  - id: gdpr-data-subject-rights
+    framework_id: gdpr-2016-679
+    control_id: GDPR-15-22
+    expected_source: dsar_procedure.txt
+  - id: gdpr-controller-processors
+    framework_id: gdpr-2016-679
+    control_id: GDPR-28-C
+    expected_source: processor_governance.txt
+  - id: gdpr-controller-ropa
+    framework_id: gdpr-2016-679
+    control_id: GDPR-30-C
+    expected_source: gdpr_ropa.txt
+  - id: gdpr-security
+    framework_id: gdpr-2016-679
+    control_id: GDPR-32
+    expected_source: data_security_schedule.txt
+  - id: gdpr-controller-breach
+    framework_id: gdpr-2016-679
+    control_id: GDPR-33-C
+    expected_source: breach_response.txt
+  - id: gdpr-dpia
+    framework_id: gdpr-2016-679
+    control_id: GDPR-35
+    expected_source: dpia.txt
+  - id: gdpr-dpo
+    framework_id: gdpr-2016-679
+    control_id: GDPR-37
+    expected_source: dpo_governance.txt
+  - id: gdpr-cross-border
+    framework_id: gdpr-2016-679
+    control_id: GDPR-44-49
+    expected_source: cross_border_transfer.txt
+  - id: nist-legal-regulatory-context
+    framework_id: nist-csf-2.0
+    control_id: NIST-GV.OC-03
+    expected_source: nist_legal_register.txt
+  - id: nist-risk-management-strategy
+    framework_id: nist-csf-2.0
+    control_id: NIST-GV.RM-01
+    expected_source: nist_risk_strategy.txt
+  - id: nist-supplier-contract-requirements
+    framework_id: nist-csf-2.0
+    control_id: NIST-GV.SC-05
+    expected_source: nist_supplier_agreements.txt
+  - id: nist-hardware-inventory
+    framework_id: nist-csf-2.0
+    control_id: NIST-ID.AM-01
+    expected_source: nist_asset_inventory.txt
+  - id: nist-vulnerability-identification
+    framework_id: nist-csf-2.0
+    control_id: NIST-ID.RA-01
+    expected_source: nist_vulnerability_register.txt
+  - id: nist-awareness-training
+    framework_id: nist-csf-2.0
+    control_id: NIST-PR.AT-01
+    expected_source: nist_awareness.txt
+  - id: nist-identity-access
+    framework_id: nist-csf-2.0
+    control_id: NIST-PR.AA-01
+    expected_source: cbn_access_control.txt
+  - id: nist-data-at-rest
+    framework_id: nist-csf-2.0
+    control_id: NIST-PR.DS-01
+    expected_source: nist_data_at_rest.txt
+  - id: nist-network-monitoring
+    framework_id: nist-csf-2.0
+    control_id: NIST-DE.CM-01
+    expected_source: nist_network_monitoring.txt
+  - id: nist-incident-response-execution
+    framework_id: nist-csf-2.0
+    control_id: NIST-RS.MA-01
+    expected_source: nist_incident_execution.txt
+  - id: nist-recovery-execution
+    framework_id: nist-csf-2.0
+    control_id: NIST-RC.RP-01
+    expected_source: nist_recovery_execution.txt

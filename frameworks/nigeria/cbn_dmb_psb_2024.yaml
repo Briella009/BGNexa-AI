@@ -1,0 +1,755 @@
+framework_id: cbn-dmb-psb-2024
+name: CBN Risk-Based Cybersecurity Framework - DMBs & PSBs
+jurisdiction: Nigeria
+version: '2024'
+authority: Central Bank of Nigeria
+source:
+  authority: Central Bank of Nigeria
+  title: Risk-Based Cybersecurity Framework and Guidelines for Deposit Money Banks
+    and Payment Service Banks
+  version: May 2024
+  source_url: https://www.cbn.gov.ng/Out/2024/BSD/CBN%20Risk-Based%20Cybersecurity%20Framework%20for%20DMBs%20and%20PSBs_2024.pdf
+  last_verified: '2026-08-19'
+  source_type: official_pdf_directly_verified_user_supplied
+  notes: 'The official CBN URL is retained as the canonical source. A user-supplied
+    copy of the May 2024 CBN PDF was structurally verified, visually rendered, and
+    paragraph/page cross-checked on 2026-08-19. SHA-256: 057d6c205c03a37ab03ea761fb51ac2e7c4c6eff454cbae1d182cacd73031ade.
+    The source PDF is not redistributed.'
+scope_note: Selected high-value DMB/PSB readiness controls. This is a traceable seed
+  pack, not an exhaustive replacement for the full CBN framework.
+copyright_mode: public_regulatory_guidance_paraphrase
+controls:
+- control_id: CBN-DMBPSB-1.1
+  reference: '1.1'
+  title: Board cybersecurity oversight and competence
+  requirement_summary: Maintain Board oversight of the cybersecurity programme, integrate
+    cybersecurity governance into the organisation, ensure appropriate Board ICT/cybersecurity
+    competence, and provide leadership, direction and resources.
+  evidence_examples:
+  - board charter
+  - board skills matrix
+  - cybersecurity governance framework
+  - board approvals
+  - cybersecurity budget
+  capability_tags:
+  - governance
+  - board_oversight
+  weight: 1.5
+  source_locator: Section 1.1
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 6
+  - 7
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-1.1-VIII
+  reference: 1.1(viii)
+  title: Quarterly Board cybersecurity reporting
+  requirement_summary: Provide the Board with quarterly cybersecurity programme reporting
+    covering material cyber-risk information, security initiatives, incidents, vulnerability/penetration-test
+    remediation and approved risk thresholds.
+  evidence_examples:
+  - quarterly board cyber report
+  - board pack
+  - risk dashboard
+  - vulnerability remediation report
+  - board minutes
+  capability_tags:
+  - governance
+  - metrics
+  - reporting
+  - board_oversight
+  weight: 1.2
+  source_locator: Section 1.1(viii)
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 7
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-1.5
+  reference: '1.5'
+  title: Information Security Steering Committee
+  requirement_summary: Maintain an Information Security Steering Committee with senior
+    representation and defined terms of reference; the committee should meet at least
+    quarterly and review the state of cybersecurity.
+  evidence_examples:
+  - ISSC charter
+  - terms of reference
+  - quarterly meeting minutes
+  - state-of-cybersecurity report
+  capability_tags:
+  - governance
+  - security_committee
+  - reporting
+  weight: 1.0
+  source_locator: Section 1.5
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 11
+  - 12
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-2.1.2
+  reference: 2.1.2
+  title: Cybersecurity risk assessment
+  requirement_summary: Evaluate cybersecurity risks at least annually and when major
+    organisational or technology changes occur, document the outcome in the required
+    risk-control self-assessment, and periodically review the methodology independently.
+  evidence_examples:
+  - annual cyber risk assessment
+  - change risk assessment
+  - cyber risk control self-assessment
+  - audit methodology review
+  - risk register
+  capability_tags:
+  - risk_assessment
+  - governance
+  - audit
+  weight: 1.5
+  source_locator: Section 2.1.2
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 14
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-2.2
+  reference: '2.2'
+  title: Vulnerability assessment and penetration testing
+  requirement_summary: Maintain vulnerability and threat assessment activities, including
+    at least annual third-party penetration testing and quarterly internal vulnerability
+    scanning, with risk assessment/sign-off before new technology-based products are
+    deployed.
+  evidence_examples:
+  - vulnerability assessment
+  - quarterly scan reports
+  - annual penetration test
+  - remediation tracker
+  - product security sign-off
+  capability_tags:
+  - vulnerability_management
+  - penetration_testing
+  - risk_assessment
+  weight: 1.5
+  source_locator: Section 2.2
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 15
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-2.3
+  reference: '2.3'
+  title: Third-party cybersecurity risk management
+  requirement_summary: Operate a third-party cyber-risk framework covering vendor
+    selection, due diligence, contracts, ongoing monitoring, incident response, assurance/audit
+    rights, relevant security obligations and continuity/recovery testing.
+  evidence_examples:
+  - third-party risk framework
+  - vendor due diligence
+  - contracts
+  - SLA audit clause
+  - vendor assurance report
+  - joint BCP test
+  capability_tags:
+  - third_party_risk
+  - contracts
+  - business_continuity
+  weight: 1.5
+  source_locator: Section 2.3
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 16
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-2.4-2.5
+  reference: 2.4-2.5
+  title: Annual CBN cybersecurity maturity self-assessment and submission
+  requirement_summary: Conduct the annual CBN Cybersecurity Self-Assessment Tool evaluation,
+    define current and target maturity profiles, and submit the prior calendar year's
+    self-assessment to Banking Supervision by 28 February with required CISO and Executive
+    Management endorsement.
+  evidence_examples:
+  - completed CSAT
+  - target maturity roadmap
+  - CISO sign-off
+  - executive endorsement
+  - CBN submission acknowledgement
+  capability_tags:
+  - self_assessment
+  - regulatory_reporting
+  - maturity
+  weight: 1.7
+  source_locator: Sections 2.4 and 2.5
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 16
+  - 17
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-3.1
+  reference: 3.1 / Appendix II 1.1
+  title: Asset, data and network inventory
+  requirement_summary: Maintain current inventories of authorised IT and data assets,
+    ownership, criticality, access profiles and network connections, supported by
+    an approved current network topology and regular review of unnecessary connections.
+  evidence_examples:
+  - CMDB
+  - asset inventory
+  - data inventory
+  - network diagram
+  - privileged account register
+  - connection catalogue
+  capability_tags:
+  - asset_management
+  - data_governance
+  - network_security
+  weight: 1.4
+  source_locator: Section 3.1 and Appendix II 1.1
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 18
+  - 29
+  - 30
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-3.3
+  reference: '3.3'
+  title: Continuous monitoring and detection
+  requirement_summary: Maintain capability for ongoing 24/7 monitoring of relevant
+    systems, infrastructure, applications and services to detect anomalies and cyber
+    incidents promptly.
+  evidence_examples:
+  - SOC operating model
+  - SIEM monitoring procedure
+  - 24x7 roster
+  - detection use cases
+  - alert records
+  capability_tags:
+  - monitoring
+  - detection
+  - soc
+  weight: 1.5
+  source_locator: Section 3.3
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 18
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-3.4
+  reference: '3.4'
+  title: Cyber-incident response capability
+  requirement_summary: Maintain an accessible capability to respond to cyber incidents,
+    whether operated internally or through an outsourced provider.
+  evidence_examples:
+  - incident response plan
+  - SOC escalation procedure
+  - retainer/SLA
+  - incident records
+  - tabletop exercise
+  capability_tags:
+  - incident_response
+  - cyber_resilience
+  weight: 1.5
+  source_locator: Section 3.4
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 19
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-4.8
+  reference: '4.8'
+  title: Emerging-technology approval and due diligence
+  requirement_summary: Apply regulatory approval, licensing checks, professional due
+    diligence and the required minimum security controls when adopting or implementing
+    emerging technologies.
+  evidence_examples:
+  - CBN approval
+  - technology risk assessment
+  - due diligence record
+  - architecture/security review
+  - API approval
+  - cloud/AI risk assessment
+  capability_tags:
+  - emerging_technology
+  - ai_governance
+  - cloud_security
+  - risk_assessment
+  weight: 1.3
+  source_locator: Section 4.8 and Appendix IV
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 23
+  - 24
+  - 43
+  - 44
+  - 45
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-5.0-METRICS
+  reference: 5.0(i)-(iv)
+  title: Cybersecurity metrics and management reporting
+  requirement_summary: Define cybersecurity performance/risk metrics aligned with
+    strategic objectives, review the metrics at least annually, use them to identify
+    control deficiencies and provide the required quarterly Board programme reports.
+  evidence_examples:
+  - KPI/KRI/KGI catalogue
+  - annual metrics review
+  - cyber dashboard
+  - quarterly board report
+  - remediation metrics
+  capability_tags:
+  - metrics
+  - monitoring
+  - reporting
+  - board_oversight
+  weight: 1.2
+  source_locator: Section 5.0(i)-(iv)
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 25
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-5.0-V
+  reference: 5.0(v)
+  title: CBN cyber-incident notification within 24 hours of detection
+  requirement_summary: Maintain a process to report reportable cyber incidents to
+    the Director of Banking Supervision not later than 24 hours after detection, using
+    the prescribed reporting format and providing additional information where required.
+  evidence_examples:
+  - regulatory incident procedure
+  - CBN reporting template
+  - incident log
+  - notification timestamp
+  - submission acknowledgement
+  capability_tags:
+  - incident_response
+  - regulatory_reporting
+  weight: 1.8
+  source_locator: Section 5.0(v) and Appendix VII
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 25
+  - 48
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-6.0
+  reference: '6.0'
+  title: Cybersecurity statutory/regulatory compliance and industry exercises
+  requirement_summary: Maintain governance for relevant cybersecurity legal and regulatory
+    requirements and participate in applicable industry cyber exercises/programmes
+    to evaluate recovery preparedness.
+  evidence_examples:
+  - legal register
+  - regulatory mapping
+  - compliance review
+  - cyber drill report
+  - war-game report
+  - remediation plan
+  capability_tags:
+  - regulatory_compliance
+  - cyber_resilience
+  - exercises
+  weight: 1.2
+  source_locator: Section 6.0
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 26
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-1.1.1
+  reference: 1.1.1
+  title: Cybersecurity strategy, framework and policy lifecycle
+  requirement_summary: Maintain a Board-directed cybersecurity strategy and framework
+    aligned with business objectives and legal, contractual, statutory and regulatory
+    obligations; clearly assign cybersecurity roles and responsibilities and review
+    the cybersecurity policy at least annually or when material cyber-risk exposure
+    changes.
+  evidence_examples:
+  - cybersecurity strategy
+  - cybersecurity framework
+  - cybersecurity policy
+  - annual policy review record
+  - roles and responsibilities matrix
+  capability_tags:
+  - governance
+  - strategy
+  - policy_management
+  - regulatory_compliance
+  weight: 1.3
+  source_locator: Section 1.1.1
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 8
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-1.2
+  reference: '1.2'
+  title: Senior Management cybersecurity responsibilities
+  requirement_summary: Ensure Senior Management implements Board-approved cybersecurity
+    policies and programmes, supports the approved CISO role, reports cybersecurity
+    status to the Board at least quarterly, enables regular Information Security training,
+    and integrates cyber-risk management into enterprise risk management and risk-appetite
+    processes.
+  evidence_examples:
+  - management cybersecurity charter
+  - CISO approval records
+  - quarterly board report
+  - security training records
+  - ERM cyber-risk mapping
+  capability_tags:
+  - governance
+  - senior_management
+  - reporting
+  - training
+  - enterprise_risk
+  weight: 1.3
+  source_locator: Section 1.2
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 9
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-1.3-1.4
+  reference: 1.3-1.4
+  title: CISO authority, independence and competence
+  requirement_summary: Maintain a CISO responsible for day-to-day cybersecurity and
+    implementation of the Board-approved programme, with appropriate authority, independence,
+    reporting line, qualifications and experience; avoid reporting arrangements that
+    create conflicts with IT operations or the Chief Risk Officer and retain required
+    CBN approval evidence.
+  evidence_examples:
+  - CISO appointment letter
+  - CBN approval
+  - organisation chart
+  - role description
+  - qualification records
+  - independence statement
+  capability_tags:
+  - governance
+  - ciso
+  - independence
+  - competence
+  weight: 1.5
+  source_locator: Sections 1.3 and 1.4
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 9
+  - 10
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-1.6
+  reference: 1.6 / 1.6.1-1.6.3
+  title: Independent risk, audit and compliance challenge
+  requirement_summary: Review cybersecurity governance processes and controls at least
+    annually and maintain independent risk, audit and compliance challenge. Cyber-risk
+    evaluation should use appropriate methods, audit scope and independence should
+    be defined, and compliance should periodically review adherence to CBN directives
+    and applicable regulation.
+  evidence_examples:
+  - annual governance review
+  - cyber risk report
+  - audit plan
+  - independent audit report
+  - compliance review
+  - qualifications of reviewers
+  capability_tags:
+  - governance
+  - risk_assessment
+  - internal_audit
+  - compliance
+  weight: 1.4
+  source_locator: Section 1.6 and subsections 1.6.1-1.6.3
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 12
+  - 13
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-2.1.4
+  reference: 2.1.4
+  title: Cyber-risk treatment and acceptance governance
+  requirement_summary: Select cyber-risk treatment options according to asset criticality
+    and assessment outcomes, govern residual-risk acceptance using Board-approved
+    criteria, and document detailed risk assessment when transferring risk through
+    outsourcing or cyber-risk insurance.
+  evidence_examples:
+  - risk treatment plan
+  - residual risk register
+  - board-approved risk acceptance criteria
+  - outsourcing risk assessment
+  - cyber insurance assessment
+  capability_tags:
+  - risk_treatment
+  - risk_acceptance
+  - governance
+  - third_party_risk
+  weight: 1.3
+  source_locator: Section 2.1.4
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 15
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-3.5
+  reference: 3.5 / Appendix III 4
+  title: Recovery and restoration after cyber incidents
+  requirement_summary: Maintain tested recovery processes for systems and assets affected
+    by cyber incidents, define criteria for moving from response to recovery after
+    threats have been addressed, periodically test backup restoration, and improve
+    recovery strategies using lessons learned.
+  evidence_examples:
+  - cyber recovery plan
+  - backup restoration test
+  - recovery checklist
+  - post-incident review
+  - lessons-learned tracker
+  capability_tags:
+  - recovery
+  - backup
+  - business_continuity
+  - incident_response
+  weight: 1.5
+  source_locator: Section 3.5 and Appendix III, Restore Service Operations
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 19
+  - 41
+  - 42
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-3.6
+  reference: '3.6'
+  title: Cyber-threat intelligence capability
+  requirement_summary: Maintain knowledge of relevant emerging threats, attacks, attack
+    vectors, mechanisms and indicators of attack or compromise that may affect information
+    assets, and use threat intelligence to support cyber-risk and defensive activities.
+  evidence_examples:
+  - threat intelligence procedure
+  - threat reports
+  - indicators of compromise
+  - threat briefings
+  - intelligence-to-detection mapping
+  capability_tags:
+  - threat_intelligence
+  - detection
+  - risk_assessment
+  weight: 1.2
+  source_locator: Section 3.6
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 19
+  - 31
+  - 32
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-1.1
+  reference: Appendix III 1.1
+  title: Access control and multi-factor authentication
+  requirement_summary: Maintain an access-control policy, periodic least-privilege
+    access review, prompt access modification or revocation, and layered authentication
+    controls. Apply MFA to critical systems and to employee, customer and third-party
+    access where specified by the framework.
+  evidence_examples:
+  - access control policy
+  - access review evidence
+  - joiner mover leaver records
+  - MFA configuration
+  - RBAC matrix
+  capability_tags:
+  - access_control
+  - mfa
+  - least_privilege
+  - identity_security
+  weight: 1.6
+  source_locator: Appendix III, Preventive Controls 1.1 Access Controls
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 34
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-1.2
+  reference: Appendix III 1.2
+  title: Privileged access management
+  requirement_summary: Apply privileged-access safeguards including least privilege,
+    segregation of duties, just-in-time access, session monitoring and credential
+    vaulting as appropriate; preserve and review privileged-user audit trails and
+    prohibit unsafe shared/default privileged credentials.
+  evidence_examples:
+  - PAM policy
+  - privileged account register
+  - vault configuration
+  - session logs
+  - privileged access review
+  - segregation-of-duties matrix
+  capability_tags:
+  - privileged_access
+  - pam
+  - least_privilege
+  - logging
+  weight: 1.6
+  source_locator: Appendix III, Preventive Controls 1.2 Privileged Access Management
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 35
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-1.5
+  reference: Appendix III 1.5
+  title: Secure configuration and system hardening
+  requirement_summary: Define and maintain security baseline configurations, centrally
+    govern security-solution settings, harden new systems, applications and databases
+    before deployment, keep baselines current, review configuration information and
+    apply strong wireless encryption.
+  evidence_examples:
+  - secure configuration standard
+  - hardening checklist
+  - baseline configuration
+  - configuration review
+  - wireless security standard
+  capability_tags:
+  - secure_configuration
+  - hardening
+  - endpoint_security
+  - network_security
+  weight: 1.4
+  source_locator: Appendix III, Preventive Controls 1.5 Secure System Configuration
+    Management
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 36
+  - 37
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-1.6
+  reference: Appendix III 1.6
+  title: Secure application and data lifecycle
+  requirement_summary: Build security into the system/application lifecycle, document
+    security requirements, use secure coding and security testing, assess open-source
+    components, protect sensitive data with classification/access controls/encryption,
+    prevent data leakage, maintain tested backups and secure disposal, and address
+    applicable data-protection obligations.
+  evidence_examples:
+  - secure SDLC standard
+  - application security tests
+  - software composition analysis
+  - data classification policy
+  - DLP configuration
+  - backup test
+  - disposal procedure
+  capability_tags:
+  - application_security
+  - secure_sdlc
+  - data_security
+  - encryption
+  - backup
+  - privacy
+  weight: 1.6
+  source_locator: Appendix III, Preventive Controls 1.6 Application and Data Security
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 37
+  - 38
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-1.8
+  reference: Appendix III 1.8
+  title: Cloud shared-responsibility and security consistency
+  requirement_summary: Document the cloud service model and security responsibilities
+    of the institution and cloud service provider, ensure those responsibilities are
+    met, and maintain consistent security policies across cloud and on-premises infrastructure.
+  evidence_examples:
+  - cloud shared-responsibility matrix
+  - cloud security standard
+  - CSP contract
+  - cloud control assessment
+  - configuration baseline
+  capability_tags:
+  - cloud_security
+  - third_party_risk
+  - shared_responsibility
+  weight: 1.3
+  source_locator: Appendix III, Preventive Controls 1.8 Cloud Information Asset Management
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 39
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-1.9
+  reference: Appendix III 1.9
+  title: Vulnerability remediation and patch management
+  requirement_summary: Define remediation responsibilities and timelines by vulnerability
+    category, test and scan patches before deployment, apply security updates promptly
+    after testing, verify successful remediation, and periodically audit patch/remediation
+    processes with management reporting.
+  evidence_examples:
+  - patch management policy
+  - vulnerability SLA
+  - patch test records
+  - deployment evidence
+  - remediation validation
+  - patch audit report
+  capability_tags:
+  - vulnerability_management
+  - patch_management
+  - remediation
+  weight: 1.5
+  source_locator: Appendix III, Preventive Controls 1.9 Vulnerability Remediation
+    and Patch Management
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 39
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-2.1
+  reference: Appendix III 2.1
+  title: SOC, logging and continuous security monitoring
+  requirement_summary: Operate continuous 24x7 security monitoring, supported by an
+    in-house or outsourced SOC with skilled personnel, adequate processes and suitable
+    tooling such as SIEM; define log retention, enable logging across on-premises
+    and third-party/cloud systems, investigate suspicious activity and maintain automated
+    detection and alerting capabilities.
+  evidence_examples:
+  - SOC charter
+  - 24x7 roster
+  - SIEM architecture
+  - log retention standard
+  - detection use cases
+  - alert records
+  - SOC board report
+  capability_tags:
+  - soc
+  - siem
+  - logging
+  - monitoring
+  - detection
+  weight: 1.8
+  source_locator: Appendix III, Monitor and Detect 2.1 Continuous Security Monitoring
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 40
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP3-3
+  reference: Appendix III 3
+  title: Incident response planning, exercises and forensics
+  requirement_summary: Maintain incident-response plans and playbooks for on-premises
+    and cloud incidents, regularly exercise them using appropriate drills/tabletops
+    or red-versus-blue tests, involve Senior Management, maintain a trained incident-response
+    team, preserve forensic chain of custody, define stakeholder communications and
+    maintain rapid-access external response support where needed.
+  evidence_examples:
+  - incident response plan
+  - incident playbooks
+  - tabletop report
+  - red-blue exercise report
+  - IR team training
+  - chain-of-custody form
+  - retainer
+  capability_tags:
+  - incident_response
+  - exercises
+  - forensics
+  - crisis_management
+  weight: 1.7
+  source_locator: Appendix III, Respond and Remediate
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 41
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+- control_id: CBN-DMBPSB-APP4-AI
+  reference: Appendix IV 3(e)
+  title: Monitoring and security of AI-enabled systems
+  requirement_summary: Where AI-enabled systems are adopted, maintain controls to
+    monitor and secure them against misuse or manipulation as part of the broader
+    emerging-technology risk, security-control, continuous-monitoring and reporting
+    programme.
+  evidence_examples:
+  - AI system inventory
+  - AI security risk assessment
+  - AI monitoring procedure
+  - abuse/misuse detection
+  - AI incident playbook
+  - model access controls
+  capability_tags:
+  - ai_security
+  - emerging_technology
+  - monitoring
+  - ai_governance
+  weight: 1.4
+  source_locator: Appendix IV, Monitor and Report 3(e)
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 45
+  verification_note: Cross-checked against the user-supplied CBN May 2024 PDF on 2026-08-19.
+framework_type: regulatory_framework

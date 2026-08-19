@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. High-risk projects require a Data Privacy Impact Assessment before launch. The DPIA describes processing operations and purposes, assesses necessity and proportionality, records risks to data subjects, and documents safeguards, security measures, owners and residual risk approval.

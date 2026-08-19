@@ -1,0 +1,56 @@
+sources:
+  ndpa_2023:
+    authority: Nigeria Data Protection Commission
+    title: Nigeria Data Protection Act, 2023
+    official_url: https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf
+    status: authoritative
+  ndpc_gaid_2025:
+    authority: Nigeria Data Protection Commission
+    title: Nigeria Data Protection Act General Application and Implementation Directive
+      2025
+    official_url: https://ndpc.gov.ng/wp-content/uploads/2025/03/NDP-ACT-GAID-2025-MARCH-20TH.pdf
+    status: authoritative
+  cbn_ofi_2022:
+    authority: Central Bank of Nigeria
+    title: Risk-Based Cybersecurity Framework and Guidelines for Other Financial Institutions
+      (OFIs)
+    official_listing_url: https://www.cbn.gov.ng/Documents/ofidpublications.html
+    archival_full_text_url: https://regalert.today/document/letter-to-all-ofis-issuance-of-risk-based-cybersecurity-framework-and-guidelines-67b176bd-f043-424a-bea9-14b1af8e83e3/text
+    status: direct_authority_pdf_verified_user_supplied_scan
+    official_url: https://www.cbn.gov.ng/Out/2022/OFISD/Letter%20to%20all%20OFIs%20Issuance%20of%20Risk-Based%20Cybersecurity%20Framework%20and%20Guidelines%20for%20Other%20Financial%20Institutions.pdf
+    verified_sha256: b2796485512005a79e18ea740a0c73926ad7e2164eb3e0266d9cb6fc2c4dd99c
+    verified_pages: 43
+    verified_on: '2026-08-19'
+    notes: User-supplied 43-page image-only CBN authority document. Full render review
+      completed. Source is marked Classified as Confidential and is not redistributed
+      in the repository.
+  cbn_dmb_psb_2024:
+    authority: Central Bank of Nigeria
+    title: Risk-Based Cybersecurity Framework and Guidelines for Deposit Money Banks
+      and Payment Service Banks
+    official_listing_url: https://www.cbn.gov.ng/documents/BSDPublicationsNEW.html
+    status: direct_authority_pdf_verified_user_supplied
+    official_url: https://www.cbn.gov.ng/Out/2024/BSD/CBN%20Risk-Based%20Cybersecurity%20Framework%20for%20DMBs%20and%20PSBs_2024.pdf
+    archival_full_text_url: https://regalert.today/document/central-bank-of-nigeria-risk-based-cybersecurity-framework-and-guidelines-for-de-11415e5e-5fa8-4ddf-9e4b-6f474be5fa00/text
+    verified_sha256: 057d6c205c03a37ab03ea761fb51ac2e7c4c6eff454cbae1d182cacd73031ade
+    verified_pages: 61
+    verified_on: '2026-08-19'
+  iso_27001:
+    authority: ISO/IEC
+    title: ISO/IEC 27001:2022
+    official_url: https://www.iso.org/standard/27001
+    amendment_url: https://www.iso.org/standard/88435.html
+    status: authoritative_reference_only
+  nist_csf_2_0:
+    authority: National Institute of Standards and Technology (NIST)
+    title: The NIST Cybersecurity Framework (CSF) 2.0
+    official_url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+    reference_tool_url: https://csrc.nist.gov/Projects/Cybersecurity-Framework/Filters
+    status: authoritative
+    verified_on: '2026-08-19'
+  gdpr_2016_679:
+    authority: European Union (EUR-Lex)
+    title: Regulation (EU) 2016/679 (General Data Protection Regulation)
+    official_url: https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng
+    status: authoritative
+    verified_on: '2026-08-19'

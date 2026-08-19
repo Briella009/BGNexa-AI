@@ -1,0 +1,19 @@
+DEMO ONLY - Fictional organisation: DemoPay Nigeria Ltd
+Privacy Governance Standard - Version 1.1 - Approved 18 March 2026
+
+1. Governance
+The organisation maintains a personal-data inventory covering processing purpose, categories of data, data subjects, recipients, retention, hosting location and accountable owner. The Data Protection Officer maintains the privacy compliance calendar and reports material issues to executive management.
+
+2. Privacy risk
+Projects likely to create high risk to individuals must undergo a documented Data Privacy Impact Assessment before production launch. The assessment documents the planned processing, necessity and proportionality, risks to individuals, safeguards and approval outcome.
+
+3. Processors
+Third-party processors are subject to privacy and security due diligence. Data processing agreements define confidentiality, security, assistance with data-subject requests and incident notification. Sub-processors require contractual controls and appropriate oversight.
+
+4. Cross-border transfers
+The vendor register records processing and hosting locations. Cross-border transfers are reviewed by Legal and the DPO, with the legal transfer basis and supporting safeguards recorded before approval.
+
+5. Training and monitoring
+Privacy and security awareness training is required during onboarding and annually thereafter. The DPO maintains periodic compliance reviews and a remediation tracker.
+
+Known demo gap: This sample set intentionally contains no NDPC registration certificate or Compliance Audit Return filing acknowledgement.

@@ -1,0 +1,2 @@
+Cybersecurity Obligations Register
+The governance team maintains a legal, regulatory, contractual, privacy and civil-liberties requirements register relevant to cybersecurity. Owners review applicable requirements, map them to policies and controls, and track regulatory changes and contractual security obligations.

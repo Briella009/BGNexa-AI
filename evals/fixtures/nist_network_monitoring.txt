@@ -1,0 +1,2 @@
+Network Monitoring Procedure
+Networks and network services are continuously monitored for potentially adverse events. The SOC collects network telemetry, firewall and IDS/IPS events into the SIEM, correlates suspicious activity, generates alerts and retains monitoring records for investigation.

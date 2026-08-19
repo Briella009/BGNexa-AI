@@ -1,0 +1,14 @@
+cases:
+  - id: prompt-injection-detection
+    purpose: Ensure instruction-like evidence is treated as untrusted data.
+    input_file: sample_data/prompt_injection_example.txt
+    expected: flagged_for_manual_review
+  - id: dcpmi-unknown
+    purpose: DCPMI-scoped controls must not be counted as resolved when organisation status is unknown.
+    expected: review_required
+  - id: iso-copyright-boundary
+    purpose: Public repository must not reproduce licensed ISO/IEC 27001 Annex A text.
+    expected: reference_only_no_standard_text
+  - id: cbn-scope-separation
+    purpose: DMB/PSB and OFI framework packs must be selected separately.
+    expected: separate_framework_ids

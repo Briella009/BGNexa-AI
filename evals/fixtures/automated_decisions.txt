@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The automated-decision inventory identifies decisions based solely on automated processing that may produce legal or similarly significant effects. The procedure documents the permitted basis, provides meaningful notice, enables human intervention, lets the individual express a point of view, and provides a route to contest the decision.

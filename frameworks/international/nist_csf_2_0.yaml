@@ -1,0 +1,2041 @@
+framework_id: nist-csf-2.0
+name: NIST Cybersecurity Framework (CSF) 2.0
+jurisdiction: Global / voluntary use
+version: 2.0 (2024)
+authority: National Institute of Standards and Technology (NIST)
+source:
+  authority: National Institute of Standards and Technology (NIST)
+  title: The NIST Cybersecurity Framework (CSF) 2.0
+  version: NIST CSWP 29, February 26 2024
+  source_url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+  last_verified: '2026-08-19'
+  source_type: official_nist_final_publication
+  notes: 'Complete CSF 2.0 Core outcome surface: 6 Functions, 22 Categories, and 106
+    Subcategories. The readiness engine assesses evidence against outcomes; it does
+    not present CSF as a certification or legal compliance scheme.'
+scope_note: Complete CSF 2.0 Core outcome pack. NIST describes CSF outcomes as non-prescriptive
+  and suitable for organizations of all sizes and sectors. All 106 Subcategories are
+  included with equal weighting.
+copyright_mode: us_government_public_domain_paraphrase
+framework_type: voluntary_framework
+controls:
+- control_id: NIST-GV.OC-01
+  reference: GV.OC-01
+  title: Organizational Context - GV.OC-01
+  requirement_summary: Understand the organizational mission and use it to inform
+    cybersecurity risk management.
+  evidence_examples: &id001
+  - business strategy
+  - legal and regulatory register
+  - stakeholder register
+  - critical services register
+  capability_tags:
+  - governance
+  - regulatory_compliance
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OC-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Organizational Context category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.OC-02
+  reference: GV.OC-02
+  title: Organizational Context - GV.OC-02
+  requirement_summary: Identify internal and external stakeholders and consider their
+    cybersecurity risk-management needs and expectations.
+  evidence_examples: *id001
+  capability_tags:
+  - governance
+  - regulatory_compliance
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OC-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Organizational Context category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.OC-03
+  reference: GV.OC-03
+  title: Organizational Context - GV.OC-03
+  requirement_summary: Understand and manage applicable cybersecurity legal, regulatory,
+    contractual, privacy, and civil-liberties requirements.
+  evidence_examples: *id001
+  capability_tags:
+  - governance
+  - regulatory_compliance
+  - privacy
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OC-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Organizational Context category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.OC-04
+  reference: GV.OC-04
+  title: Organizational Context - GV.OC-04
+  requirement_summary: Understand and communicate critical objectives, capabilities,
+    and services that external stakeholders depend on or expect.
+  evidence_examples: *id001
+  capability_tags:
+  - governance
+  - regulatory_compliance
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OC-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Organizational Context category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.OC-05
+  reference: GV.OC-05
+  title: Organizational Context - GV.OC-05
+  requirement_summary: Understand and communicate the outcomes, capabilities, and
+    services on which the organization depends.
+  evidence_examples: *id001
+  capability_tags:
+  - governance
+  - regulatory_compliance
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OC-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Organizational Context category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RM-01
+  reference: GV.RM-01
+  title: Risk Management Strategy - GV.RM-01
+  requirement_summary: Establish cybersecurity risk-management objectives and agree
+    them with organizational stakeholders.
+  evidence_examples: &id002
+  - enterprise risk management framework
+  - risk appetite statement
+  - risk methodology
+  - risk register
+  capability_tags:
+  - risk_management
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RM-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Risk Management Strategy category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RM-02
+  reference: GV.RM-02
+  title: Risk Management Strategy - GV.RM-02
+  requirement_summary: Establish, communicate, and maintain risk appetite and risk
+    tolerance statements.
+  evidence_examples: *id002
+  capability_tags:
+  - risk_management
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RM-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Risk Management Strategy category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RM-03
+  reference: GV.RM-03
+  title: Risk Management Strategy - GV.RM-03
+  requirement_summary: Integrate cybersecurity risk-management activities and outcomes
+    into enterprise risk-management processes.
+  evidence_examples: *id002
+  capability_tags:
+  - risk_management
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RM-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Risk Management Strategy category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RM-04
+  reference: GV.RM-04
+  title: Risk Management Strategy - GV.RM-04
+  requirement_summary: Establish and communicate strategic direction for appropriate
+    risk-response options.
+  evidence_examples: *id002
+  capability_tags:
+  - risk_management
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RM-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Risk Management Strategy category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RM-05
+  reference: GV.RM-05
+  title: Risk Management Strategy - GV.RM-05
+  requirement_summary: Establish organizational communication paths for cybersecurity
+    risks, including supplier and third-party risks.
+  evidence_examples: *id002
+  capability_tags:
+  - risk_management
+  - risk_assessment
+  - third_party_risk
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RM-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Risk Management Strategy category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RM-06
+  reference: GV.RM-06
+  title: Risk Management Strategy - GV.RM-06
+  requirement_summary: Use a standardized method to calculate, document, categorize,
+    and prioritize cybersecurity risks.
+  evidence_examples: *id002
+  capability_tags:
+  - risk_management
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RM-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Risk Management Strategy category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RM-07
+  reference: GV.RM-07
+  title: Risk Management Strategy - GV.RM-07
+  requirement_summary: Characterize strategic opportunities and include positive risks
+    in organizational cybersecurity risk discussions.
+  evidence_examples: *id002
+  capability_tags:
+  - risk_management
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RM-07
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 21
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Risk Management Strategy category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.RR-01
+  reference: GV.RR-01
+  title: Roles, Responsibilities, and Authorities - GV.RR-01
+  requirement_summary: Make organizational leadership responsible and accountable
+    for cybersecurity risk and a risk-aware, ethical, continually improving culture.
+  evidence_examples: &id003
+  - RACI matrix
+  - organisation chart
+  - cybersecurity role descriptions
+  - security budget
+  capability_tags:
+  - governance
+  - roles_responsibilities
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RR-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Roles, Responsibilities, and Authorities category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.RR-02
+  reference: GV.RR-02
+  title: Roles, Responsibilities, and Authorities - GV.RR-02
+  requirement_summary: Establish, communicate, understand, and enforce cybersecurity
+    risk-management roles, responsibilities, and authorities.
+  evidence_examples: *id003
+  capability_tags:
+  - governance
+  - roles_responsibilities
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RR-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Roles, Responsibilities, and Authorities category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.RR-03
+  reference: GV.RR-03
+  title: Roles, Responsibilities, and Authorities - GV.RR-03
+  requirement_summary: Allocate adequate resources in line with the cybersecurity
+    risk strategy, roles, responsibilities, and policies.
+  evidence_examples: *id003
+  capability_tags:
+  - governance
+  - roles_responsibilities
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RR-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Roles, Responsibilities, and Authorities category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.RR-04
+  reference: GV.RR-04
+  title: Roles, Responsibilities, and Authorities - GV.RR-04
+  requirement_summary: Include cybersecurity considerations in human-resources practices.
+  evidence_examples: *id003
+  capability_tags:
+  - governance
+  - roles_responsibilities
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.RR-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Roles, Responsibilities, and Authorities category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.PO-01
+  reference: GV.PO-01
+  title: Policy - GV.PO-01
+  requirement_summary: Establish, communicate, and enforce cybersecurity risk-management
+    policy based on organizational context, strategy, and priorities.
+  evidence_examples: &id004
+  - cybersecurity policy
+  - policy approval record
+  - policy review log
+  capability_tags:
+  - policy_management
+  - governance
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.PO-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Policy category. Equal weight is used so the product does
+    not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.PO-02
+  reference: GV.PO-02
+  title: Policy - GV.PO-02
+  requirement_summary: Review, update, communicate, and enforce cybersecurity policy
+    as requirements, threats, technology, and mission change.
+  evidence_examples: *id004
+  capability_tags:
+  - policy_management
+  - governance
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.PO-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Policy category. Equal weight is used so the product does
+    not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.OV-01
+  reference: GV.OV-01
+  title: Oversight - GV.OV-01
+  requirement_summary: Review cybersecurity risk-management strategy outcomes to inform
+    and adjust strategy and direction.
+  evidence_examples: &id005
+  - board cyber report
+  - KPI/KRI dashboard
+  - governance review minutes
+  capability_tags:
+  - governance
+  - metrics
+  - reporting
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OV-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Oversight category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.OV-02
+  reference: GV.OV-02
+  title: Oversight - GV.OV-02
+  requirement_summary: Review and adjust the cybersecurity risk-management strategy
+    so it covers organizational requirements and risks.
+  evidence_examples: *id005
+  capability_tags:
+  - governance
+  - metrics
+  - reporting
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OV-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Oversight category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.OV-03
+  reference: GV.OV-03
+  title: Oversight - GV.OV-03
+  requirement_summary: Evaluate cybersecurity risk-management performance and review
+    where adjustments are needed.
+  evidence_examples: *id005
+  capability_tags:
+  - governance
+  - metrics
+  - reporting
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.OV-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Oversight category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-GV.SC-01
+  reference: GV.SC-01
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-01
+  requirement_summary: Establish and agree a cybersecurity supply-chain risk-management
+    program, strategy, objectives, policies, and processes.
+  evidence_examples: &id006
+  - third-party risk policy
+  - supplier inventory
+  - due diligence
+  - security clauses
+  - supplier monitoring
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-02
+  reference: GV.SC-02
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-02
+  requirement_summary: Establish, communicate, and coordinate cybersecurity roles
+    and responsibilities for suppliers, customers, and partners.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-03
+  reference: GV.SC-03
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-03
+  requirement_summary: Integrate cybersecurity supply-chain risk management into cybersecurity,
+    enterprise risk, assessment, and improvement processes.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-04
+  reference: GV.SC-04
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-04
+  requirement_summary: Know suppliers and prioritize them by criticality.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 22
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-05
+  reference: GV.SC-05
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-05
+  requirement_summary: Establish, prioritize, and include supply-chain cybersecurity
+    requirements in supplier and third-party agreements.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-06
+  reference: GV.SC-06
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-06
+  requirement_summary: Perform planning and due diligence to reduce cybersecurity
+    risk before formal supplier or third-party relationships begin.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-07
+  reference: GV.SC-07
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-07
+  requirement_summary: Understand, record, prioritize, assess, respond to, and monitor
+    risks from suppliers, products, services, and other third parties throughout the
+    relationship.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-07
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-08
+  reference: GV.SC-08
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-08
+  requirement_summary: Include relevant suppliers and third parties in incident planning,
+    response, and recovery activities.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  - incident_response
+  - recovery
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-08
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-09
+  reference: GV.SC-09
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-09
+  requirement_summary: Integrate supply-chain security practices into cybersecurity
+    and enterprise risk programs and monitor them through the technology lifecycle.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-09
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-GV.SC-10
+  reference: GV.SC-10
+  title: Cybersecurity Supply Chain Risk Management - GV.SC-10
+  requirement_summary: Include post-termination activities in cybersecurity supply-chain
+    risk-management plans.
+  evidence_examples: *id006
+  capability_tags:
+  - third_party_risk
+  - supply_chain
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - GV.SC-10
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Govern function / Cybersecurity Supply Chain Risk Management category. Equal
+    weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-ID.AM-01
+  reference: ID.AM-01
+  title: Asset Management - ID.AM-01
+  requirement_summary: Maintain inventories of organizational hardware.
+  evidence_examples: &id007
+  - asset inventory
+  - software inventory
+  - data inventory
+  - network diagram
+  - supplier service inventory
+  capability_tags:
+  - asset_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.AM-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Asset Management category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.AM-02
+  reference: ID.AM-02
+  title: Asset Management - ID.AM-02
+  requirement_summary: Maintain inventories of organizational software, services,
+    and systems.
+  evidence_examples: *id007
+  capability_tags:
+  - asset_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.AM-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Asset Management category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.AM-03
+  reference: ID.AM-03
+  title: Asset Management - ID.AM-03
+  requirement_summary: Maintain representations of authorized network communications
+    and internal and external network data flows.
+  evidence_examples: *id007
+  capability_tags:
+  - asset_management
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.AM-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Asset Management category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.AM-04
+  reference: ID.AM-04
+  title: Asset Management - ID.AM-04
+  requirement_summary: Maintain inventories of services provided by suppliers.
+  evidence_examples: *id007
+  capability_tags:
+  - asset_management
+  - third_party_risk
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.AM-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Asset Management category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.AM-05
+  reference: ID.AM-05
+  title: Asset Management - ID.AM-05
+  requirement_summary: Prioritize assets based on classification, criticality, resources,
+    and mission impact.
+  evidence_examples: *id007
+  capability_tags:
+  - asset_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.AM-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Asset Management category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.AM-07
+  reference: ID.AM-07
+  title: Asset Management - ID.AM-07
+  requirement_summary: Maintain inventories of data and corresponding metadata for
+    designated data types.
+  evidence_examples: *id007
+  capability_tags:
+  - asset_management
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.AM-07
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Asset Management category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.AM-08
+  reference: ID.AM-08
+  title: Asset Management - ID.AM-08
+  requirement_summary: Manage systems, hardware, software, services, and data throughout
+    their lifecycles.
+  evidence_examples: *id007
+  capability_tags:
+  - asset_management
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.AM-08
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Asset Management category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-01
+  reference: ID.RA-01
+  title: Risk Assessment - ID.RA-01
+  requirement_summary: Identify, validate, and record vulnerabilities in assets.
+  evidence_examples: &id008
+  - risk assessment
+  - vulnerability register
+  - threat intelligence report
+  - vulnerability disclosure process
+  - supplier assessment
+  capability_tags:
+  - risk_assessment
+  - vulnerability_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 23
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-02
+  reference: ID.RA-02
+  title: Risk Assessment - ID.RA-02
+  requirement_summary: Receive cyber-threat intelligence from information-sharing
+    forums and other sources.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  - threat_intelligence
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-03
+  reference: ID.RA-03
+  title: Risk Assessment - ID.RA-03
+  requirement_summary: Identify and record internal and external threats to the organization.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-04
+  reference: ID.RA-04
+  title: Risk Assessment - ID.RA-04
+  requirement_summary: Identify and record potential impacts and likelihoods of threats
+    exploiting vulnerabilities.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  - vulnerability_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-05
+  reference: ID.RA-05
+  title: Risk Assessment - ID.RA-05
+  requirement_summary: Use threats, vulnerabilities, likelihoods, and impacts to understand
+    inherent risk and prioritize risk responses.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  - vulnerability_management
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-06
+  reference: ID.RA-06
+  title: Risk Assessment - ID.RA-06
+  requirement_summary: Choose, prioritize, plan, track, and communicate risk responses.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-07
+  reference: ID.RA-07
+  title: Risk Assessment - ID.RA-07
+  requirement_summary: Manage changes and exceptions, assess their risk impact, and
+    record and track them.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-07
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-08
+  reference: ID.RA-08
+  title: Risk Assessment - ID.RA-08
+  requirement_summary: Establish processes for receiving, analyzing, and responding
+    to vulnerability disclosures.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  - vulnerability_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-08
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-09
+  reference: ID.RA-09
+  title: Risk Assessment - ID.RA-09
+  requirement_summary: Assess hardware and software authenticity and integrity before
+    acquisition and use.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-09
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.RA-10
+  reference: ID.RA-10
+  title: Risk Assessment - ID.RA-10
+  requirement_summary: Assess critical suppliers before acquisition.
+  evidence_examples: *id008
+  capability_tags:
+  - risk_assessment
+  - third_party_risk
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.RA-10
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Risk Assessment category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.IM-01
+  reference: ID.IM-01
+  title: Improvement - ID.IM-01
+  requirement_summary: Identify cybersecurity improvements from evaluations.
+  evidence_examples: &id009
+  - lessons learned
+  - security test report
+  - improvement register
+  - incident response plan
+  capability_tags:
+  - continual_improvement
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.IM-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Improvement category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.IM-02
+  reference: ID.IM-02
+  title: Improvement - ID.IM-02
+  requirement_summary: Identify improvements from security tests and exercises, including
+    coordinated activities with suppliers and relevant third parties.
+  evidence_examples: *id009
+  capability_tags:
+  - continual_improvement
+  - third_party_risk
+  - third_party_risk
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.IM-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Improvement category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.IM-03
+  reference: ID.IM-03
+  title: Improvement - ID.IM-03
+  requirement_summary: Identify improvements from the execution of operational processes,
+    procedures, and activities.
+  evidence_examples: *id009
+  capability_tags:
+  - continual_improvement
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.IM-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Improvement category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-ID.IM-04
+  reference: ID.IM-04
+  title: Improvement - ID.IM-04
+  requirement_summary: Establish, communicate, maintain, and improve incident-response
+    plans and other cybersecurity plans that affect operations.
+  evidence_examples: *id009
+  capability_tags:
+  - continual_improvement
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - ID.IM-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Identify function / Improvement category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.AA-01
+  reference: PR.AA-01
+  title: Identity Management, Authentication, and Access Control - PR.AA-01
+  requirement_summary: Manage identities and credentials for authorized users, services,
+    and hardware.
+  evidence_examples: &id010
+  - access control policy
+  - identity register
+  - MFA configuration
+  - access review
+  - physical access logs
+  capability_tags:
+  - access_control
+  - identity_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AA-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Identity Management, Authentication, and Access Control
+    category. Equal weight is used so the product does not imply NIST assigns relative
+    importance to Core outcomes.
+- control_id: NIST-PR.AA-02
+  reference: PR.AA-02
+  title: Identity Management, Authentication, and Access Control - PR.AA-02
+  requirement_summary: Proof identities and bind them to credentials based on the
+    context of interactions.
+  evidence_examples: *id010
+  capability_tags:
+  - access_control
+  - identity_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AA-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Identity Management, Authentication, and Access Control
+    category. Equal weight is used so the product does not imply NIST assigns relative
+    importance to Core outcomes.
+- control_id: NIST-PR.AA-03
+  reference: PR.AA-03
+  title: Identity Management, Authentication, and Access Control - PR.AA-03
+  requirement_summary: Authenticate users, services, and hardware.
+  evidence_examples: *id010
+  capability_tags:
+  - access_control
+  - identity_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AA-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Identity Management, Authentication, and Access Control
+    category. Equal weight is used so the product does not imply NIST assigns relative
+    importance to Core outcomes.
+- control_id: NIST-PR.AA-04
+  reference: PR.AA-04
+  title: Identity Management, Authentication, and Access Control - PR.AA-04
+  requirement_summary: Protect, convey, and verify identity assertions.
+  evidence_examples: *id010
+  capability_tags:
+  - access_control
+  - identity_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AA-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 24
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Identity Management, Authentication, and Access Control
+    category. Equal weight is used so the product does not imply NIST assigns relative
+    importance to Core outcomes.
+- control_id: NIST-PR.AA-05
+  reference: PR.AA-05
+  title: Identity Management, Authentication, and Access Control - PR.AA-05
+  requirement_summary: Define, manage, enforce, and review permissions, entitlements,
+    and authorizations using least privilege and separation of duties.
+  evidence_examples: *id010
+  capability_tags:
+  - access_control
+  - identity_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AA-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Identity Management, Authentication, and Access Control
+    category. Equal weight is used so the product does not imply NIST assigns relative
+    importance to Core outcomes.
+- control_id: NIST-PR.AA-06
+  reference: PR.AA-06
+  title: Identity Management, Authentication, and Access Control - PR.AA-06
+  requirement_summary: Manage, monitor, and enforce physical access to assets commensurate
+    with risk.
+  evidence_examples: *id010
+  capability_tags:
+  - access_control
+  - identity_management
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AA-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Identity Management, Authentication, and Access Control
+    category. Equal weight is used so the product does not imply NIST assigns relative
+    importance to Core outcomes.
+- control_id: NIST-PR.AT-01
+  reference: PR.AT-01
+  title: Awareness and Training - PR.AT-01
+  requirement_summary: Provide personnel with cybersecurity awareness and training
+    for general tasks.
+  evidence_examples: &id011
+  - security awareness programme
+  - training records
+  - role-based training
+  capability_tags:
+  - security_awareness
+  - training
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AT-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Awareness and Training category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.AT-02
+  reference: PR.AT-02
+  title: Awareness and Training - PR.AT-02
+  requirement_summary: Provide specialized-role personnel with cybersecurity awareness
+    and training appropriate to their tasks.
+  evidence_examples: *id011
+  capability_tags:
+  - security_awareness
+  - training
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.AT-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Awareness and Training category. Equal weight is used
+    so the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.DS-01
+  reference: PR.DS-01
+  title: Data Security - PR.DS-01
+  requirement_summary: Protect the confidentiality, integrity, and availability of
+    data at rest.
+  evidence_examples: &id012
+  - encryption standard
+  - data handling policy
+  - backup report
+  - restore test
+  capability_tags:
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.DS-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Data Security category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.DS-02
+  reference: PR.DS-02
+  title: Data Security - PR.DS-02
+  requirement_summary: Protect the confidentiality, integrity, and availability of
+    data in transit.
+  evidence_examples: *id012
+  capability_tags:
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.DS-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Data Security category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.DS-10
+  reference: PR.DS-10
+  title: Data Security - PR.DS-10
+  requirement_summary: Protect the confidentiality, integrity, and availability of
+    data in use.
+  evidence_examples: *id012
+  capability_tags:
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.DS-10
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Data Security category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.DS-11
+  reference: PR.DS-11
+  title: Data Security - PR.DS-11
+  requirement_summary: Create, protect, maintain, and test data backups.
+  evidence_examples: *id012
+  capability_tags:
+  - data_security
+  - backup
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.DS-11
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Data Security category. Equal weight is used so the product
+    does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.PS-01
+  reference: PR.PS-01
+  title: Platform Security - PR.PS-01
+  requirement_summary: Establish and apply configuration-management practices.
+  evidence_examples: &id013
+  - configuration baseline
+  - patch report
+  - logging standard
+  - secure SDLC policy
+  capability_tags:
+  - platform_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.PS-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Platform Security category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.PS-02
+  reference: PR.PS-02
+  title: Platform Security - PR.PS-02
+  requirement_summary: Maintain, replace, and remove software in a risk-appropriate
+    manner.
+  evidence_examples: *id013
+  capability_tags:
+  - platform_security
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.PS-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Platform Security category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.PS-03
+  reference: PR.PS-03
+  title: Platform Security - PR.PS-03
+  requirement_summary: Maintain, replace, and remove hardware in a risk-appropriate
+    manner.
+  evidence_examples: *id013
+  capability_tags:
+  - platform_security
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.PS-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Platform Security category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.PS-04
+  reference: PR.PS-04
+  title: Platform Security - PR.PS-04
+  requirement_summary: Generate log records and make them available for continuous
+    monitoring.
+  evidence_examples: *id013
+  capability_tags:
+  - platform_security
+  - logging
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.PS-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Platform Security category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.PS-05
+  reference: PR.PS-05
+  title: Platform Security - PR.PS-05
+  requirement_summary: Prevent installation and execution of unauthorized software.
+  evidence_examples: *id013
+  capability_tags:
+  - platform_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.PS-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Platform Security category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.PS-06
+  reference: PR.PS-06
+  title: Platform Security - PR.PS-06
+  requirement_summary: Integrate secure software-development practices and monitor
+    their performance throughout the software-development lifecycle.
+  evidence_examples: *id013
+  capability_tags:
+  - platform_security
+  - secure_development
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.PS-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Platform Security category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-PR.IR-01
+  reference: PR.IR-01
+  title: Technology Infrastructure Resilience - PR.IR-01
+  requirement_summary: Protect networks and environments from unauthorized logical
+    access and usage.
+  evidence_examples: &id014
+  - network security architecture
+  - resilience design
+  - capacity plan
+  - environmental controls
+  capability_tags:
+  - resilience
+  - network_security
+  - access_control
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.IR-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 25
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Technology Infrastructure Resilience category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-PR.IR-02
+  reference: PR.IR-02
+  title: Technology Infrastructure Resilience - PR.IR-02
+  requirement_summary: Protect technology assets from environmental threats.
+  evidence_examples: *id014
+  capability_tags:
+  - resilience
+  - network_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.IR-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Technology Infrastructure Resilience category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-PR.IR-03
+  reference: PR.IR-03
+  title: Technology Infrastructure Resilience - PR.IR-03
+  requirement_summary: Implement mechanisms to achieve resilience requirements in
+    normal and adverse situations.
+  evidence_examples: *id014
+  capability_tags:
+  - resilience
+  - network_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.IR-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Technology Infrastructure Resilience category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-PR.IR-04
+  reference: PR.IR-04
+  title: Technology Infrastructure Resilience - PR.IR-04
+  requirement_summary: Maintain adequate resource capacity to support availability.
+  evidence_examples: *id014
+  capability_tags:
+  - resilience
+  - network_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - PR.IR-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Protect function / Technology Infrastructure Resilience category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-DE.CM-01
+  reference: DE.CM-01
+  title: Continuous Monitoring - DE.CM-01
+  requirement_summary: Monitor networks and network services for potentially adverse
+    events.
+  evidence_examples: &id015
+  - SIEM configuration
+  - monitoring procedure
+  - SOC report
+  - provider monitoring records
+  capability_tags:
+  - monitoring
+  - detection
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.CM-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Continuous Monitoring category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.CM-02
+  reference: DE.CM-02
+  title: Continuous Monitoring - DE.CM-02
+  requirement_summary: Monitor the physical environment for potentially adverse events.
+  evidence_examples: *id015
+  capability_tags:
+  - monitoring
+  - detection
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.CM-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Continuous Monitoring category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.CM-03
+  reference: DE.CM-03
+  title: Continuous Monitoring - DE.CM-03
+  requirement_summary: Monitor personnel activity and technology usage for potentially
+    adverse events.
+  evidence_examples: *id015
+  capability_tags:
+  - monitoring
+  - detection
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.CM-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Continuous Monitoring category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.CM-06
+  reference: DE.CM-06
+  title: Continuous Monitoring - DE.CM-06
+  requirement_summary: Monitor external service-provider activities and services for
+    potentially adverse events.
+  evidence_examples: *id015
+  capability_tags:
+  - monitoring
+  - detection
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.CM-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Continuous Monitoring category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.CM-09
+  reference: DE.CM-09
+  title: Continuous Monitoring - DE.CM-09
+  requirement_summary: Monitor computing hardware, software, runtime environments,
+    and their data for potentially adverse events.
+  evidence_examples: *id015
+  capability_tags:
+  - monitoring
+  - detection
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.CM-09
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Continuous Monitoring category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.AE-02
+  reference: DE.AE-02
+  title: Adverse Event Analysis - DE.AE-02
+  requirement_summary: Analyze potentially adverse events to understand associated
+    activities.
+  evidence_examples: &id016
+  - alert triage procedure
+  - correlation rules
+  - incident criteria
+  - threat intelligence integration
+  capability_tags:
+  - detection
+  - incident_analysis
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.AE-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Adverse Event Analysis category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.AE-03
+  reference: DE.AE-03
+  title: Adverse Event Analysis - DE.AE-03
+  requirement_summary: Correlate information from multiple sources.
+  evidence_examples: *id016
+  capability_tags:
+  - detection
+  - incident_analysis
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.AE-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Adverse Event Analysis category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.AE-04
+  reference: DE.AE-04
+  title: Adverse Event Analysis - DE.AE-04
+  requirement_summary: Understand the estimated impact and scope of adverse events.
+  evidence_examples: *id016
+  capability_tags:
+  - detection
+  - incident_analysis
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.AE-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Adverse Event Analysis category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.AE-06
+  reference: DE.AE-06
+  title: Adverse Event Analysis - DE.AE-06
+  requirement_summary: Provide information on adverse events to authorized staff and
+    tools.
+  evidence_examples: *id016
+  capability_tags:
+  - detection
+  - incident_analysis
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.AE-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Adverse Event Analysis category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.AE-07
+  reference: DE.AE-07
+  title: Adverse Event Analysis - DE.AE-07
+  requirement_summary: Integrate cyber-threat intelligence and other context into
+    adverse-event analysis.
+  evidence_examples: *id016
+  capability_tags:
+  - detection
+  - incident_analysis
+  - threat_intelligence
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.AE-07
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Adverse Event Analysis category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-DE.AE-08
+  reference: DE.AE-08
+  title: Adverse Event Analysis - DE.AE-08
+  requirement_summary: Declare incidents when adverse events meet defined incident
+    criteria.
+  evidence_examples: *id016
+  capability_tags:
+  - detection
+  - incident_analysis
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - DE.AE-08
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 26
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Detect function / Adverse Event Analysis category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.MA-01
+  reference: RS.MA-01
+  title: Incident Management - RS.MA-01
+  requirement_summary: Execute the incident-response plan with relevant third parties
+    once an incident is declared.
+  evidence_examples: &id017
+  - incident response plan
+  - incident tickets
+  - triage procedure
+  - escalation matrix
+  capability_tags:
+  - incident_response
+  - third_party_risk
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.MA-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Management category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.MA-02
+  reference: RS.MA-02
+  title: Incident Management - RS.MA-02
+  requirement_summary: Triage and validate incident reports.
+  evidence_examples: *id017
+  capability_tags:
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.MA-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Management category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.MA-03
+  reference: RS.MA-03
+  title: Incident Management - RS.MA-03
+  requirement_summary: Categorize and prioritize incidents.
+  evidence_examples: *id017
+  capability_tags:
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.MA-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Management category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.MA-04
+  reference: RS.MA-04
+  title: Incident Management - RS.MA-04
+  requirement_summary: Escalate or elevate incidents as needed.
+  evidence_examples: *id017
+  capability_tags:
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.MA-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Management category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.MA-05
+  reference: RS.MA-05
+  title: Incident Management - RS.MA-05
+  requirement_summary: Apply the criteria for initiating incident recovery.
+  evidence_examples: *id017
+  capability_tags:
+  - incident_response
+  - recovery
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.MA-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Management category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.AN-03
+  reference: RS.AN-03
+  title: Incident Analysis - RS.AN-03
+  requirement_summary: Analyze incidents to establish what happened and determine
+    root cause.
+  evidence_examples: &id018
+  - investigation report
+  - forensic procedure
+  - chain-of-custody record
+  - root-cause analysis
+  capability_tags:
+  - incident_response
+  - forensics
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.AN-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Analysis category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.AN-06
+  reference: RS.AN-06
+  title: Incident Analysis - RS.AN-06
+  requirement_summary: Record investigation actions and preserve record integrity
+    and provenance.
+  evidence_examples: *id018
+  capability_tags:
+  - incident_response
+  - forensics
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.AN-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Analysis category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.AN-07
+  reference: RS.AN-07
+  title: Incident Analysis - RS.AN-07
+  requirement_summary: Collect incident data and metadata and preserve their integrity
+    and provenance.
+  evidence_examples: *id018
+  capability_tags:
+  - incident_response
+  - forensics
+  - data_security
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.AN-07
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Analysis category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.AN-08
+  reference: RS.AN-08
+  title: Incident Analysis - RS.AN-08
+  requirement_summary: Estimate and validate incident magnitude.
+  evidence_examples: *id018
+  capability_tags:
+  - incident_response
+  - forensics
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.AN-08
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Analysis category. Equal weight is used so the
+    product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.CO-02
+  reference: RS.CO-02
+  title: Incident Response Reporting and Communication - RS.CO-02
+  requirement_summary: Notify internal and external stakeholders of incidents.
+  evidence_examples: &id019
+  - incident communication plan
+  - notification log
+  - stakeholder contact list
+  capability_tags:
+  - incident_response
+  - reporting
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.CO-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Response Reporting and Communication category.
+    Equal weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-RS.CO-03
+  reference: RS.CO-03
+  title: Incident Response Reporting and Communication - RS.CO-03
+  requirement_summary: Share incident information with designated internal and external
+    stakeholders.
+  evidence_examples: *id019
+  capability_tags:
+  - incident_response
+  - reporting
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.CO-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Response Reporting and Communication category.
+    Equal weight is used so the product does not imply NIST assigns relative importance
+    to Core outcomes.
+- control_id: NIST-RS.MI-01
+  reference: RS.MI-01
+  title: Incident Mitigation - RS.MI-01
+  requirement_summary: Contain incidents.
+  evidence_examples: &id020
+  - containment playbook
+  - eradication record
+  - incident timeline
+  capability_tags:
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.MI-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Mitigation category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RS.MI-02
+  reference: RS.MI-02
+  title: Incident Mitigation - RS.MI-02
+  requirement_summary: Eradicate incidents.
+  evidence_examples: *id020
+  capability_tags:
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RS.MI-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Respond function / Incident Mitigation category. Equal weight is used so
+    the product does not imply NIST assigns relative importance to Core outcomes.
+- control_id: NIST-RC.RP-01
+  reference: RC.RP-01
+  title: Incident Recovery Plan Execution - RC.RP-01
+  requirement_summary: Execute the recovery portion of the incident-response plan
+    when initiated by the incident-response process.
+  evidence_examples: &id021
+  - recovery plan
+  - restore test
+  - recovery checklist
+  - post-incident report
+  capability_tags:
+  - recovery
+  - business_continuity
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.RP-01
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 27
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Plan Execution category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-RC.RP-02
+  reference: RC.RP-02
+  title: Incident Recovery Plan Execution - RC.RP-02
+  requirement_summary: Select, scope, prioritize, and perform recovery actions.
+  evidence_examples: *id021
+  capability_tags:
+  - recovery
+  - business_continuity
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.RP-02
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 28
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Plan Execution category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-RC.RP-03
+  reference: RC.RP-03
+  title: Incident Recovery Plan Execution - RC.RP-03
+  requirement_summary: Verify the integrity of backups and other restoration assets
+    before restoration.
+  evidence_examples: *id021
+  capability_tags:
+  - recovery
+  - business_continuity
+  - backup
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.RP-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 28
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Plan Execution category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-RC.RP-04
+  reference: RC.RP-04
+  title: Incident Recovery Plan Execution - RC.RP-04
+  requirement_summary: Consider critical mission functions and cybersecurity risk
+    management when establishing post-incident operational norms.
+  evidence_examples: *id021
+  capability_tags:
+  - recovery
+  - business_continuity
+  - incident_response
+  - risk_management
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.RP-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 28
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Plan Execution category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-RC.RP-05
+  reference: RC.RP-05
+  title: Incident Recovery Plan Execution - RC.RP-05
+  requirement_summary: Verify restored asset integrity, restore systems and services,
+    and confirm normal operating status.
+  evidence_examples: *id021
+  capability_tags:
+  - recovery
+  - business_continuity
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.RP-05
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 28
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Plan Execution category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-RC.RP-06
+  reference: RC.RP-06
+  title: Incident Recovery Plan Execution - RC.RP-06
+  requirement_summary: Declare the end of incident recovery based on criteria and
+    complete incident-related documentation.
+  evidence_examples: *id021
+  capability_tags:
+  - recovery
+  - business_continuity
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.RP-06
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 28
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Plan Execution category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-RC.CO-03
+  reference: RC.CO-03
+  title: Incident Recovery Communication - RC.CO-03
+  requirement_summary: Communicate recovery activities and progress in restoring operational
+    capabilities to designated internal and external stakeholders.
+  evidence_examples: &id022
+  - recovery communications plan
+  - status update records
+  - approved public messaging
+  capability_tags:
+  - recovery
+  - communication
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.CO-03
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 28
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Communication category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.
+- control_id: NIST-RC.CO-04
+  reference: RC.CO-04
+  title: Incident Recovery Communication - RC.CO-04
+  requirement_summary: Share public updates on incident recovery using approved methods
+    and messaging.
+  evidence_examples: *id022
+  capability_tags:
+  - recovery
+  - communication
+  - incident_response
+  weight: 1.0
+  source_locator: NIST CSF 2.0 Appendix A - RC.CO-04
+  verification_status: official_text_cross_checked
+  source_pdf_pages:
+  - 28
+  verification_note: Identifier and outcome were cross-checked against the final NIST
+    CSWP 29 Appendix A published 2024-02-26.
+  notes: Recover function / Incident Recovery Communication category. Equal weight
+    is used so the product does not imply NIST assigns relative importance to Core
+    outcomes.

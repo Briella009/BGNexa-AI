@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The cyber incident regulatory procedure requires escalation to the regulatory reporting team immediately after detection. For CBN-reportable incidents, the team prepares the prescribed incident template, records the detection timestamp, submits within the applicable 24-hour window and retains acknowledgement from the relevant supervision department.

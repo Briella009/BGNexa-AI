@@ -1,0 +1,21 @@
+{
+  "framework_id": "cbn-dmb-psb-2024",
+  "passed": true,
+  "title_match": true,
+  "page_count": 61,
+  "minimum_pages": 20,
+  "page_count_ok": true,
+  "markers": {
+    "risk-based cybersecurity framework": true,
+    "cybersecurity self-assessment": true,
+    "cyber-threat intelligence": true,
+    "emerging technologies": true,
+    "security incident reporting template": true,
+    "artificial intelligence and machine learning": true
+  },
+  "missing_markers": [],
+  "warning": "A passing structural check confirms that the supplied PDF resembles the expected framework. It does not prove provenance by itself; retain the original CBN download source and review the file manually before upgrading source status.",
+  "file_name": "CBN Risk-Based Cybersecurity Framework for DMBs and PSBs_2024.pdf",
+  "sha256": "057d6c205c03a37ab03ea761fb51ac2e7c4c6eff454cbae1d182cacd73031ade",
+  "bytes": 1054769
+}

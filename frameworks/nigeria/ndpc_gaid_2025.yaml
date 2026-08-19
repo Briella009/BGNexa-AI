@@ -1,0 +1,285 @@
+framework_id: ndpc-gaid-2025
+name: NDPC GAID 2025 - Implementation Readiness
+jurisdiction: Nigeria
+version: '2025'
+authority: Nigeria Data Protection Commission
+source:
+  authority: Nigeria Data Protection Commission
+  title: Nigeria Data Protection Act General Application and Implementation Directive
+    2025
+  version: '2025'
+  source_url: https://ndpc.gov.ng/wp-content/uploads/2025/03/NDP-ACT-GAID-2025-MARCH-20TH.pdf
+  last_verified: '2026-08-19'
+  source_type: official
+  notes: Implementation-oriented checks are paraphrased from the NDPC-published GAID.
+    Exact article locators are retained where verified; applicability remains a qualified-human
+    determination.
+scope_note: Companion implementation checks for NDPA readiness, including DCPMI, DPO,
+  audit, security, training, breach and processor-governance requirements. Exact applicability
+  depends on organisation status and processing context.
+copyright_mode: public_regulatory_guidance_paraphrase
+controls:
+- control_id: GAID-07
+  reference: Article 7
+  title: General NDP Act compliance programme
+  requirement_summary: Maintain an organised NDP Act compliance programme that includes
+    applicable registration and audit activities, compliance schedules, semi-annual
+    data-protection reporting, data-security maintenance, staff sensitisation/training,
+    and current organisational privacy policies.
+  evidence_examples:
+  - compliance schedule
+  - privacy compliance plan
+  - semi-annual privacy report
+  - training records
+  - data security maintenance schedule
+  capability_tags:
+  - privacy_governance
+  - compliance_program
+  - training
+  - data_security
+  weight: 1.5
+  source_locator: Article 7
+  verification_status: official_text_cross_checked
+- control_id: GAID-08
+  reference: Article 8
+  title: Documented DCPMI designation assessment
+  requirement_summary: Maintain a documented assessment of whether the organisation
+    falls within a data controller or data processor of major importance category
+    under the current NDPC designation criteria and GAID classification framework.
+    The Copilot must not make this legal classification autonomously.
+  evidence_examples:
+  - DCPMI applicability assessment
+  - data-subject volume analysis
+  - processing-risk profile
+  - NDPC designation correspondence
+  capability_tags:
+  - privacy_governance
+  - regulatory_registration
+  - applicability
+  weight: 1.0
+  source_locator: Article 8; read with current NDPC DCPMI designation guidance
+  verification_status: official_text_cross_checked
+- control_id: GAID-09
+  reference: Article 9
+  title: DCPMI registration with the Commission
+  requirement_summary: Where designated as a data controller or processor of major
+    importance, maintain current registration with the Commission and evidence of
+    the organisation’s registration status and required updates.
+  evidence_examples:
+  - NDPC registration certificate
+  - registration acknowledgement
+  - registration record
+  - renewal or update evidence
+  capability_tags:
+  - regulatory_registration
+  - privacy_governance
+  weight: 1.2
+  source_locator: Article 9
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_dcpmi: true
+    registration_requirement: true
+- control_id: GAID-10
+  reference: Article 10
+  title: Compliance Audit Return for applicable DCPMIs
+  requirement_summary: Where the organisation is within a DCPMI category required
+    to file a Compliance Audit Return, maintain an annual risk-based privacy audit
+    and file the prescribed CAR by the applicable deadline, retaining filing evidence
+    and supporting audit records.
+  evidence_examples:
+  - Compliance Audit Return
+  - audit working papers
+  - filing acknowledgement
+  - compliance calendar
+  capability_tags:
+  - privacy_audit
+  - regulatory_reporting
+  - compliance_program
+  weight: 1.5
+  source_locator: Article 10 and Schedule 2
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_dcpmi: true
+    dcpmi_tier_policy:
+      applicable:
+      - UHL
+      - EHL
+      review:
+      - OHL
+    tier_review_rationale: 'GAID 2025 contains a filing-scope tension: Article 7(c)
+      expressly names UHL and EHL for annual CAR filing, while Article 10(6) states
+      that a data controller or processor of major importance shall file CAR annually.
+      OHL applicability is therefore not auto-decided by the Copilot.'
+    tier_review_recommendation: Obtain current NDPC or qualified legal/privacy guidance
+      on OHL CAR filing before treating this control as applicable or not applicable.
+  notes: Applicability intentionally remains review-required for OHL because Article
+    7(c) and Article 10(6) are not phrased consistently on CAR filing scope.
+- control_id: GAID-SEC-AUDIT
+  reference: Article 10(1)-(5)
+  title: Risk-based privacy and data-security audit
+  requirement_summary: Use risk-based privacy audit controls, identify points of data-processing
+    risk, determine appropriate audit techniques and frequency, and review online
+    environments frequently where personal data is exposed to cyber risk.
+  evidence_examples:
+  - privacy audit plan
+  - security audit schedule
+  - risk register
+  - technical assessment report
+  - remediation tracker
+  capability_tags:
+  - privacy_audit
+  - cyber_risk
+  - data_security
+  weight: 1.3
+  source_locator: Article 10(1)-(5)
+  verification_status: official_text_cross_checked
+- control_id: GAID-11
+  reference: Article 11
+  title: DPO designation and contact publication
+  requirement_summary: Where a DPO is required, maintain a formal DPO designation
+    and publish and communicate the DPO contact details in the prescribed manner.
+  evidence_examples:
+  - DPO appointment letter
+  - DPO service contract
+  - published DPO contact details
+  - NDPC communication record
+  capability_tags:
+  - dpo
+  - privacy_governance
+  - regulatory_reporting
+  weight: 1.1
+  source_locator: Article 11
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_dcpmi: true
+- control_id: GAID-12
+  reference: Article 12
+  title: DPO independence, resources and access
+  requirement_summary: Support the DPO with appropriate resources and access to processing
+    operations, protect the role from improper influence or penalty, ensure senior-management
+    reporting, preserve confidentiality, and manage conflicts of interest.
+  evidence_examples:
+  - DPO charter
+  - organisation chart
+  - DPO budget/resources
+  - conflict-of-interest assessment
+  - management reporting record
+  capability_tags:
+  - dpo
+  - governance
+  - independence
+  - training
+  weight: 1.2
+  source_locator: Article 12
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_dcpmi: true
+- control_id: GAID-DPO-REPORT
+  reference: Article 13
+  title: Semi-annual DPO data-protection report
+  requirement_summary: Ensure the DPO compiles a semi-annual data-protection report
+    for management, retains acknowledgement and RoPA linkage, and covers the organisation’s
+    material privacy-compliance status for later audit verification.
+  evidence_examples:
+  - DPO report
+  - compliance monitoring report
+  - privacy notice review
+  - DPIA register
+  - complaints register
+  capability_tags:
+  - dpo
+  - privacy_governance
+  - monitoring
+  weight: 1.0
+  source_locator: Article 13
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_dcpmi: true
+- control_id: GAID-29
+  reference: Article 29
+  title: Monitoring, evaluation and maintenance of data-security systems
+  requirement_summary: Maintain risk-based schedules for monitoring, evaluating and
+    maintaining data-security systems across people, processes and technology, including
+    assigned owners and relevant technical/organisational measures such as training,
+    software updates, vulnerability testing, authentication, encryption review and
+    quality assurance.
+  evidence_examples:
+  - data-security maintenance schedule
+  - vulnerability test plan
+  - patching schedule
+  - authentication review
+  - encryption review
+  - security owner matrix
+  capability_tags:
+  - data_security
+  - vulnerability_management
+  - maintenance
+  - authentication
+  - encryption
+  weight: 1.6
+  source_locator: Article 29
+  verification_status: official_text_cross_checked
+- control_id: GAID-30
+  reference: Article 30
+  title: Internal privacy sensitisation and training schedule
+  requirement_summary: Prepare and implement an organisational schedule for internal
+    privacy sensitisation and training, with evidence of delivery, coverage and periodic
+    review.
+  evidence_examples:
+  - privacy training schedule
+  - attendance records
+  - training content
+  - awareness campaign
+  - completion dashboard
+  capability_tags:
+  - training
+  - privacy_governance
+  - awareness
+  weight: 1.0
+  source_locator: Article 30
+  verification_status: official_text_cross_checked
+- control_id: GAID-33
+  reference: Article 33
+  title: Data-breach notification and response readiness
+  requirement_summary: Maintain procedures to detect and assess personal-data breaches,
+    meet applicable Commission notification timing and content requirements, communicate
+    with affected data subjects when required, and retain incident-response and breach
+    records.
+  evidence_examples:
+  - privacy breach procedure
+  - 72-hour notification workflow
+  - breach register
+  - notification template
+  - incident response plan
+  capability_tags:
+  - incident_response
+  - breach_notification
+  - privacy_incident
+  - regulatory_reporting
+  weight: 1.8
+  source_locator: Article 33
+  verification_status: official_text_cross_checked
+- control_id: GAID-34
+  reference: Article 34
+  title: Data Processing Agreement content and due diligence
+  requirement_summary: Where processing is carried out on behalf of a controller,
+    maintain a Data Processing Agreement that addresses the parties, purpose and scope,
+    processing location, lawful basis, responsibilities, technical and organisational
+    measures, relevant DPIA outcomes/risks, confidentiality and other required contractual
+    safeguards, and perform reasonable compliance checks on the counterparty.
+  evidence_examples:
+  - Data Processing Agreement
+  - processor contract
+  - security schedule
+  - DPIA reference
+  - processor due diligence
+  - cross-border location record
+  capability_tags:
+  - processor_management
+  - contracts
+  - third_party_risk
+  - data_security
+  weight: 1.5
+  source_locator: Article 34
+  verification_status: official_text_cross_checked
+framework_type: regulatory_implementation_guidance

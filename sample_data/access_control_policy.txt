@@ -1,0 +1,14 @@
+DEMO ONLY - Fictional organisation: DemoPay Nigeria Ltd
+Access Control Policy - Version 1.3 - Approved 15 January 2026
+
+1. Purpose
+This policy establishes access-control requirements for company systems and information assets.
+
+2. Identity and privileged access
+All workforce members must use unique user accounts. Multi-factor authentication is mandatory for privileged administrator accounts and for remote access to production systems. Privileged access is approved by the Head of Information Security and reviewed every quarter. Access is removed promptly when employment or contractual need ends.
+
+3. Passwords and authentication
+Passwords must meet the company's current password standard. Shared privileged credentials are prohibited except for controlled emergency accounts stored in the approved password vault.
+
+4. Review evidence
+The IT Operations Manager retains quarterly access-review reports, approval records and remediation tickets for at least two years. Exceptions are recorded in the security risk register.

@@ -1,0 +1,508 @@
+framework_id: gdpr-2016-679
+name: EU General Data Protection Regulation (GDPR)
+jurisdiction: European Union
+version: Regulation (EU) 2016/679
+authority: European Union (EUR-Lex)
+source:
+  authority: European Union (EUR-Lex)
+  title: Regulation (EU) 2016/679 (General Data Protection Regulation)
+  version: Regulation (EU) 2016/679
+  source_url: https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng
+  last_verified: '2026-08-19'
+  source_type: official_eu_regulation_text
+  notes: Selected high-value organisational readiness obligations. Territorial scope
+    is controlled separately from evidence assessment using a confirmed Article 3
+    scope field; the AI does not decide legal scope.
+scope_note: Selected GDPR organisational readiness controls. This is not an exhaustive
+  GDPR legal checklist. Article 3 territorial scope and conditional obligations such
+  as DPIAs, DPO designation, Article 30 record keeping, processor usage, and international
+  transfers are resolved separately from AI evidence review.
+copyright_mode: official_law_paraphrase
+framework_type: law
+controls:
+- control_id: GDPR-5
+  reference: Article 5
+  title: Data-protection principles and accountability
+  requirement_summary: Operate controller processing in line with the GDPR principles,
+    including lawfulness/fairness/transparency, purpose limitation, data minimisation,
+    accuracy, storage limitation, security, and demonstrable accountability.
+  evidence_examples:
+  - privacy governance policy
+  - data retention schedule
+  - data minimisation standard
+  - accountability records
+  capability_tags:
+  - privacy_governance
+  - data_minimisation
+  - data_security
+  - regulatory_compliance
+  weight: 1.4
+  source_locator: GDPR Article 5
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-6
+  reference: Article 6
+  title: Lawful basis for processing
+  requirement_summary: Identify and document an appropriate Article 6 lawful basis
+    for each controller processing purpose and manage processing consistently with
+    that basis.
+  evidence_examples:
+  - lawful basis register
+  - records of processing
+  - privacy notice
+  - legitimate interests assessment
+  capability_tags:
+  - lawful_basis
+  - privacy_governance
+  - regulatory_compliance
+  weight: 1.5
+  source_locator: GDPR Article 6
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-12-14
+  reference: Articles 12-14
+  title: Transparent privacy information
+  requirement_summary: Provide required privacy information and rights communications
+    in a concise, transparent, intelligible, accessible and clear manner, with the
+    Article 13/14 content appropriate to how data was obtained.
+  evidence_examples:
+  - privacy notice
+  - employee privacy notice
+  - cookie/privacy information
+  - notice review log
+  capability_tags:
+  - transparency
+  - privacy_notice
+  - data_subject_rights
+  weight: 1.2
+  source_locator: GDPR Articles 12-14
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-15-22
+  reference: Articles 15-22
+  title: Data-subject rights operations
+  requirement_summary: Maintain processes to identify, authenticate, track and respond
+    to applicable data-subject rights requests within the GDPR framework, including
+    access and the other rights in Articles 16-22.
+  evidence_examples:
+  - DSAR procedure
+  - rights request log
+  - identity verification procedure
+  - response templates
+  capability_tags:
+  - data_subject_rights
+  - privacy_operations
+  weight: 1.4
+  source_locator: GDPR Articles 15-22
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-24
+  reference: Article 24
+  title: Controller accountability measures
+  requirement_summary: Implement, review and update risk-appropriate technical and
+    organisational measures so the controller can ensure and demonstrate GDPR-compliant
+    processing.
+  evidence_examples:
+  - privacy compliance programme
+  - data protection policy
+  - control register
+  - management review
+  capability_tags:
+  - privacy_governance
+  - governance
+  - regulatory_compliance
+  weight: 1.5
+  source_locator: GDPR Article 24
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-25
+  reference: Article 25
+  title: Data protection by design and by default
+  requirement_summary: Integrate data-protection principles and safeguards into processing
+    design and ensure that, by default, only personal data necessary for each specific
+    purpose is processed.
+  evidence_examples:
+  - privacy by design standard
+  - product privacy checklist
+  - architecture review
+  - data minimisation assessment
+  capability_tags:
+  - privacy_by_design
+  - data_minimisation
+  - secure_development
+  weight: 1.4
+  source_locator: GDPR Article 25
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-28-C
+  reference: Article 28(1)-(3)
+  title: Controller governance of processors
+  requirement_summary: Use processors that provide sufficient guarantees and govern
+    processor relationships with written terms that cover the required processing
+    instructions, safeguards and obligations.
+  evidence_examples:
+  - processor due diligence
+  - data processing agreement
+  - vendor privacy assessment
+  - subprocessor register
+  capability_tags:
+  - processor_governance
+  - third_party_risk
+  - contracts
+  weight: 1.5
+  source_locator: GDPR Article 28(1)-(3)
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+    requires_gdpr_controller_uses_processors: true
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-28-P
+  reference: Article 28(2)-(4)
+  title: Processor obligations and subprocessors
+  requirement_summary: For processor activities, follow documented controller instructions,
+    manage subprocessors through required authorization and flow-down obligations,
+    and support the controller as required by Article 28.
+  evidence_examples:
+  - data processing agreement
+  - controller instructions
+  - subprocessor approval records
+  - processor compliance procedure
+  capability_tags:
+  - processor_governance
+  - third_party_risk
+  - privacy_operations
+  weight: 1.5
+  source_locator: GDPR Article 28(2)-(4)
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Processor
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-30-C
+  reference: Article 30(1)
+  title: Controller records of processing
+  requirement_summary: Where Article 30 record-keeping applies, maintain the required
+    controller record of processing activities, including purposes, categories, recipients,
+    transfers, retention information where possible, and a general security-measures
+    description where possible.
+  evidence_examples:
+  - records of processing activities
+  - data inventory
+  - retention schedule
+  - transfer register
+  capability_tags:
+  - records_of_processing
+  - data_inventory
+  - privacy_governance
+  weight: 1.3
+  source_locator: GDPR Article 30(1)
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+    requires_gdpr_ropa: true
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-30-P
+  reference: Article 30(2)
+  title: Processor records of processing
+  requirement_summary: Where Article 30 record-keeping applies, maintain the required
+    processor record of categories of processing performed for controllers, including
+    relevant transfers and security information.
+  evidence_examples:
+  - processor ROPA
+  - controller register
+  - processing inventory
+  - transfer register
+  capability_tags:
+  - records_of_processing
+  - processor_governance
+  - data_inventory
+  weight: 1.3
+  source_locator: GDPR Article 30(2)
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Processor
+    - Both
+    requires_gdpr_ropa: true
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-32
+  reference: Article 32
+  title: Security of processing
+  requirement_summary: Implement technical and organisational measures appropriate
+    to processing risk, considering measures such as encryption/pseudonymisation,
+    confidentiality-integrity-availability-resilience, timely restoration, and regular
+    testing and evaluation of security measures.
+  evidence_examples:
+  - information security policy
+  - encryption standard
+  - backup and restore test
+  - security testing results
+  - risk assessment
+  capability_tags:
+  - data_security
+  - risk_assessment
+  - resilience
+  - security_testing
+  weight: 1.7
+  source_locator: GDPR Article 32
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Processor
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-33-C
+  reference: Article 33(1),(3)-(5)
+  title: Controller breach notification and documentation
+  requirement_summary: Maintain a process for controller notification of qualifying
+    personal-data breaches to the competent supervisory authority without undue delay
+    and, where feasible, within 72 hours of awareness, and document breaches and response
+    actions.
+  evidence_examples:
+  - personal data breach procedure
+  - breach register
+  - regulator notification template
+  - incident timeline
+  capability_tags:
+  - incident_response
+  - privacy_breach
+  - regulatory_reporting
+  weight: 1.8
+  source_locator: GDPR Article 33(1),(3)-(5)
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-33-P
+  reference: Article 33(2)
+  title: Processor breach escalation
+  requirement_summary: Ensure processors notify the controller without undue delay
+    after becoming aware of a personal-data breach.
+  evidence_examples:
+  - processor incident procedure
+  - controller notification workflow
+  - breach escalation record
+  - DPA incident clause
+  capability_tags:
+  - incident_response
+  - privacy_breach
+  - processor_governance
+  weight: 1.6
+  source_locator: GDPR Article 33(2)
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Processor
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-34
+  reference: Article 34
+  title: High-risk breach communication to data subjects
+  requirement_summary: Maintain a process to communicate qualifying high-risk personal-data
+    breaches to affected data subjects without undue delay, using clear language and
+    the required information, subject to applicable exceptions.
+  evidence_examples:
+  - breach communication procedure
+  - data subject notification template
+  - risk assessment
+  - communication log
+  capability_tags:
+  - incident_response
+  - privacy_breach
+  - data_subject_rights
+  weight: 1.5
+  source_locator: GDPR Article 34
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-35
+  reference: Article 35
+  title: Data protection impact assessment
+  requirement_summary: Where processing is likely to result in high risk to individuals,
+    conduct a DPIA before processing and document the nature, scope, context, purposes,
+    necessity/proportionality, risks and safeguards as applicable.
+  evidence_examples:
+  - DPIA procedure
+  - DPIA screening record
+  - completed DPIA
+  - risk treatment plan
+  capability_tags:
+  - dpia
+  - risk_assessment
+  - privacy_by_design
+  weight: 1.5
+  source_locator: GDPR Article 35
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Both
+    requires_gdpr_dpia: true
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-37
+  reference: Article 37
+  title: Mandatory DPO designation where triggered
+  requirement_summary: Where an Article 37 designation trigger applies, appoint a
+    data protection officer based on appropriate professional qualities and data-protection
+    expertise and publish/communicate the DPO contact details as required.
+  evidence_examples:
+  - DPO appointment letter
+  - DPO role profile
+  - published DPO contact
+  - supervisory authority notification
+  capability_tags:
+  - dpo
+  - privacy_governance
+  - roles_responsibilities
+  weight: 1.4
+  source_locator: GDPR Article 37
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Processor
+    - Both
+    requires_gdpr_dpo: true
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-38-39
+  reference: Articles 38-39
+  title: DPO independence, support and tasks
+  requirement_summary: Where a DPO is required, involve the DPO in personal-data matters,
+    provide appropriate resources and access, preserve independence and direct reporting,
+    avoid conflicts, and support the Article 39 advisory/monitoring/cooperation tasks.
+  evidence_examples:
+  - DPO charter
+  - organisation chart
+  - DPO annual plan
+  - training and audit programme
+  - DPIA consultation records
+  capability_tags:
+  - dpo
+  - governance
+  - training
+  - audit
+  weight: 1.4
+  source_locator: GDPR Articles 38-39
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Processor
+    - Both
+    requires_gdpr_dpo: true
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null
+- control_id: GDPR-44-49
+  reference: Articles 44-49
+  title: International transfer safeguards
+  requirement_summary: Where personal data is transferred to a third country or international
+    organisation, identify and document a lawful Chapter V transfer basis and the
+    safeguards/conditions applicable to the transfer and onward transfers.
+  evidence_examples:
+  - international transfer register
+  - adequacy assessment
+  - standard contractual clauses
+  - transfer impact assessment
+  - binding corporate rules
+  capability_tags:
+  - cross_border_transfer
+  - privacy_governance
+  - third_party_risk
+  weight: 1.5
+  source_locator: GDPR Articles 44-49
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_gdpr_scope: true
+    processing_roles:
+    - Controller
+    - Processor
+    - Both
+    requires_gdpr_cross_border_transfer: true
+  verification_note: Paraphrased and cross-checked against the official EUR-Lex text
+    of Regulation (EU) 2016/679 on 2026-08-19.
+  notes: null

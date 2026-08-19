@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The personal-data breach plan covers detection, triage, risk assessment, containment, evidence preservation and regulator notification. The workflow tracks the 72-hour notification target where applicable, records notification content, supports communication to affected data subjects for high-risk breaches, and maintains a breach register.

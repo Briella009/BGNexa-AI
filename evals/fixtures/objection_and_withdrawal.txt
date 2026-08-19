@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. Data subjects can withdraw consent through the preference centre or privacy contact. The privacy team also handles objections to processing, including direct-marketing objections, and places validated requests on suppression lists. Each action is recorded in the rights register.

@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. Consent is collected using clear affirmative choices without preselected boxes. The consent audit log records the notice version, purpose, timestamp and channel. Data subjects are told they may withdraw consent, and the preference centre applies withdrawal and suppression decisions to downstream marketing systems.

@@ -1,0 +1,2 @@
+Incident Response Execution Procedure
+When an incident is declared, the incident response plan is executed using triage, escalation, containment, communication and third-party coordination procedures. Incident tickets record actions, responsible responders, external-provider engagement and decision timelines.

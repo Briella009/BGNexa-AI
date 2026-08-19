@@ -1,0 +1,418 @@
+framework_id: ndpa-2023
+name: Nigeria Data Protection Act 2023 - Core Readiness
+jurisdiction: Nigeria
+version: '2023'
+authority: Nigeria Data Protection Commission
+source:
+  authority: Nigeria Data Protection Commission
+  title: Nigeria Data Protection Act, 2023
+  version: '2023'
+  source_url: https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf
+  last_verified: '2026-08-19'
+  source_type: official
+  notes: Operational controls are paraphrased from the NDPC-published Act. Section-level
+    references are retained for traceability; legal interpretation remains a qualified-human
+    task.
+scope_note: Evidence-readiness checks for core operational obligations in the NDPA.
+  The tool does not determine legal compliance, and applicability must be confirmed
+  for the relevant processing activity.
+copyright_mode: public_law_paraphrase
+controls:
+- control_id: NDPA-24
+  reference: Section 24
+  title: Processing principles and accountability
+  requirement_summary: Maintain documented practices showing that personal data processing
+    follows the Act's processing principles, uses appropriate security measures, and
+    can be demonstrated through accountability evidence.
+  evidence_examples:
+  - privacy policy
+  - data inventory
+  - retention schedule
+  - security policy
+  - accountability records
+  capability_tags:
+  - privacy_governance
+  - data_security
+  - accountability
+  weight: 1.5
+  source_locator: Section 24
+  verification_status: official_text_cross_checked
+- control_id: NDPA-25
+  reference: Section 25
+  title: Lawful basis for personal-data processing
+  requirement_summary: Identify and document a valid lawful basis for each material
+    personal-data processing purpose before or when the processing takes place, and
+    retain evidence sufficient to demonstrate the basis relied upon.
+  evidence_examples:
+  - record of processing activities
+  - lawful-basis register
+  - privacy assessment
+  - processing inventory
+  - contract or legal-obligation mapping
+  capability_tags:
+  - lawful_basis
+  - privacy_governance
+  - accountability
+  weight: 1.5
+  source_locator: Section 25
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-26
+  reference: Section 26
+  title: Consent governance
+  requirement_summary: Where consent is the lawful basis, maintain evidence that consent
+    is affirmative, informed and demonstrable, that requests are clear and accessible,
+    and that data subjects are informed of and can exercise withdrawal.
+  evidence_examples:
+  - consent record
+  - consent wording
+  - preference centre
+  - withdrawal procedure
+  - consent audit log
+  capability_tags:
+  - consent
+  - lawful_basis
+  - data_subject_rights
+  - accountability
+  weight: 1.2
+  source_locator: Section 26
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-27
+  reference: Section 27
+  title: Privacy information and transparency
+  requirement_summary: Before collecting personal data, provide required information
+    about the controller, lawful basis and purposes, recipients, data-subject rights,
+    retention, complaint rights and relevant automated decision-making in a clear
+    and accessible privacy notice.
+  evidence_examples:
+  - privacy notice
+  - privacy policy
+  - collection notice
+  - retention statement
+  - automated-decision notice
+  capability_tags:
+  - transparency
+  - privacy_notice
+  - data_subject_rights
+  weight: 1.3
+  source_locator: Section 27
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-28
+  reference: Section 28
+  title: Data privacy impact assessment
+  requirement_summary: Conduct a data privacy impact assessment before processing
+    that is likely to result in high risk to data subjects, and document the processing,
+    necessity and proportionality, risks, and planned safeguards.
+  evidence_examples:
+  - DPIA
+  - privacy risk assessment
+  - project risk register
+  - mitigation plan
+  capability_tags:
+  - privacy_risk
+  - dpia
+  - risk_assessment
+  weight: 1.5
+  source_locator: Section 28
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-29
+  reference: Section 29
+  title: Processor governance and written agreements
+  requirement_summary: When engaging processors or sub-processors, use written agreements
+    and require appropriate assistance, security measures, compliance information,
+    and notification when another processor is engaged.
+  evidence_examples:
+  - data processing agreement
+  - vendor contract
+  - processor due diligence
+  - subprocessor register
+  capability_tags:
+  - third_party_risk
+  - processor_management
+  - contracts
+  weight: 1.3
+  source_locator: Section 29
+  verification_status: official_text_cross_checked
+- control_id: NDPA-30
+  reference: Section 30
+  title: Sensitive personal-data processing
+  requirement_summary: Identify sensitive personal data and document the specific
+    permitted condition relied on for processing, together with safeguards appropriate
+    to the sensitivity and processing context.
+  evidence_examples:
+  - sensitive-data register
+  - lawful-condition assessment
+  - access-control policy
+  - medical confidentiality procedure
+  - biometric-data assessment
+  capability_tags:
+  - sensitive_data
+  - lawful_basis
+  - data_security
+  - privacy_risk
+  weight: 1.6
+  source_locator: Section 30
+  verification_status: official_text_cross_checked
+- control_id: NDPA-31
+  reference: Section 31
+  title: Children and persons lacking legal capacity
+  requirement_summary: Where personal data relates to a child or a person lacking
+    legal capacity to consent, maintain age/capacity-aware processing controls and
+    evidence of an appropriate parent, guardian or other permitted basis where required.
+  evidence_examples:
+  - age-assurance procedure
+  - parental or guardian consent record
+  - child privacy notice
+  - education or care processing assessment
+  capability_tags:
+  - children_data
+  - consent
+  - privacy_risk
+  - data_subject_rights
+  weight: 1.5
+  source_locator: Section 31
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-32
+  reference: Section 32
+  title: Data Protection Officer for controllers of major importance
+  requirement_summary: A data controller of major importance shall designate a qualified
+    Data Protection Officer with expert knowledge of data-protection law and practices
+    who advises on processing obligations, monitors compliance, and acts as a contact
+    point for the Commission.
+  evidence_examples:
+  - DPO appointment letter
+  - DPO job description
+  - reporting line
+  - DPO contact record
+  capability_tags:
+  - privacy_governance
+  - dpo
+  weight: 1.0
+  source_locator: Section 32
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_dcpmi: true
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-34
+  reference: Section 34
+  title: Data-subject access and rights request handling
+  requirement_summary: Maintain a documented process for receiving, authenticating,
+    tracking and responding to data-subject requests, including access to personal
+    data and information about the processing.
+  evidence_examples:
+  - DSAR procedure
+  - request register
+  - identity-verification procedure
+  - response template
+  - service-level tracker
+  capability_tags:
+  - data_subject_rights
+  - access_request
+  - privacy_operations
+  weight: 1.4
+  source_locator: Section 34
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-35
+  reference: Section 35
+  title: Withdrawal of consent
+  requirement_summary: Provide a practical method for a data subject to withdraw consent
+    and ensure downstream processing decisions reflect the withdrawal while preserving
+    records needed to demonstrate prior lawful processing.
+  evidence_examples:
+  - consent withdrawal procedure
+  - preference-centre log
+  - suppression record
+  - request register
+  capability_tags:
+  - consent
+  - data_subject_rights
+  - privacy_operations
+  weight: 1.0
+  source_locator: Section 35
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-36
+  reference: Section 36
+  title: Right to object to processing
+  requirement_summary: Maintain a process to recognise and act on valid objections
+    to processing, including objections relevant to direct marketing and other processing
+    contexts covered by the Act.
+  evidence_examples:
+  - objection-handling procedure
+  - marketing suppression list
+  - request register
+  - balancing assessment
+  capability_tags:
+  - data_subject_rights
+  - objection
+  - direct_marketing
+  - privacy_operations
+  weight: 1.1
+  source_locator: Section 36
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-37
+  reference: Section 37
+  title: Automated decision-making safeguards
+  requirement_summary: Identify solely automated decisions that may have legal or
+    similarly significant effects, document the applicable basis and safeguards, and
+    provide routes for human intervention, expression of the data subject’s view and
+    contesting a decision where required.
+  evidence_examples:
+  - automated-decision inventory
+  - AI decision procedure
+  - human-review workflow
+  - model decision notice
+  - appeal log
+  capability_tags:
+  - automated_decision
+  - ai_governance
+  - data_subject_rights
+  - human_oversight
+  weight: 1.5
+  source_locator: Section 37
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+- control_id: NDPA-38
+  reference: Section 38
+  title: Data portability readiness
+  requirement_summary: Where data portability is available under applicable Commission
+    rules, maintain the technical and operational capability to provide relevant personal
+    data in a structured, commonly used and machine-readable format and support permitted
+    transfer to another controller.
+  evidence_examples:
+  - portability procedure
+  - machine-readable export
+  - request register
+  - controller-to-controller transfer workflow
+  capability_tags:
+  - data_subject_rights
+  - data_portability
+  - privacy_operations
+  weight: 0.8
+  source_locator: Section 38
+  verification_status: official_text_cross_checked
+  applicability:
+    processing_roles:
+    - Controller
+    - Both
+  notes: Section 38 authorises the Commission to prescribe circumstances and conditions
+    for exercising portability; assess against current implementing rules before treating
+    this as a fully resolved obligation.
+- control_id: NDPA-39
+  reference: Section 39
+  title: Security, integrity and confidentiality
+  requirement_summary: Implement appropriate technical and organisational measures
+    to protect personal data, taking account of the amount and sensitivity of data,
+    likely harm, processing extent, retention period, and proportionate technology.
+    Measures may include de-identification, encryption, resilience, restoration, risk
+    assessment, testing, and updates.
+  evidence_examples:
+  - information security policy
+  - encryption standard
+  - access control policy
+  - backup plan
+  - vulnerability assessment
+  - security test report
+  capability_tags:
+  - data_security
+  - encryption
+  - resilience
+  - vulnerability_management
+  weight: 2.0
+  source_locator: Section 39
+  verification_status: official_text_cross_checked
+- control_id: NDPA-40
+  reference: Section 40
+  title: Personal data breach management
+  requirement_summary: Maintain a breach process covering processor-to-controller
+    notification, regulator notification within the statutory timeframe when risk
+    criteria are met, high-risk communication to affected data subjects, and breach
+    records.
+  evidence_examples:
+  - data breach procedure
+  - incident response plan
+  - breach register
+  - notification template
+  - incident log
+  capability_tags:
+  - incident_response
+  - breach_notification
+  - privacy_incident
+  weight: 2.0
+  source_locator: Section 40
+  verification_status: official_text_cross_checked
+- control_id: NDPA-41
+  reference: Sections 41-43
+  title: Cross-border transfer governance
+  requirement_summary: Record and justify the legal basis for transfers of personal
+    data outside Nigeria and retain evidence of adequate protection or another permitted
+    transfer condition where applicable.
+  evidence_examples:
+  - cross-border transfer register
+  - transfer assessment
+  - contractual clauses
+  - consent record
+  - vendor location register
+  capability_tags:
+  - cross_border_transfer
+  - third_party_risk
+  - privacy_governance
+  weight: 1.2
+  source_locator: Sections 41-43
+  verification_status: official_text_cross_checked
+- control_id: NDPA-44
+  reference: Section 44
+  title: Registration of data controllers/processors of major importance
+  requirement_summary: Determine whether the organisation is a data controller or
+    processor of major importance and, where applicable, maintain evidence of registration
+    with the Commission and current registration information.
+  evidence_examples:
+  - NDPC registration certificate
+  - registration acknowledgement
+  - DCPMI assessment
+  - filing record
+  capability_tags:
+  - regulatory_registration
+  - privacy_governance
+  weight: 1.0
+  source_locator: Section 44; read with current NDPC designation guidance
+  verification_status: official_text_cross_checked
+  applicability:
+    requires_dcpmi: true
+    registration_requirement: true
+framework_type: law

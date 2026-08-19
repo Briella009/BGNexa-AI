@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The cloud security standard documents SaaS, PaaS and IaaS shared-responsibility matrices with each cloud provider. Security responsibilities are contractually allocated and periodically reviewed. Equivalent security policies and configuration baselines apply across cloud and on-premises infrastructure.

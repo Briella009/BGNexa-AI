@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The privacy governance file contains the organisation's DCPMI applicability assessment, data-subject volume analysis, processing-risk factors and current Nigeria Data Protection Commission registration record. Registration acknowledgements and updates are retained in the compliance calendar.

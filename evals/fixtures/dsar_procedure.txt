@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The Data Subject Access Request procedure covers intake, identity verification, search, redaction, response approval and tracking. The rights register records access, rectification and erasure requests, deadlines, response dates, recipients of corrections and any lawful refusal rationale.

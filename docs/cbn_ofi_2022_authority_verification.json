@@ -1,0 +1,98 @@
+{
+  "framework_id": "cbn-ofi-2022",
+  "passed": true,
+  "verification_mode": "manual_visual_render_review",
+  "manual_visual_verification_required": false,
+  "title_match": true,
+  "page_count": 43,
+  "minimum_pages": 20,
+  "page_count_ok": true,
+  "markers": {
+    "risk-based cybersecurity framework": true,
+    "cybersecurity risk management system": true,
+    "cyber-threat intelligence": true,
+    "metrics, monitoring": true,
+    "january 1, 2023": true
+  },
+  "missing_markers": [],
+  "warning": "Recorded visual observations match the expected authority-document structure. Retain the source hash, page count, review date, and provenance record; do not redistribute restricted source material.",
+  "file_name": "0344465a-3dde-40f2-a368-2dbf77496dcb(1).pdf",
+  "sha256": "b2796485512005a79e18ea740a0c73926ad7e2164eb3e0266d9cb6fc2c4dd99c",
+  "bytes": 1015337,
+  "reviewed_on": "2026-08-19",
+  "review_scope": "All 43 pages rendered and visually scanned; source identity, section structure, key control pages, effective date and confidentiality marking checked.",
+  "confidentiality_note": "Every reviewed source page is marked Classified as Confidential. The source document is excluded from the public repository.",
+  "verified_control_pages": {
+    "2.4.14": [
+      7
+    ],
+    "2.4.17": [
+      8
+    ],
+    "2.4.18": [
+      8,
+      9
+    ],
+    "2.10.4": [
+      14
+    ],
+    "3.7": [
+      15
+    ],
+    "4.3": [
+      16
+    ],
+    "5.1": [
+      16,
+      21,
+      22
+    ],
+    "6.1": [
+      17
+    ],
+    "7.5": [
+      18
+    ],
+    "7.6": [
+      18
+    ],
+    "8.1": [
+      19
+    ],
+    "Appendix III 1": [
+      25
+    ],
+    "Appendix III 2": [
+      25,
+      26
+    ],
+    "Appendix III 3": [
+      26
+    ],
+    "Appendix III 4": [
+      27
+    ],
+    "Appendix III 5": [
+      27,
+      28
+    ],
+    "Appendix III 6(a)": [
+      28,
+      29
+    ],
+    "Appendix III 6(b)": [
+      29
+    ],
+    "Appendix III 6(c)": [
+      30
+    ],
+    "Appendix III 7": [
+      30,
+      31,
+      32
+    ],
+    "Appendix III 8": [
+      32
+    ]
+  }
+}

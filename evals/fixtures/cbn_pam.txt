@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The privileged access management standard uses just-in-time privileged elevation, session monitoring, password vaulting, least privilege and segregation of duties. Privileged activity logs are preserved and reviewed. Shared default administrative passwords are prohibited and default credentials are changed before commissioning.

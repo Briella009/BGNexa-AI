@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The portability workflow can export eligible personal data in a structured, commonly used, machine-readable format. Where technically feasible and legally applicable, the workflow supports direct transmission to another controller and records the request, verification and completion date.

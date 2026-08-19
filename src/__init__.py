@@ -1,0 +1,1 @@
+"""BGNexa AI core package."""

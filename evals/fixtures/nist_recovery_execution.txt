@@ -1,0 +1,2 @@
+Cybersecurity Recovery Procedure
+When initiated by the incident response process, the recovery portion of the plan is executed to restore affected services and assets. Teams use approved recovery checklists, validate restored systems and data, perform restore testing, and document post-incident improvements.

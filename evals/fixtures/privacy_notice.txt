@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The public privacy notice identifies the controller and contact details, purposes and lawful bases, recipient categories, retention periods, data-subject rights, complaint route to the regulator, cross-border disclosures and whether automated decision-making is used. Collection forms link to the notice before personal data is submitted.

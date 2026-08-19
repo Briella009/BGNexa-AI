@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The cross-border transfer register lists recipient country, vendor, purpose, data categories, transfer mechanism, adequacy status and safeguards. Privacy reviews document the lawful transfer condition, contractual safeguards, recipient protections and approval before international personal-data transfers begin.

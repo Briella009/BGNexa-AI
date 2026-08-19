@@ -1,0 +1,2 @@
+Hardware Asset Inventory Standard
+The organisation maintains a continuously updated inventory of organizational hardware, including laptops, servers, mobile devices, network appliances and cloud-hosted infrastructure assets. Each asset has an owner, location, status and unique identifier. Discovery scans reconcile unknown hardware into the asset inventory.

@@ -1,0 +1,2 @@
+Data at Rest Protection Standard
+Confidential and restricted data stored on endpoints, servers, databases, backups and approved cloud services is protected for confidentiality, integrity and availability. Encryption at rest, access controls, integrity monitoring, backup protection and recovery testing are implemented according to data classification and risk.

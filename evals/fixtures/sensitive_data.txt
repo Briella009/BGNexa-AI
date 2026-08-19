@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The sensitive-data register identifies biometric, genetic, health, ethnicity, religion, political opinion, trade-union and sex-life data. For each sensitive category the privacy team records the specific permitted processing condition, access restrictions, encryption, retention and additional safeguards.

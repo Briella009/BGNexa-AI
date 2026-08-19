@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. Services involving children use age-assurance checks and a child-data workflow. Where required, the organisation records parent or legal guardian authorisation and gives age-appropriate privacy information. Exceptions are documented only where a permitted basis applies, such as vital interests or specified care and education contexts.

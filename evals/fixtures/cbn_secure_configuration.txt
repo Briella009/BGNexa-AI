@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The secure configuration standard defines approved hardening baselines for servers, workstations, databases, network devices and applications. Security controls are centrally managed, new systems are hardened before deployment, configuration baselines are reviewed regularly and wireless networks use strong encryption with key-management requirements.

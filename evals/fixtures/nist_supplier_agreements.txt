@@ -1,0 +1,2 @@
+Cybersecurity Supply Chain Requirements
+Supplier contracts contain prioritized cybersecurity requirements based on service criticality. Due diligence, security clauses, incident notification, access restrictions, assurance evidence and ongoing supplier monitoring are required for relevant third parties before and during the relationship.

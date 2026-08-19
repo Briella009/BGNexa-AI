@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The ISMS risk methodology defines information-security risk criteria, likelihood and impact, risk owners, assessment cadence and treatment options. The risk register links selected treatments to the risk treatment plan, security objectives and Statement of Applicability references.

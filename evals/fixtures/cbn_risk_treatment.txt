@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The cyber risk treatment plan records whether risks are reduced, accepted, avoided or transferred. Residual risk acceptance follows Board-approved criteria. Outsourcing and cyber-insurance risk transfers require documented risk assessments, named risk owners and management approval.

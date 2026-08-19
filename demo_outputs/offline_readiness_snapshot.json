@@ -1,0 +1,951 @@
+{
+  "snapshot_schema": "readiness-copilot/v1",
+  "created_at": "2026-08-19T12:16:50+00:00",
+  "organisation_profile": {
+    "organisation_name": "Demo Organisation",
+    "processing_role": "Both",
+    "dcpmi_status": "Unknown"
+  },
+  "frameworks": [
+    {
+      "framework_id": "iso-iec-27001-2022-amd1-2024",
+      "name": "ISO/IEC 27001:2022 + Amendment 1:2024 - ISMS Core Readiness",
+      "version": "2022 + Amd 1:2024",
+      "authority": "ISO/IEC",
+      "framework_type": "international_standard",
+      "source_url": "https://www.iso.org/standard/27001",
+      "source_type": "official",
+      "source_last_verified": "2026-08-19",
+      "score": {
+        "provisional_readiness_percent": null,
+        "resolved_weight": 0.0,
+        "applicable_weight": 9.9,
+        "coverage_percent": 0.0,
+        "supported": 0,
+        "partial": 0,
+        "not_evidenced": 0,
+        "review_required": 8,
+        "not_applicable": 0
+      },
+      "controls": [
+        {
+          "control_id": "ISO-4",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "ISO-4-A1",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "ISO-5",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "ISO-6",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "ISO-7",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "ISO-8",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "ISO-9",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "ISO-10",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        }
+      ]
+    },
+    {
+      "framework_id": "ndpa-2023",
+      "name": "Nigeria Data Protection Act 2023 - Core Readiness",
+      "version": "2023",
+      "authority": "Nigeria Data Protection Commission",
+      "framework_type": "law",
+      "source_url": "https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf",
+      "source_type": "official",
+      "source_last_verified": "2026-08-19",
+      "score": {
+        "provisional_readiness_percent": null,
+        "resolved_weight": 0.0,
+        "applicable_weight": 24.4,
+        "coverage_percent": 0.0,
+        "supported": 0,
+        "partial": 0,
+        "not_evidenced": 0,
+        "review_required": 18,
+        "not_applicable": 0
+      },
+      "controls": [
+        {
+          "control_id": "NDPA-24",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-25",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-26",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-27",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-28",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-29",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-30",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-31",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-32",
+          "status": "review_required",
+          "rationale": "Applicability cannot be resolved until DCPMI status is determined against current NDPC designation guidance.",
+          "evidence_strength": "none",
+          "evidence": [],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-34",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-35",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-36",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-37",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-38",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-39",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "access_control_policy.txt:0:0",
+              "source_name": "access_control_policy.txt",
+              "page": null,
+              "content_hash": "fba026c7afc59ea021711e1d14a8b12b13a5ca8685f2fe30dad6c1b63df6cf1c",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-40",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-41",
+          "status": "review_required",
+          "rationale": "Relevant evidence candidates were found. Confirm that they explicitly demonstrate the requirement before resolving this control.",
+          "evidence_strength": "weak",
+          "evidence": [
+            {
+              "chunk_id": "privacy_governance.txt:0:0",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "fd727996ef3e8cbd1591f5f68bc0dd539730a90521f8ab360af6db560a0b8674",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "privacy_governance.txt:0:1",
+              "source_name": "privacy_governance.txt",
+              "page": null,
+              "content_hash": "16385555d4345013427c0dd91cb6b746fea661f1a69d4df8c905517539a2d943",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:0",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "385bf5958274f01f433ca1c2fa52fc7e0aaf143f3a68336992b127101f45d66e",
+              "retrieval_method": "tfidf"
+            },
+            {
+              "chunk_id": "incident_response_policy.txt:0:1",
+              "source_name": "incident_response_policy.txt",
+              "page": null,
+              "content_hash": "0852348c5a7fbb9c8a1d29b341a375520a98b61aa4fbc1e9a47198f91643e6b1",
+              "retrieval_method": "tfidf"
+            }
+          ],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        },
+        {
+          "control_id": "NDPA-44",
+          "status": "review_required",
+          "rationale": "Applicability cannot be resolved until DCPMI status is determined against current NDPC designation guidance.",
+          "evidence_strength": "none",
+          "evidence": [],
+          "ai_assessed": false,
+          "human_validated": false,
+          "reviewer": null,
+          "reviewed_at": null
+        }
+      ]
+    }
+  ],
+  "validations": [],
+  "notice": "Evidence-backed readiness snapshot only; not a legal-compliance determination, ISO certification, regulator approval, or audit opinion.",
+  "sha256": "ee6c2bde3575b0aeee2e60ea706db5dcaf92b6bc463bffb9ff98e0c00686681f"
+}

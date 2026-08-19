@@ -1,0 +1,17 @@
+DEMO ONLY - Fictional organisation: DemoPay Nigeria Ltd
+Cybersecurity and Personal Data Incident Response Procedure - Version 2.0 - Approved 03 February 2026
+
+1. Scope
+This procedure covers suspected and confirmed cybersecurity incidents, including incidents involving personal data.
+
+2. Reporting and triage
+Employees report suspected incidents immediately to the Security Operations team. The incident lead records the event, affected systems, detection time, containment actions, data categories, likely impact and responsible owners in the incident register.
+
+3. Personal data breach escalation
+If personal data may be involved, the Data Protection Officer and Legal team are notified during triage. The privacy assessment records whether notification to the Nigeria Data Protection Commission and affected data subjects is required. Regulatory deadlines are tracked from the time the organisation becomes aware of a qualifying breach.
+
+4. CBN escalation
+Where a CBN-regulated business unit is in scope, the Regulatory Compliance team is engaged immediately and records the applicable CBN reporting obligation and submission evidence.
+
+5. Testing
+A tabletop incident-response exercise is performed at least annually. Findings, owners and remediation due dates are documented and tracked to closure.

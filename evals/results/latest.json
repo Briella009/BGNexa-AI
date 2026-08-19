@@ -1,0 +1,955 @@
+{
+  "generated_at": "2026-08-19T12:57:07+00:00",
+  "retrieval": {
+    "cases": 66,
+    "recall_at_1": 0.9848,
+    "recall_at_3": 1.0,
+    "mrr": 0.9924,
+    "failures": [],
+    "results": [
+      {
+        "id": "ndpa-lawful-basis",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-25",
+        "expected_source": "lawful_basis_register.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "lawful_basis_register.txt",
+          "gdpr_ropa.txt",
+          "processor_governance.txt"
+        ]
+      },
+      {
+        "id": "ndpa-consent",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-26",
+        "expected_source": "consent_management.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "consent_management.txt",
+          "lawful_basis_register.txt",
+          "objection_and_withdrawal.txt"
+        ]
+      },
+      {
+        "id": "ndpa-transparency",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-27",
+        "expected_source": "privacy_notice.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "privacy_notice.txt",
+          "automated_decisions.txt",
+          "lawful_basis_register.txt"
+        ]
+      },
+      {
+        "id": "ndpa-dpia",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-28",
+        "expected_source": "dpia.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dpia.txt",
+          "iso_risk_management.txt",
+          "breach_response.txt"
+        ]
+      },
+      {
+        "id": "ndpa-processors",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-29",
+        "expected_source": "processor_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "processor_governance.txt",
+          "gdpr_ropa.txt",
+          "dpia.txt"
+        ]
+      },
+      {
+        "id": "ndpa-sensitive-data",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-30",
+        "expected_source": "sensitive_data.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "sensitive_data.txt",
+          "cross_border_transfer.txt",
+          "gdpr_ropa.txt"
+        ]
+      },
+      {
+        "id": "ndpa-children",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-31",
+        "expected_source": "children_data.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "children_data.txt",
+          "lawful_basis_register.txt",
+          "consent_management.txt"
+        ]
+      },
+      {
+        "id": "ndpa-dpo",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-32",
+        "expected_source": "dpo_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dpo_governance.txt",
+          "dcpmi_registration.txt",
+          "compliance_audit_return.txt"
+        ]
+      },
+      {
+        "id": "ndpa-access-rights",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-34",
+        "expected_source": "dsar_procedure.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dsar_procedure.txt",
+          "processor_governance.txt",
+          "privacy_notice.txt"
+        ]
+      },
+      {
+        "id": "ndpa-withdrawal",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-35",
+        "expected_source": "consent_management.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "consent_management.txt",
+          "objection_and_withdrawal.txt",
+          "lawful_basis_register.txt"
+        ]
+      },
+      {
+        "id": "ndpa-objection",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-36",
+        "expected_source": "objection_and_withdrawal.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "objection_and_withdrawal.txt",
+          "gdpr_ropa.txt",
+          "lawful_basis_register.txt"
+        ]
+      },
+      {
+        "id": "ndpa-automated-decision",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-37",
+        "expected_source": "automated_decisions.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "automated_decisions.txt",
+          "privacy_notice.txt",
+          "cbn_emerging_ai.txt"
+        ]
+      },
+      {
+        "id": "ndpa-portability",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-38",
+        "expected_source": "data_portability.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "data_portability.txt",
+          "cross_border_transfer.txt",
+          "gdpr_ropa.txt"
+        ]
+      },
+      {
+        "id": "ndpa-security",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-39",
+        "expected_source": "data_security_schedule.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "data_security_schedule.txt",
+          "nist_data_at_rest.txt",
+          "cbn_access_control.txt"
+        ]
+      },
+      {
+        "id": "ndpa-breach",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-40",
+        "expected_source": "breach_response.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "breach_response.txt",
+          "nist_incident_execution.txt",
+          "cbn_ir_exercises.txt"
+        ]
+      },
+      {
+        "id": "ndpa-cross-border",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-41",
+        "expected_source": "cross_border_transfer.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cross_border_transfer.txt",
+          "privacy_notice.txt",
+          "nist_legal_register.txt"
+        ]
+      },
+      {
+        "id": "ndpa-registration",
+        "framework_id": "ndpa-2023",
+        "control_id": "NDPA-44",
+        "expected_source": "dcpmi_registration.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dcpmi_registration.txt",
+          "compliance_audit_return.txt",
+          "processor_governance.txt"
+        ]
+      },
+      {
+        "id": "gaid-programme",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-07",
+        "expected_source": "privacy_compliance_program.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "privacy_compliance_program.txt",
+          "privacy_training.txt",
+          "compliance_audit_return.txt"
+        ]
+      },
+      {
+        "id": "gaid-dcpmi-assessment",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-08",
+        "expected_source": "dcpmi_registration.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dcpmi_registration.txt",
+          "iso_risk_management.txt",
+          "nist_risk_strategy.txt"
+        ]
+      },
+      {
+        "id": "gaid-registration",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-09",
+        "expected_source": "dcpmi_registration.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dcpmi_registration.txt",
+          "compliance_audit_return.txt",
+          "dpo_governance.txt"
+        ]
+      },
+      {
+        "id": "gaid-car",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-10",
+        "expected_source": "compliance_audit_return.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "compliance_audit_return.txt",
+          "privacy_compliance_program.txt",
+          "dcpmi_registration.txt"
+        ]
+      },
+      {
+        "id": "gaid-dpo-position",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-12",
+        "expected_source": "dpo_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dpo_governance.txt",
+          "data_security_schedule.txt",
+          "cbn_ciso_governance.txt"
+        ]
+      },
+      {
+        "id": "gaid-security-maintenance",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-29",
+        "expected_source": "data_security_schedule.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "data_security_schedule.txt",
+          "privacy_compliance_program.txt",
+          "nist_data_at_rest.txt"
+        ]
+      },
+      {
+        "id": "gaid-training",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-30",
+        "expected_source": "privacy_training.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "privacy_training.txt",
+          "nist_awareness.txt",
+          "privacy_compliance_program.txt"
+        ]
+      },
+      {
+        "id": "gaid-breach",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-33",
+        "expected_source": "breach_response.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "breach_response.txt",
+          "nist_incident_execution.txt",
+          "cbn_ir_exercises.txt"
+        ]
+      },
+      {
+        "id": "gaid-dpa",
+        "framework_id": "ndpc-gaid-2025",
+        "control_id": "GAID-34",
+        "expected_source": "processor_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "processor_governance.txt",
+          "lawful_basis_register.txt",
+          "gdpr_ropa.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-board",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-1.1-VIII",
+        "expected_source": "cbn_board_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_board_governance.txt",
+          "cbn_risk_treatment.txt",
+          "cbn_ciso_governance.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-third-party",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-2.3",
+        "expected_source": "cbn_third_party_risk.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_third_party_risk.txt",
+          "nist_risk_strategy.txt",
+          "nist_supplier_agreements.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-incident-reporting",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-5.0-V",
+        "expected_source": "cbn_incident_reporting.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_incident_reporting.txt",
+          "nist_incident_execution.txt",
+          "cbn_soc_monitoring.txt"
+        ]
+      },
+      {
+        "id": "cbn-ofi-threat-intel",
+        "framework_id": "cbn-ofi-2022",
+        "control_id": "CBN-OFI-6.1",
+        "expected_source": "cbn_threat_intelligence.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_threat_intelligence.txt",
+          "nist_vulnerability_register.txt",
+          "cbn_risk_treatment.txt"
+        ]
+      },
+      {
+        "id": "cbn-ofi-incident-reporting",
+        "framework_id": "cbn-ofi-2022",
+        "control_id": "CBN-OFI-7.6",
+        "expected_source": "cbn_incident_reporting.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_incident_reporting.txt",
+          "nist_incident_execution.txt",
+          "breach_response.txt"
+        ]
+      },
+      {
+        "id": "iso-risk-planning",
+        "framework_id": "iso-iec-27001-2022-amd1-2024",
+        "control_id": "ISO-6",
+        "expected_source": "iso_risk_management.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "iso_risk_management.txt",
+          "nist_risk_strategy.txt",
+          "cbn_risk_treatment.txt"
+        ]
+      },
+      {
+        "id": "iso-performance-evaluation",
+        "framework_id": "iso-iec-27001-2022-amd1-2024",
+        "control_id": "ISO-9",
+        "expected_source": "iso_audit_review.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "iso_audit_review.txt",
+          "privacy_compliance_program.txt",
+          "compliance_audit_return.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-ciso-governance",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-1.3-1.4",
+        "expected_source": "cbn_ciso_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_ciso_governance.txt",
+          "dpo_governance.txt",
+          "iso_audit_review.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-risk-treatment",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-2.1.4",
+        "expected_source": "cbn_risk_treatment.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_risk_treatment.txt",
+          "iso_risk_management.txt",
+          "nist_risk_strategy.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-recovery",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-3.5",
+        "expected_source": "cbn_recovery.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_recovery.txt",
+          "nist_recovery_execution.txt",
+          "nist_data_at_rest.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-access-control",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-1.1",
+        "expected_source": "cbn_access_control.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_access_control.txt",
+          "data_security_schedule.txt",
+          "dsar_procedure.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-pam",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-1.2",
+        "expected_source": "cbn_pam.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_pam.txt",
+          "cbn_access_control.txt",
+          "cbn_emerging_ai.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-secure-configuration",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-1.5",
+        "expected_source": "cbn_secure_configuration.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_secure_configuration.txt",
+          "cbn_cloud_security.txt",
+          "cbn_application_security.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-application-security",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-1.6",
+        "expected_source": "cbn_application_security.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_application_security.txt",
+          "nist_data_at_rest.txt",
+          "data_security_schedule.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-cloud-security",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-1.8",
+        "expected_source": "cbn_cloud_security.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_cloud_security.txt",
+          "cbn_soc_monitoring.txt",
+          "cbn_ir_exercises.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-patch-management",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-1.9",
+        "expected_source": "cbn_patch_management.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_patch_management.txt",
+          "cbn_board_governance.txt",
+          "nist_vulnerability_register.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-soc-monitoring",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-2.1",
+        "expected_source": "cbn_soc_monitoring.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_soc_monitoring.txt",
+          "nist_network_monitoring.txt",
+          "cbn_threat_intelligence.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-ir-exercises",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP3-3",
+        "expected_source": "cbn_ir_exercises.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_ir_exercises.txt",
+          "nist_incident_execution.txt",
+          "nist_recovery_execution.txt"
+        ]
+      },
+      {
+        "id": "cbn-dmb-ai-security",
+        "framework_id": "cbn-dmb-psb-2024",
+        "control_id": "CBN-DMBPSB-APP4-AI",
+        "expected_source": "cbn_emerging_ai.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_emerging_ai.txt",
+          "cbn_soc_monitoring.txt",
+          "cbn_application_security.txt"
+        ]
+      },
+      {
+        "id": "gdpr-lawful-basis",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-6",
+        "expected_source": "lawful_basis_register.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "lawful_basis_register.txt",
+          "gdpr_ropa.txt",
+          "privacy_notice.txt"
+        ]
+      },
+      {
+        "id": "gdpr-transparency",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-12-14",
+        "expected_source": "privacy_notice.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "privacy_notice.txt",
+          "children_data.txt",
+          "consent_management.txt"
+        ]
+      },
+      {
+        "id": "gdpr-data-subject-rights",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-15-22",
+        "expected_source": "dsar_procedure.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dsar_procedure.txt",
+          "processor_governance.txt",
+          "privacy_notice.txt"
+        ]
+      },
+      {
+        "id": "gdpr-controller-processors",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-28-C",
+        "expected_source": "processor_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "processor_governance.txt",
+          "gdpr_ropa.txt",
+          "nist_legal_register.txt"
+        ]
+      },
+      {
+        "id": "gdpr-controller-ropa",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-30-C",
+        "expected_source": "gdpr_ropa.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "gdpr_ropa.txt",
+          "lawful_basis_register.txt",
+          "cross_border_transfer.txt"
+        ]
+      },
+      {
+        "id": "gdpr-security",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-32",
+        "expected_source": "data_security_schedule.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "data_security_schedule.txt",
+          "nist_data_at_rest.txt",
+          "gdpr_ropa.txt"
+        ]
+      },
+      {
+        "id": "gdpr-controller-breach",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-33-C",
+        "expected_source": "breach_response.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "breach_response.txt",
+          "data_portability.txt",
+          "privacy_notice.txt"
+        ]
+      },
+      {
+        "id": "gdpr-dpia",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-35",
+        "expected_source": "dpia.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dpia.txt",
+          "iso_risk_management.txt",
+          "cbn_risk_treatment.txt"
+        ]
+      },
+      {
+        "id": "gdpr-dpo",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-37",
+        "expected_source": "dpo_governance.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "dpo_governance.txt",
+          "privacy_notice.txt",
+          "dcpmi_registration.txt"
+        ]
+      },
+      {
+        "id": "gdpr-cross-border",
+        "framework_id": "gdpr-2016-679",
+        "control_id": "GDPR-44-49",
+        "expected_source": "cross_border_transfer.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cross_border_transfer.txt",
+          "dpia.txt",
+          "gdpr_ropa.txt"
+        ]
+      },
+      {
+        "id": "nist-legal-regulatory-context",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-GV.OC-03",
+        "expected_source": "nist_legal_register.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_legal_register.txt",
+          "cbn_incident_reporting.txt",
+          "cbn_third_party_risk.txt"
+        ]
+      },
+      {
+        "id": "nist-risk-management-strategy",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-GV.RM-01",
+        "expected_source": "nist_risk_strategy.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_risk_strategy.txt",
+          "iso_risk_management.txt",
+          "cbn_risk_treatment.txt"
+        ]
+      },
+      {
+        "id": "nist-supplier-contract-requirements",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-GV.SC-05",
+        "expected_source": "nist_supplier_agreements.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_supplier_agreements.txt",
+          "nist_risk_strategy.txt",
+          "cbn_third_party_risk.txt"
+        ]
+      },
+      {
+        "id": "nist-hardware-inventory",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-ID.AM-01",
+        "expected_source": "nist_asset_inventory.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_asset_inventory.txt",
+          "nist_supplier_agreements.txt",
+          "automated_decisions.txt"
+        ]
+      },
+      {
+        "id": "nist-vulnerability-identification",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-ID.RA-01",
+        "expected_source": "nist_vulnerability_register.txt",
+        "rank": 2,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_threat_intelligence.txt",
+          "nist_vulnerability_register.txt",
+          "nist_risk_strategy.txt"
+        ]
+      },
+      {
+        "id": "nist-awareness-training",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-PR.AT-01",
+        "expected_source": "nist_awareness.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_awareness.txt",
+          "privacy_training.txt",
+          "dpo_governance.txt"
+        ]
+      },
+      {
+        "id": "nist-identity-access",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-PR.AA-01",
+        "expected_source": "cbn_access_control.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "cbn_access_control.txt",
+          "dsar_procedure.txt",
+          "data_security_schedule.txt"
+        ]
+      },
+      {
+        "id": "nist-data-at-rest",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-PR.DS-01",
+        "expected_source": "nist_data_at_rest.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_data_at_rest.txt",
+          "data_security_schedule.txt",
+          "processor_governance.txt"
+        ]
+      },
+      {
+        "id": "nist-network-monitoring",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-DE.CM-01",
+        "expected_source": "nist_network_monitoring.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_network_monitoring.txt",
+          "cbn_soc_monitoring.txt",
+          "cbn_secure_configuration.txt"
+        ]
+      },
+      {
+        "id": "nist-incident-response-execution",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-RS.MA-01",
+        "expected_source": "nist_incident_execution.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_incident_execution.txt",
+          "cbn_ir_exercises.txt",
+          "nist_recovery_execution.txt"
+        ]
+      },
+      {
+        "id": "nist-recovery-execution",
+        "framework_id": "nist-csf-2.0",
+        "control_id": "NIST-RC.RP-01",
+        "expected_source": "nist_recovery_execution.txt",
+        "rank": 1,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "top_sources": [
+          "nist_recovery_execution.txt",
+          "cbn_recovery.txt",
+          "nist_incident_execution.txt"
+        ]
+      }
+    ]
+  },
+  "provenance": {
+    "frameworks": 7,
+    "controls": 213,
+    "verification_tiers": {
+      "authority_traceable": 213
+    },
+    "errors": 0,
+    "warnings": 0,
+    "findings": []
+  },
+  "security": {
+    "prompt_injection_detection": true,
+    "copilot_flagged_evidence_exclusion": true,
+    "pass": true
+  },
+  "thresholds": {
+    "recall_at_3": 0.9,
+    "mrr": 0.75
+  }
+}

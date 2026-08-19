@@ -1,0 +1,160 @@
+framework_id: iso-iec-27001-2022-amd1-2024
+name: ISO/IEC 27001:2022 + Amendment 1:2024 - ISMS Core Readiness
+jurisdiction: Global
+version: 2022 + Amd 1:2024
+authority: ISO/IEC
+source:
+  authority: ISO/IEC
+  title: ISO/IEC 27001:2022 - Information security management systems - Requirements
+  version: 2022 + Amendment 1:2024
+  source_url: https://www.iso.org/standard/27001
+  last_verified: '2026-08-19'
+  source_type: official
+  notes: This open-source pack uses clause references and original summaries only.
+    It does not reproduce the copyrighted standard or Annex A control text.
+scope_note: Clause-level ISMS readiness only. Full certification readiness requires
+  the licensed standard, Annex A applicability work, a Statement of Applicability,
+  risk treatment evidence, and qualified audit judgement.
+copyright_mode: reference_only_no_standard_text
+controls:
+- control_id: ISO-4
+  reference: Clause 4
+  title: Organisational context and ISMS scope
+  requirement_summary: Document relevant internal/external context, interested parties
+    and requirements, and define an appropriate ISMS scope and operating system.
+  evidence_examples:
+  - context analysis
+  - interested parties register
+  - ISMS scope
+  - ISMS process map
+  capability_tags:
+  - isms
+  - governance
+  - scope
+  weight: 1.2
+  source_locator: Clause 4 - reference only
+  verification_status: official_reference_paraphrase
+- control_id: ISO-4-A1
+  reference: Clauses 4.1 and 4.2 - Amendment 1:2024
+  title: Climate-change relevance consideration
+  requirement_summary: Document whether climate change is a relevant issue for the
+    ISMS context and consider relevant climate-related requirements of interested
+    parties.
+  evidence_examples:
+  - context register
+  - interested parties register
+  - management review
+  - risk assessment
+  capability_tags:
+  - isms
+  - context
+  - climate_change
+  weight: 0.5
+  source_locator: ISO/IEC 27001:2022/Amd 1:2024
+  verification_status: official_reference_paraphrase
+- control_id: ISO-5
+  reference: Clause 5
+  title: Leadership, policy and responsibilities
+  requirement_summary: Demonstrate leadership commitment, maintain an information
+    security policy, and assign relevant ISMS roles and responsibilities.
+  evidence_examples:
+  - information security policy
+  - role descriptions
+  - governance charter
+  - management approval
+  capability_tags:
+  - isms
+  - governance
+  - policy_management
+  weight: 1.3
+  source_locator: Clause 5 - reference only
+  verification_status: official_reference_paraphrase
+- control_id: ISO-6
+  reference: Clause 6
+  title: Risk and objective planning
+  requirement_summary: Maintain a structured information-security risk assessment
+    and treatment approach, security objectives, and plans for achieving them.
+  evidence_examples:
+  - risk methodology
+  - risk register
+  - risk treatment plan
+  - security objectives
+  - Statement of Applicability reference
+  capability_tags:
+  - isms
+  - risk_assessment
+  - risk_treatment
+  weight: 1.7
+  source_locator: Clause 6 - reference only
+  verification_status: official_reference_paraphrase
+- control_id: ISO-7
+  reference: Clause 7
+  title: ISMS support
+  requirement_summary: Provide resources, competence, awareness, communication and
+    controlled documented information needed to operate the ISMS.
+  evidence_examples:
+  - training records
+  - competence matrix
+  - communication plan
+  - document control procedure
+  capability_tags:
+  - isms
+  - training
+  - document_control
+  weight: 1.0
+  source_locator: Clause 7 - reference only
+  verification_status: official_reference_paraphrase
+- control_id: ISO-8
+  reference: Clause 8
+  title: ISMS operation
+  requirement_summary: Operate planned information-security processes and perform
+    risk assessment and treatment activities as required by the organisation's ISMS
+    approach.
+  evidence_examples:
+  - operational procedures
+  - completed risk assessments
+  - risk treatment evidence
+  - change records
+  capability_tags:
+  - isms
+  - operations
+  - risk_treatment
+  weight: 1.5
+  source_locator: Clause 8 - reference only
+  verification_status: official_reference_paraphrase
+- control_id: ISO-9
+  reference: Clause 9
+  title: Performance evaluation
+  requirement_summary: Monitor and evaluate ISMS performance, conduct internal audits,
+    and perform management reviews at planned intervals.
+  evidence_examples:
+  - ISMS metrics
+  - internal audit report
+  - audit programme
+  - management review minutes
+  capability_tags:
+  - isms
+  - audit
+  - metrics
+  - management_review
+  weight: 1.5
+  source_locator: Clause 9 - reference only
+  verification_status: official_reference_paraphrase
+- control_id: ISO-10
+  reference: Clause 10
+  title: Improvement and corrective action
+  requirement_summary: Manage nonconformities and corrective actions and demonstrate
+    continual improvement of the ISMS.
+  evidence_examples:
+  - corrective action register
+  - nonconformity log
+  - improvement plan
+  - lessons learned
+  capability_tags:
+  - isms
+  - corrective_action
+  - continual_improvement
+  weight: 1.2
+  source_locator: Clause 10 - reference only
+  verification_status: official_reference_paraphrase
+framework_type: international_standard

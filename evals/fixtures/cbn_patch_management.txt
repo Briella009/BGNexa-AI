@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The vulnerability remediation and patch management procedure assigns remediation owners and target timelines by severity. Patches are scanned and tested before deployment, security updates are applied promptly, remediation is validated after deployment and the patch process is periodically audited with reports to Senior Management.

@@ -1,0 +1,4 @@
+-r requirements-core.txt
+streamlit>=1.40,<2
+openai>=2.45,<3
+pytest>=8.0,<9

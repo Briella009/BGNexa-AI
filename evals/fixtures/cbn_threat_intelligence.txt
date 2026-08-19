@@ -1,0 +1,1 @@
+Synthetic evaluation fixture. The cyber-threat intelligence programme collects internal and external threat information, validates indicators of compromise, produces threat reports and briefings, maps emerging threats to assets and detection use cases, and feeds intelligence into monitoring and risk assessment activities.

@@ -1,0 +1,497 @@
+framework_id: cbn-ofi-2022
+name: CBN Risk-Based Cybersecurity Framework - OFIs
+jurisdiction: Nigeria
+version: '2022'
+authority: Central Bank of Nigeria
+source:
+  authority: Central Bank of Nigeria
+  title: Risk-Based Cybersecurity Framework and Guidelines for Other Financial Institutions
+    (OFIs)
+  version: June 2022
+  source_url: https://www.cbn.gov.ng/Out/2022/OFISD/Letter%20to%20all%20OFIs%20Issuance%20of%20Risk-Based%20Cybersecurity%20Framework%20and%20Guidelines%20for%20Other%20Financial%20Institutions.pdf
+  last_verified: '2026-08-19'
+  source_type: direct_authority_pdf_verified_user_supplied_scan
+  notes: Effective date stated in the issuing letter is 1 January 2023. The user-supplied
+    authority PDF is image-only and was verified by full render review on 2026-08-19.
+    The source PDF is marked Classified as Confidential and is not redistributed.
+scope_note: Selected high-value controls from the CBN OFI 2022 framework, directly
+  verified against the user-supplied 43-page scanned authority document. This control
+  pack is traceable but does not claim to reproduce every requirement in the source.
+copyright_mode: public_regulatory_guidance_paraphrase
+controls:
+- control_id: CBN-OFI-2.4.14
+  reference: 2.4.14
+  title: Cybersecurity as a standing Board agenda item
+  requirement_summary: Cybersecurity should be a standing agenda item at Board meetings.
+  evidence_examples:
+  - board minutes
+  - board agenda
+  - cybersecurity board report
+  capability_tags:
+  - governance
+  - board_oversight
+  weight: 1.0
+  source_locator: 2.4.14
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 7
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-2.4.17
+  reference: 2.4.17
+  title: Quarterly Board cybersecurity reporting
+  requirement_summary: The Board should receive and review quarterly reporting on
+    the overall cybersecurity programme and adherence to approved cyber-risk thresholds.
+  evidence_examples:
+  - quarterly cyber report
+  - board pack
+  - risk dashboard
+  - board minutes
+  capability_tags:
+  - governance
+  - metrics
+  - reporting
+  weight: 1.2
+  source_locator: 2.4.17
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 8
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-2.4.18
+  reference: 2.4.18
+  title: CISO appointment or designation
+  requirement_summary: Appoint or designate a qualified CISO responsible for oversight
+    and implementation of the cybersecurity programme.
+  evidence_examples:
+  - CISO appointment letter
+  - job description
+  - organisation chart
+  capability_tags:
+  - governance
+  - ciso
+  weight: 1.2
+  source_locator: 2.4.18 and 2.6
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 8
+  - 9
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-2.10.4
+  reference: 2.10.4
+  title: Cybersecurity policy review
+  requirement_summary: Board-approved cybersecurity policy documents should be reviewed
+    and updated at least annually or when significant cyber-risk changes occur.
+  evidence_examples:
+  - cybersecurity policy
+  - policy review log
+  - board approval
+  - change history
+  capability_tags:
+  - policy_management
+  - governance
+  weight: 1.0
+  source_locator: 2.10.4
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 14
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-3.7
+  reference: '3.7'
+  title: Cyber risk, vulnerability and threat assessment
+  requirement_summary: Regularly conduct risk assessments, vulnerability assessments
+    and threat analysis to evaluate risks to information assets and control adequacy.
+  evidence_examples:
+  - cyber risk assessment
+  - vulnerability assessment
+  - penetration test
+  - threat analysis
+  capability_tags:
+  - risk_assessment
+  - vulnerability_management
+  - threat_intelligence
+  weight: 1.5
+  source_locator: '3.7'
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 15
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-4.3
+  reference: '4.3'
+  title: Annual cybersecurity self-assessment reporting
+  requirement_summary: Conduct the prescribed annual cybersecurity self-assessment
+    and submit the signed report to the relevant CBN supervision function on or before
+    31 March, including gaps, threats, risks, impacts, action plans, timelines and
+    remediation status.
+  evidence_examples:
+  - cybersecurity self-assessment
+  - submission acknowledgement
+  - remediation roadmap
+  - CISO sign-off
+  capability_tags:
+  - regulatory_reporting
+  - self_assessment
+  - remediation
+  weight: 1.5
+  source_locator: '4.3'
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 16
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-5.1
+  reference: '5.1'
+  title: Asset and environment inventory
+  requirement_summary: Maintain an up-to-date inventory of authorised software, hardware,
+    network devices and connections, and identify, remove and report unauthorised
+    assets.
+  evidence_examples:
+  - asset inventory
+  - software inventory
+  - network diagram
+  - unauthorised asset process
+  capability_tags:
+  - asset_management
+  - network_security
+  weight: 1.3
+  source_locator: '5.1'
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 16
+  - 21
+  - 22
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-6.1
+  reference: '6.1'
+  title: Cyber-threat intelligence programme
+  requirement_summary: Establish a cyber-threat intelligence programme to proactively
+    identify, detect and mitigate potential cyber threats and risks.
+  evidence_examples:
+  - CTI policy
+  - threat feeds
+  - intelligence reports
+  - threat briefings
+  - IOC process
+  capability_tags:
+  - threat_intelligence
+  - detection
+  weight: 1.2
+  source_locator: 6.1-6.5
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 17
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-7.5
+  reference: '7.5'
+  title: Quarterly cybersecurity status reporting
+  requirement_summary: Provide the Board and Senior Management with quarterly reports
+    on the state of the cyber/information security programme and governance issues.
+  evidence_examples:
+  - quarterly cyber report
+  - management dashboard
+  - board report
+  capability_tags:
+  - metrics
+  - reporting
+  - governance
+  weight: 1.0
+  source_locator: '7.5'
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 18
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-7.6
+  reference: '7.6'
+  title: CBN cyber-incident reporting
+  requirement_summary: Maintain a process to report all cyber incidents, whether successful
+    or unsuccessful, to the Director, Other Financial Institutions Supervision Department
+    not later than 24 hours after detection using the prescribed reporting format.
+  evidence_examples:
+  - incident reporting procedure
+  - CBN notification template
+  - incident log
+  - notification evidence
+  capability_tags:
+  - incident_response
+  - regulatory_reporting
+  weight: 1.7
+  source_locator: '7.6'
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 18
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-8.1
+  reference: '8.1'
+  title: Statutory and regulatory cybersecurity compliance
+  requirement_summary: Board and Senior Management should ensure compliance with relevant
+    cybersecurity statutes, regulations and CBN directives.
+  evidence_examples:
+  - legal register
+  - compliance register
+  - regulatory mapping
+  - compliance report
+  capability_tags:
+  - regulatory_compliance
+  - governance
+  weight: 1.0
+  source_locator: '8.1'
+  verification_status: direct_authority_pdf_verified
+  source_pdf_pages:
+  - 19
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+- control_id: CBN-OFI-APP3-1
+  reference: Appendix III - 1
+  title: Access control baseline
+  requirement_summary: Establish an access control policy and supporting mechanisms
+    for identity, credential, authorisation, least-privilege and physical-access management
+    across information assets.
+  evidence_examples:
+  - access control policy
+  - access control matrix
+  - identity lifecycle procedure
+  - access review records
+  capability_tags:
+  - access_control
+  - identity_management
+  weight: 1.4
+  source_locator: Appendix III, section 1 - Access Control
+  source_pdf_pages:
+  - 25
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-2
+  reference: Appendix III - 2
+  title: Secure configuration management
+  requirement_summary: Maintain secure baseline configurations and controls to detect,
+    log and respond to unauthorised configuration changes.
+  evidence_examples:
+  - secure configuration standard
+  - hardening baseline
+  - configuration monitoring
+  - change records
+  capability_tags:
+  - secure_configuration
+  - change_management
+  weight: 1.3
+  source_locator: Appendix III, section 2 - Secure System Configuration Management
+  source_pdf_pages:
+  - 25
+  - 26
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-3
+  reference: Appendix III - 3
+  title: Cybersecurity awareness training
+  requirement_summary: Maintain cybersecurity awareness content and ensure Board members
+    and employees participate at least annually, with appropriate awareness for vendors
+    and customers.
+  evidence_examples:
+  - security awareness programme
+  - training attendance
+  - board training records
+  - vendor awareness records
+  capability_tags:
+  - security_awareness
+  - training
+  - governance
+  weight: 1.2
+  source_locator: Appendix III, section 3 - Cybersecurity Awareness Training
+  source_pdf_pages:
+  - 26
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-4
+  reference: Appendix III - 4
+  title: Data security and loss prevention
+  requirement_summary: Protect sensitive and confidential information through classification,
+    monitoring, data-loss controls, secure disposal and equivalent controls at relevant
+    vendor-managed facilities.
+  evidence_examples:
+  - data classification policy
+  - DLP configuration
+  - secure disposal procedure
+  - vendor security assessment
+  capability_tags:
+  - data_security
+  - data_classification
+  - third_party_risk
+  weight: 1.5
+  source_locator: Appendix III, section 4 - Data Security
+  source_pdf_pages:
+  - 27
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-5
+  reference: Appendix III - 5
+  title: Secure system life cycle management
+  requirement_summary: Establish lifecycle policies for systems and applications and
+    integrate cybersecurity controls into acquisition, development, maintenance, update
+    and disposal activities.
+  evidence_examples:
+  - SDLC policy
+  - secure development standard
+  - security requirements
+  - decommissioning procedure
+  capability_tags:
+  - secure_development
+  - system_lifecycle
+  - data_security
+  weight: 1.4
+  source_locator: Appendix III, section 5 - System Life Cycle Management
+  source_pdf_pages:
+  - 27
+  - 28
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-6A
+  reference: Appendix III - 6(a)
+  title: Vulnerability management
+  requirement_summary: Maintain a Board-approved vulnerability management strategy,
+    identify and document vulnerabilities, and conduct vulnerability assessments at
+    least quarterly and after significant infrastructure changes or newly disclosed
+    vulnerabilities.
+  evidence_examples:
+  - vulnerability management policy
+  - quarterly vulnerability scan
+  - vulnerability register
+  - remediation records
+  capability_tags:
+  - vulnerability_management
+  - risk_assessment
+  - patch_management
+  weight: 1.6
+  source_locator: Appendix III, section 6(a) - Vulnerability Management / Information
+    Assets
+  source_pdf_pages:
+  - 28
+  - 29
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-6B
+  reference: Appendix III - 6(b)
+  title: Privileged account risk controls
+  requirement_summary: Identify privileged employees and service accounts and apply
+    segregation of duties, least privilege, appropriate account management and restrictions
+    on shared privileged credentials.
+  evidence_examples:
+  - privileged account inventory
+  - PAM policy
+  - access review
+  - segregation of duties matrix
+  capability_tags:
+  - privileged_access
+  - access_control
+  - identity_management
+  weight: 1.5
+  source_locator: Appendix III, section 6(b) - System Administrators and Privileged
+    Accounts
+  source_pdf_pages:
+  - 29
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-6C
+  reference: Appendix III - 6(c)
+  title: Vendor privileged-access controls
+  requirement_summary: Restrict vendor access to information assets, require management
+    approval where access is needed, monitor vendor activity and avoid unattended
+    or unfettered vendor access.
+  evidence_examples:
+  - vendor access procedure
+  - vendor access approvals
+  - session logs
+  - third-party access review
+  capability_tags:
+  - third_party_risk
+  - access_control
+  - monitoring
+  weight: 1.5
+  source_locator: Appendix III, section 6(c) - Vendors
+  source_pdf_pages:
+  - 30
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-7
+  reference: Appendix III - 7
+  title: Continuous security monitoring
+  requirement_summary: Define and operate continuous security monitoring covering
+    relevant systems, databases, networks, log security, monitoring baselines, alerting,
+    anomaly detection and response-related information.
+  evidence_examples:
+  - continuous monitoring strategy
+  - SIEM configuration
+  - log retention policy
+  - SOC monitoring records
+  capability_tags:
+  - monitoring
+  - detection
+  - logging
+  weight: 1.6
+  source_locator: Appendix III, section 7 - Continuous Security Monitoring
+  source_pdf_pages:
+  - 30
+  - 31
+  - 32
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+- control_id: CBN-OFI-APP3-8
+  reference: Appendix III - 8
+  title: Incident response and disaster recovery
+  requirement_summary: Maintain and test incident response, disaster recovery and
+    business continuity arrangements, including Board-approved incident response planning,
+    defined response roles, exercises and continuous improvement from lessons learned.
+  evidence_examples:
+  - incident response plan
+  - DR/BCP plan
+  - exercise schedule
+  - tabletop report
+  - lessons learned
+  capability_tags:
+  - incident_response
+  - business_continuity
+  - recovery
+  weight: 1.7
+  source_locator: Appendix III, section 8 - Incident Response (IR) and Disaster Recovery
+    (DR)
+  source_pdf_pages:
+  - 32
+  verification_status: direct_authority_pdf_verified
+  verification_note: Verified by visual review of the user-supplied scanned CBN OFI
+    authority PDF on 2026-08-19.
+  applicability: {}
+  notes: null
+framework_type: regulatory_framework
