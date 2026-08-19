@@ -17,7 +17,7 @@ from src.gdpr import triage_gdpr_article3
 from src.embeddings import OpenAIEmbedder, can_use_openai_embeddings
 from src.evidence import parse_bytes, parse_path
 from src.framework_loader import load_frameworks
-from src.llm import can_use_llm
+from src.llm import can_use_llm, llm_model_name, llm_provider
 from src.models import AssessmentResult, AssessmentStatus, HumanValidation
 from src.report import build_executive_html, priority_gaps_dataframe, results_dataframe
 from src.retriever import HybridEvidenceRetriever
@@ -405,14 +405,21 @@ with st.sidebar:
     ai_available = can_use_llm()
     use_ai = st.toggle("Use AI evidence reviewer", value=False, disabled=not ai_available)
     if ai_available:
-        st.caption(f"Reasoning model: {os.getenv('OPENAI_MODEL', 'gpt-5.6')}. Structured output is used.")
+        provider = llm_provider()
+        st.caption(f"Generation provider: {provider}. Reasoning model: {llm_model_name()}. Structured output is used.")
     else:
-        st.caption("No OPENAI_API_KEY detected. Retrieved candidates remain review-required until a person validates them.")
+        st.caption("No supported generation API key detected. Retrieved candidates remain review-required until a person validates them.")
 
     if use_semantic_retrieval or use_ai:
+        providers = []
+        if use_semantic_retrieval:
+            providers.append("OpenAI embeddings")
+        if use_ai and llm_provider():
+            providers.append(f"{llm_provider()} generation")
         st.warning(
-            "External AI mode is enabled. Relevant organisational evidence will be sent to the configured OpenAI API for "
-            "embeddings and/or evidence review. Use only evidence you are authorised to process through that provider."
+            "External AI mode is enabled. Relevant organisational evidence will be sent to the configured provider(s): "
+            + ", ".join(providers)
+            + ". Use only evidence you are authorised to process through those providers."
         )
 
 recommended = recommended_framework_ids(

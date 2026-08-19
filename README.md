@@ -72,6 +72,19 @@ The product deliberately labels each pack by source type:
 
 A readiness percentage inside one pack is therefore **not** treated as interchangeable with another pack and is never described as certification or legal compliance.
 
+
+## Free-tier AI option (Groq)
+
+BGNexa can run without any API key in deterministic retrieval/manual-review mode. For optional generation, it also supports Groq through its OpenAI-compatible API. When only Groq is configured, generation can be enabled while semantic embeddings stay on the local TF-IDF fallback.
+
+```env
+AI_PROVIDER=groq
+GROQ_API_KEY=your_key_here
+GROQ_MODEL=openai/gpt-oss-20b
+```
+
+Never commit real API keys. On Streamlit Community Cloud, store them in **App settings → Secrets**. External-AI mode sends only the retrieved evidence selected for the request to the configured generation provider.
+
 ## Quick start
 
 ```bash

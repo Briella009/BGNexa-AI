@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from .llm import can_use_llm
+from .llm import _structured_completion, can_use_llm
 from .models import CopilotAnswer, CopilotCitation, EvidenceMatch, Framework
 
 
@@ -149,21 +149,11 @@ Relevant framework summaries:
 {controls_text}
 """
 
-    from openai import OpenAI
-
-    client = OpenAI()
-    response = client.responses.parse(
-        model=os.getenv("OPENAI_MODEL", "gpt-5.6"),
-        input=[
-            {"role": "system", "content": COPILOT_SYSTEM},
-            {"role": "user", "content": prompt},
-        ],
-        text_format=LLMCopilotDecision,
-        store=False,
+    decision = _structured_completion(
+        system=COPILOT_SYSTEM,
+        user=prompt,
+        schema=LLMCopilotDecision,
     )
-    decision = response.output_parsed
-    if decision is None:
-        raise RuntimeError("The model did not return a structured Copilot answer.")
 
     evidence_by_id = {e.chunk_id: e for e in safe_evidence}
     controls_by_id = {c.control_id: (fw, c) for fw, c, _ in framework_hits}

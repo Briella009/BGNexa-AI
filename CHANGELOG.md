@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.4.1
+
+- Added Groq as an optional free-tier-friendly generation provider through the existing OpenAI-compatible client.
+- Added automatic provider selection with `AI_PROVIDER`, `GROQ_API_KEY`, and `GROQ_MODEL`.
+- Kept OpenAI embeddings optional and independent from Groq generation.
+- Preserved deterministic/manual-review behavior when no provider key is configured.
+- Added provider-selection regression tests.
+
 ## 0.4.0 - 2026-08-19
 
 - Rebranded the product as **BGNexa AI** with the tagline "Turn evidence into readiness."

@@ -1,6 +1,6 @@
 # Stage 4 Evaluation Report
 
-Generated: 2026-08-19T12:57:07+00:00
+Generated: 2026-08-19T15:36:16+00:00
 
 ## Retrieval baseline
 
