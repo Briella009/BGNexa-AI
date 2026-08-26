@@ -146,7 +146,8 @@ def assess_with_llm(control: Control, evidence: list[EvidenceMatch]) -> LLMDecis
     evidence_text = "\n\n".join(
         (
             f"<evidence source={e.source_name!r} page={e.page!r} retrieval_score={e.retrieval_score!r} "
-            f"evidence_type={e.evidence_type.value!r} document_date={e.document_date!r} "
+            f"evidence_type={e.evidence_type.value!r} evidence_type_tags={[t.value for t in e.evidence_type_tags]!r} "
+            f"document_date={e.document_date!r} date_source={e.date_source!r} "
             f"freshness={e.freshness_status.value!r} age_days={e.age_days!r}>\n{e.excerpt}\n</evidence>"
         )
         for e in evidence

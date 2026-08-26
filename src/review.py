@@ -6,7 +6,7 @@ from copy import deepcopy
 from datetime import datetime, timezone
 from typing import Any
 
-from .models import AssessmentResult, AssessmentStatus, Framework, HumanValidation
+from .models import AssessmentResult, AssessmentStatus, EvidenceSourceRecord, Framework, HumanValidation
 
 
 REVIEWABLE_STATUSES = {
@@ -80,6 +80,7 @@ def build_assessment_snapshot(
     bundle: dict[str, dict[str, Any]],
     organisation_profile: dict[str, Any],
     validations: list[HumanValidation] | None = None,
+    source_records: list[EvidenceSourceRecord] | None = None,
     created_at: str | None = None,
 ) -> dict[str, Any]:
     """Create a deterministic, tamper-evident assessment snapshot.
@@ -89,6 +90,7 @@ def build_assessment_snapshot(
     """
     created_at = created_at or utc_now_iso()
     validations = validations or []
+    source_records = source_records or []
 
     frameworks: list[dict[str, Any]] = []
     for framework_id in sorted(bundle):
@@ -119,8 +121,12 @@ def build_assessment_snapshot(
                                 "source_name": e.source_name,
                                 "page": e.page,
                                 "content_hash": e.content_hash,
+                                "source_hash": e.source_hash,
+                                "source_size_bytes": e.source_size_bytes,
+                                "source_extension": e.source_extension,
                                 "retrieval_method": e.retrieval_method,
                                 "evidence_type": e.evidence_type.value,
+                                "evidence_type_tags": [tag.value for tag in e.evidence_type_tags],
                                 "document_date": e.document_date,
                                 "date_source": e.date_source,
                                 "age_days": e.age_days,
@@ -140,9 +146,10 @@ def build_assessment_snapshot(
         )
 
     payload = {
-        "snapshot_schema": "readiness-copilot/v2",
+        "snapshot_schema": "readiness-copilot/v3",
         "created_at": created_at,
         "organisation_profile": deepcopy(organisation_profile),
+        "evidence_sources": [record.model_dump(mode="json") for record in source_records],
         "frameworks": frameworks,
         "validations": [v.model_dump(mode="json") for v in validations],
         "notice": (

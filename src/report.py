@@ -6,7 +6,7 @@ from typing import Any
 import pandas as pd
 
 from .crosswalk import evidence_reuse_opportunities
-from .models import AssessmentResult, AssessmentStatus, Framework
+from .models import AssessmentResult, AssessmentStatus, EvidenceSourceRecord, Framework
 
 
 def results_dataframe(framework: Framework, results: list[AssessmentResult]) -> pd.DataFrame:
@@ -23,7 +23,15 @@ def results_dataframe(framework: Framework, results: list[AssessmentResult]) -> 
                 "title": control.title,
                 "status": result.status.value,
                 "evidence_strength": result.evidence_strength,
-                "evidence_types": "; ".join(sorted({e.evidence_type.value for e in result.evidence})),
+                "evidence_types": "; ".join(
+                    sorted(
+                        {
+                            tag.value
+                            for e in result.evidence
+                            for tag in (e.evidence_type_tags or [e.evidence_type])
+                        }
+                    )
+                ),
                 "evidence_freshness": "; ".join(sorted({e.freshness_status.value for e in result.evidence})),
                 "evidence_dates": "; ".join(sorted({e.document_date for e in result.evidence if e.document_date})),
                 "evidence_quality_flags": "; ".join(result.evidence_quality_flags),
@@ -37,6 +45,7 @@ def results_dataframe(framework: Framework, results: list[AssessmentResult]) -> 
                 "evidence_sources": "; ".join(
                     f"{e.source_name}{f' p.{e.page}' if e.page else ''}" for e in result.evidence
                 ),
+                "evidence_source_sha256": "; ".join(sorted({e.source_hash for e in result.evidence if e.source_hash})),
                 "retrieval_methods": "; ".join(sorted({e.retrieval_method for e in result.evidence})),
                 "source_locator": control.source_locator,
                 "verification_status": control.verification_status,
@@ -45,8 +54,83 @@ def results_dataframe(framework: Framework, results: list[AssessmentResult]) -> 
     return pd.DataFrame(rows)
 
 
-def evidence_quality_dataframe(bundle: dict[str, dict[str, Any]]) -> pd.DataFrame:
-    """Return one row per unique evidence source observed in the current assessment."""
+def evidence_quality_dataframe(
+    bundle: dict[str, dict[str, Any]],
+    source_records: list[EvidenceSourceRecord] | None = None,
+) -> pd.DataFrame:
+    """Return one row per supplied evidence source, even when retrieval never uses it."""
+
+    usage: dict[str, dict[str, Any]] = {}
+    for item in bundle.values():
+        for result in item["results"]:
+            for evidence in result.evidence:
+                row = usage.setdefault(
+                    evidence.source_name,
+                    {
+                        "matched_controls": set(),
+                        "retrieved_chunks": set(),
+                    },
+                )
+                row["matched_controls"].add((result.framework_id, result.control_id))
+                row["retrieved_chunks"].add(evidence.chunk_id)
+
+    columns = [
+        "source",
+        "parse_status",
+        "assessment_use",
+        "matched_controls",
+        "chunk_count",
+        "evidence_type",
+        "evidence_type_tags",
+        "document_date",
+        "date_source",
+        "age_days",
+        "freshness",
+        "quality_flags",
+        "prompt_injection_flag",
+        "parse_error",
+        "sha256",
+        "size_bytes",
+    ]
+
+    if source_records is not None:
+        rows = []
+        for record in source_records:
+            source_usage = usage.get(record.source_name, {})
+            matched_count = len(source_usage.get("matched_controls", set()))
+            if record.parse_status == "parse_error":
+                assessment_use = "parse_error"
+            elif record.parse_status == "parsed_no_text":
+                assessment_use = "parsed_no_text"
+            elif matched_count:
+                assessment_use = "retrieved"
+            else:
+                assessment_use = "indexed_not_retrieved"
+            rows.append(
+                {
+                    "source": record.source_name,
+                    "parse_status": record.parse_status,
+                    "assessment_use": assessment_use,
+                    "matched_controls": matched_count,
+                    "chunk_count": record.chunk_count,
+                    "evidence_type": record.evidence_type.value,
+                    "evidence_type_tags": "; ".join(tag.value for tag in record.evidence_type_tags),
+                    "document_date": record.document_date or "",
+                    "date_source": record.date_source or "",
+                    "age_days": record.age_days,
+                    "freshness": record.freshness_status.value,
+                    "quality_flags": "; ".join(record.quality_flags),
+                    "prompt_injection_flag": record.injection_flag,
+                    "parse_error": record.parse_error or "",
+                    "sha256": record.source_hash,
+                    "size_bytes": record.size_bytes,
+                }
+            )
+        if not rows:
+            return pd.DataFrame(columns=columns)
+        return pd.DataFrame(rows).sort_values(["parse_status", "source"]).reset_index(drop=True)
+
+    # Compatibility fallback for callers that only have an assessment bundle.
     by_source: dict[str, dict[str, Any]] = {}
     for item in bundle.values():
         for result in item["results"]:
@@ -55,19 +139,39 @@ def evidence_quality_dataframe(bundle: dict[str, dict[str, Any]]) -> pd.DataFram
                     evidence.source_name,
                     {
                         "source": evidence.source_name,
+                        "parse_status": "parsed",
+                        "assessment_use": "retrieved",
+                        "matched_controls": 0,
+                        "chunk_count": 0,
                         "evidence_type": evidence.evidence_type.value,
+                        "evidence_type_tags": set(),
                         "document_date": evidence.document_date or "",
+                        "date_source": evidence.date_source or "",
                         "age_days": evidence.age_days,
                         "freshness": evidence.freshness_status.value,
                         "quality_flags": set(),
+                        "prompt_injection_flag": evidence.injection_flag,
+                        "parse_error": "",
+                        "sha256": evidence.source_hash or "",
+                        "size_bytes": evidence.source_size_bytes,
+                        "control_ids": set(),
+                        "chunk_ids": set(),
                     },
                 )
                 row["quality_flags"].update(evidence.quality_flags)
+                row["prompt_injection_flag"] = row["prompt_injection_flag"] or evidence.injection_flag
+                row["evidence_type_tags"].update(tag.value for tag in (evidence.evidence_type_tags or [evidence.evidence_type]))
+                row["control_ids"].add((result.framework_id, result.control_id))
+                row["chunk_ids"].add(evidence.chunk_id)
     rows = []
     for row in by_source.values():
-        rows.append({**row, "quality_flags": "; ".join(sorted(row["quality_flags"]))})
+        row["matched_controls"] = len(row.pop("control_ids"))
+        row["chunk_count"] = len(row.pop("chunk_ids"))
+        row["evidence_type_tags"] = "; ".join(sorted(row["evidence_type_tags"]))
+        row["quality_flags"] = "; ".join(sorted(row["quality_flags"]))
+        rows.append(row)
     if not rows:
-        return pd.DataFrame(columns=["source", "evidence_type", "document_date", "age_days", "freshness", "quality_flags"])
+        return pd.DataFrame(columns=columns)
     return pd.DataFrame(rows).sort_values(["freshness", "source"]).reset_index(drop=True)
 
 
@@ -121,7 +225,11 @@ def priority_gaps_dataframe(bundle: dict[str, dict[str, Any]]) -> pd.DataFrame:
     return df.drop(columns=["priority_rank"]).reset_index(drop=True)
 
 
-def build_executive_html(bundle: dict[str, dict[str, Any]], organisation_name: str = "Organisation") -> str:
+def build_executive_html(
+    bundle: dict[str, dict[str, Any]],
+    organisation_name: str = "Organisation",
+    source_records: list[EvidenceSourceRecord] | None = None,
+) -> str:
     framework_rows = []
     frameworks: list[Framework] = []
     for item in bundle.values():
@@ -139,7 +247,7 @@ def build_executive_html(bundle: dict[str, dict[str, Any]], organisation_name: s
             f"<td>{score.supported}</td><td>{score.partial}</td><td>{score.not_evidenced}</td><td>{score.review_required}</td></tr>"
         )
 
-    quality = evidence_quality_dataframe(bundle)
+    quality = evidence_quality_dataframe(bundle, source_records=source_records)
     quality_counts = quality["freshness"].value_counts().to_dict() if not quality.empty else {}
 
     gaps = priority_gaps_dataframe(bundle)

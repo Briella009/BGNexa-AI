@@ -4,7 +4,7 @@
 
 BGNexa AI is a source-traceable evidence intelligence platform for cybersecurity, privacy and regulatory readiness across Nigerian and international frameworks.
 
-**Current release: v0.4.3**
+**Current release: v0.4.4**
 
 The project currently supports:
 
@@ -49,6 +49,10 @@ A document mentioning a control topic is not automatically treated as proof that
 - Provisional readiness **plus separate resolved coverage**
 - Human validation with evidence-confirmation guardrails
 - Deterministic evidence-type classification and freshness metadata
+- Document-level evidence registry: every supplied source remains visible even when no control retrieves it
+- SHA-256 provenance, file size, parse status and source-format metadata for every supplied evidence document
+- Filename date fallback for evidence named with an explicit `YYYY-MM-DD` date when content does not expose a reliable document date
+- Composite evidence-type tags so operational artefacts can retain training/audit/technical signals without being flattened into policy intent
 - Automated quality caps: stale-only evidence and policy-only proof for operational requirements cannot resolve as fully supported
 - Assessment-aware evidence-grounded Copilot with citation allow-listing; current scores, control states, human validations and priority gaps are supplied as read-only context for assessment questions
 - Priority remediation/review queue
@@ -142,14 +146,16 @@ BGNexa now records evidence quality separately from retrieval relevance. Each up
 - training evidence; or
 - unknown.
 
-Where an explicit document date can be extracted from a labelled field such as `Approved`, `Effective`, `Issued`, `Reviewed` or `Date`, or from reliable PDF/DOCX metadata, the app also exposes a general freshness signal:
+Where an explicit document date can be extracted from a labelled field such as `Record date`, `Assessment date`, `Approved`, `Effective`, `Issued`, `Reviewed` or `Date`, the app exposes a general freshness signal. If content does not expose a reliable date, an explicit `YYYY-MM-DD` date in the filename is used as a traceable fallback; PDF/DOCX metadata remains a later fallback.
 
 - `current`: 0-365 days old;
 - `aging`: 366-730 days old;
 - `stale`: more than 730 days old;
 - `unknown`: no reliable date, or a future-dated document.
 
-These thresholds are a product-level evidence-age heuristic, **not** a substitute for framework-specific review, retention, recertification or regulatory deadlines. Unknown dates are never invented. A stale-only evidence set cannot produce an automated `supported` result, and policy/procedure evidence cannot by itself prove an operational requirement where the control expects records, logs, tests, configurations, filings or similar implementation proof.
+These thresholds are a product-level evidence-age heuristic, **not** a substitute for framework-specific review, retention, recertification or regulatory deadlines. Unknown dates are never invented. Filename-derived dates are visibly marked with `filename:date`. A stale-only evidence set cannot produce an automated `supported` result, and policy/procedure evidence cannot by itself prove an operational requirement where the control expects records, logs, tests, configurations, filings or similar implementation proof.
+
+The evidence register is document-level rather than retrieval-only. A parsed source that is not selected by retrieval is shown as `indexed_not_retrieved`; an unreadable source is shown as `parsed_no_text` or `parse_error`. This prevents an uploaded document from silently disappearing simply because it was not relevant to the selected controls. The tamper-evident JSON snapshot includes the source-level provenance records, and the UI exposes a separate evidence-register CSV export.
 
 ## Scoring model
 

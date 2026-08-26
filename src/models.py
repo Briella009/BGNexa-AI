@@ -78,7 +78,11 @@ class EvidenceChunk(BaseModel):
     page: int | None = None
     injection_flag: bool = False
     content_hash: str | None = None
+    source_hash: str | None = None
+    source_size_bytes: int | None = None
+    source_extension: str | None = None
     evidence_type: EvidenceType = EvidenceType.UNKNOWN
+    evidence_type_tags: list[EvidenceType] = Field(default_factory=list)
     evidence_type_reason: str | None = None
     document_date: str | None = None
     date_source: str | None = None
@@ -95,16 +99,46 @@ class EvidenceMatch(BaseModel):
     page: int | None = None
     injection_flag: bool = False
     content_hash: str | None = None
+    source_hash: str | None = None
+    source_size_bytes: int | None = None
+    source_extension: str | None = None
     lexical_score: float | None = None
     semantic_score: float | None = None
     retrieval_method: str = "tfidf"
     evidence_type: EvidenceType = EvidenceType.UNKNOWN
+    evidence_type_tags: list[EvidenceType] = Field(default_factory=list)
     evidence_type_reason: str | None = None
     document_date: str | None = None
     date_source: str | None = None
     age_days: int | None = None
     freshness_status: FreshnessStatus = FreshnessStatus.UNKNOWN
     quality_flags: list[str] = Field(default_factory=list)
+
+
+class EvidenceSourceRecord(BaseModel):
+    """Document-level provenance and quality record for every supplied source.
+
+    This record is intentionally independent of retrieval. A source remains visible
+    even when none of its chunks rank highly enough for a framework control.
+    """
+
+    source_name: str
+    source_hash: str
+    size_bytes: int
+    source_extension: str
+    parse_status: Literal["parsed", "parsed_no_text", "parse_error"]
+    chunk_count: int = 0
+    character_count: int = 0
+    evidence_type: EvidenceType = EvidenceType.UNKNOWN
+    evidence_type_tags: list[EvidenceType] = Field(default_factory=list)
+    evidence_type_reason: str | None = None
+    document_date: str | None = None
+    date_source: str | None = None
+    age_days: int | None = None
+    freshness_status: FreshnessStatus = FreshnessStatus.UNKNOWN
+    quality_flags: list[str] = Field(default_factory=list)
+    injection_flag: bool = False
+    parse_error: str | None = None
 
 
 class AssessmentResult(BaseModel):

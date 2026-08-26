@@ -15,7 +15,7 @@ from src.crosswalk import capability_crosswalk, evidence_reuse_opportunities
 from src.dcpmi import triage_dcpmi
 from src.gdpr import triage_gdpr_article3
 from src.embeddings import OpenAIEmbedder, can_use_openai_embeddings
-from src.evidence import parse_bytes, parse_path
+from src.evidence import parse_bytes_with_source_record, parse_path_with_source_record
 from src.framework_loader import load_frameworks
 from src.llm import can_use_llm, llm_model_name, llm_provider
 from src.models import AssessmentResult, AssessmentStatus, HumanValidation
@@ -58,6 +58,7 @@ def manual_review_count(results: list[AssessmentResult]) -> int:
 
 def build_chunks(uploaded_files, use_samples: bool, include_injection_test: bool):
     chunks = []
+    source_records = []
     errors: list[str] = []
 
     if use_samples:
@@ -65,18 +66,20 @@ def build_chunks(uploaded_files, use_samples: bool, include_injection_test: bool
         if include_injection_test:
             names.append("prompt_injection_example.txt")
         for name in names:
-            try:
-                chunks.extend(parse_path(SAMPLE_ROOT / name))
-            except Exception as exc:  # pragma: no cover - UI defensive path
-                errors.append(f"{name}: {exc}")
+            parsed, record = parse_path_with_source_record(SAMPLE_ROOT / name)
+            chunks.extend(parsed)
+            source_records.append(record)
+            if record.parse_error:
+                errors.append(f"{name}: {record.parse_error}")
 
     for uploaded in uploaded_files or []:
-        try:
-            chunks.extend(parse_bytes(uploaded.name, uploaded.getvalue()))
-        except Exception as exc:
-            errors.append(f"{uploaded.name}: {exc}")
+        parsed, record = parse_bytes_with_source_record(uploaded.name, uploaded.getvalue())
+        chunks.extend(parsed)
+        source_records.append(record)
+        if record.parse_error:
+            errors.append(f"{uploaded.name}: {record.parse_error}")
 
-    return chunks, errors
+    return chunks, source_records, errors
 
 
 def build_retriever(chunks, use_semantic_retrieval: bool):
@@ -468,12 +471,26 @@ with col2:
 run = st.button("Run readiness assessment", type="primary", disabled=not selected_frameworks)
 
 if run:
-    chunks, parse_errors = build_chunks(uploaded_files, use_samples, include_injection_test)
+    # A new ingestion attempt invalidates the previous assessment. This prevents a
+    # failed/empty upload from leaving an older bundle on screen as if it belonged
+    # to the newly supplied evidence set.
+    st.session_state.pop("assessment_bundle", None)
+    st.session_state.pop("evidence_retriever", None)
+    chunks, source_records, parse_errors = build_chunks(uploaded_files, use_samples, include_injection_test)
+    st.session_state["evidence_chunks"] = chunks
+    st.session_state["evidence_source_records"] = source_records
     if parse_errors:
         for error in parse_errors:
             st.error(error)
     if not chunks:
         st.error("No readable evidence was provided. Add sample policies or upload evidence files.")
+        if source_records:
+            st.caption("Supplied sources remain registered below even though no readable chunks were available for assessment.")
+            st.dataframe(
+                evidence_quality_dataframe({}, source_records=source_records),
+                use_container_width=True,
+                hide_index=True,
+            )
     else:
         with st.spinner("Retrieving and assessing evidence..."):
             retriever = build_retriever(chunks, use_semantic_retrieval)
@@ -493,7 +510,6 @@ if run:
                 gdpr_uses_processors_status=gdpr_uses_processors_status,
             )
         st.session_state["assessment_bundle"] = bundle
-        st.session_state["evidence_chunks"] = chunks
         st.session_state["evidence_retriever"] = retriever
         st.session_state["review_validations"] = []
         st.session_state["retrieval_mode"] = retriever.mode
@@ -572,21 +588,28 @@ if bundle:
     if st.session_state.get("semantic_error"):
         st.warning(f"Semantic retrieval fell back safely to lexical retrieval: {st.session_state['semantic_error']}")
 
-    quality_df = evidence_quality_dataframe(bundle)
+    source_records = st.session_state.get("evidence_source_records", [])
+    quality_df = evidence_quality_dataframe(bundle, source_records=source_records)
     if not quality_df.empty:
         st.subheader("Evidence quality snapshot")
         freshness_counts = quality_df["freshness"].value_counts().to_dict()
-        quality_cols = st.columns(4)
-        quality_cols[0].metric("Current sources", freshness_counts.get("current", 0))
-        quality_cols[1].metric("Aging sources", freshness_counts.get("aging", 0))
-        quality_cols[2].metric("Stale sources", freshness_counts.get("stale", 0))
-        quality_cols[3].metric("Undated / unknown", freshness_counts.get("unknown", 0))
+        quality_cols = st.columns(5)
+        quality_cols[0].metric("Supplied sources", len(quality_df))
+        quality_cols[1].metric("Current sources", freshness_counts.get("current", 0))
+        quality_cols[2].metric("Aging sources", freshness_counts.get("aging", 0))
+        quality_cols[3].metric("Stale sources", freshness_counts.get("stale", 0))
+        quality_cols[4].metric("Undated / unknown", freshness_counts.get("unknown", 0))
         st.caption(
             "General evidence-age signal only: current <=365 days, aging 366-730 days, stale >730 days. "
-            "Framework-specific review, retention and recertification rules still take precedence."
+            "Framework-specific review, retention and recertification rules still take precedence. Every supplied source remains "
+            "registered here even when retrieval does not use it for a control."
         )
         if freshness_counts.get("stale", 0):
             st.warning("Stale evidence is present. BGNexa will not allow stale-only evidence to establish a supported automated result.")
+        if (quality_df["parse_status"] == "parse_error").any():
+            st.error("One or more supplied sources could not be parsed. They remain visible in the register rather than disappearing silently.")
+        if (quality_df["assessment_use"] == "indexed_not_retrieved").any():
+            st.info("Some parsed sources were indexed but were not retrieved for the selected controls. This is not a parse failure.")
         with st.expander("Show evidence type and freshness register", expanded=False):
             st.dataframe(quality_df, use_container_width=True, hide_index=True)
 
@@ -614,7 +637,16 @@ if bundle:
                         "Control": control.title,
                         "Status": status_label(result.status),
                         "Evidence": result.evidence_strength,
-                        "Evidence type": ", ".join(sorted({m.evidence_type.value for m in result.evidence})) or "none",
+                        "Evidence type": ", ".join(
+                            sorted(
+                                {
+                                    tag.value
+                                    for match in result.evidence
+                                    for tag in (match.evidence_type_tags or [match.evidence_type])
+                                }
+                            )
+                        )
+                        or "none",
                         "Freshness": ", ".join(sorted({m.freshness_status.value for m in result.evidence})) or "none",
                         "AI": "Yes" if result.ai_assessed else "No",
                         "Human validated": "Yes" if result.human_validated else "No",
@@ -649,11 +681,18 @@ if bundle:
                                 score_parts.append(f"lexical {match.lexical_score:.3f}")
                             if match.semantic_score is not None:
                                 score_parts.append(f"semantic {match.semantic_score:.3f}")
-                            quality_parts = [f"type {match.evidence_type.value}", f"freshness {match.freshness_status.value}"]
+                            type_tags = match.evidence_type_tags or [match.evidence_type]
+                            quality_parts = [
+                                f"type {match.evidence_type.value}",
+                                f"tags {', '.join(tag.value for tag in type_tags)}",
+                                f"freshness {match.freshness_status.value}",
+                            ]
                             if match.document_date:
                                 quality_parts.append(f"document date {match.document_date}")
                             if match.age_days is not None and match.age_days >= 0:
                                 quality_parts.append(f"age {match.age_days} days")
+                            if match.source_hash:
+                                quality_parts.append(f"source SHA-256 {match.source_hash[:12]}…")
                             st.caption(
                                 f"{match.source_name}{location} | {' | '.join(score_parts)} | {' | '.join(quality_parts)}{flag}"
                             )
@@ -793,15 +832,27 @@ if bundle:
         st.warning("Exports are disabled until the assessment is rerun with the current organisation profile/framework selection.")
     else:
         export_df = combined_export(bundle)
-        export_cols = st.columns(3)
+        source_records = st.session_state.get("evidence_source_records", [])
+        evidence_register_df = evidence_quality_dataframe(bundle, source_records=source_records)
+        export_cols = st.columns(4)
         export_cols[0].download_button(
             "Download assessment CSV",
             data=export_df.to_csv(index=False).encode("utf-8"),
             file_name="readiness_assessment.csv",
             mime="text/csv",
         )
-        executive_html = build_executive_html(bundle, organisation_name=organisation_name)
         export_cols[1].download_button(
+            "Download evidence register CSV",
+            data=evidence_register_df.to_csv(index=False).encode("utf-8"),
+            file_name="evidence_source_register.csv",
+            mime="text/csv",
+        )
+        executive_html = build_executive_html(
+            bundle,
+            organisation_name=organisation_name,
+            source_records=source_records,
+        )
+        export_cols[2].download_button(
             "Download executive HTML",
             data=executive_html.encode("utf-8"),
             file_name="readiness_executive_report.html",
@@ -828,8 +879,9 @@ if bundle:
             bundle,
             organisation_profile=profile,
             validations=st.session_state.get("review_validations", []),
+            source_records=source_records,
         )
-        export_cols[2].download_button(
+        export_cols[3].download_button(
             "Download snapshot JSON",
             data=json.dumps(snapshot, indent=2).encode("utf-8"),
             file_name="readiness_snapshot.json",
