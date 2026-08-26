@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.4.2
+
+- Made the Evidence-grounded Copilot assessment-aware without changing the assessment engine, scoring, Groq provider, exports, prompt-injection safeguards, or human-validation workflow.
+- Added current framework readiness, resolved coverage, per-control status/evidence strength, human-validation state and the deterministic priority-remediation queue to Copilot context.
+- Added explicit guardrails so supported and human-validated controls are not described as evidence gaps, `review_required` remains unresolved review rather than a confirmed deficiency, and readiness is never converted into a legal-compliance conclusion.
+- Expanded Copilot citation allow-listing so answers about current assessment state can cite any selected framework control, not only lexical framework hits.
+- Updated the UI disclosure to state that Copilot receives the current assessment state as well as retrieved evidence and framework summaries.
+- Added regression tests for assessment-aware gap/status reasoning and ISO score explanations; automated suite now has 69 passing tests.
+
 ## v0.4.1
 
 - Added Groq as an optional free-tier-friendly generation provider through the existing OpenAI-compatible client.
