@@ -67,6 +67,13 @@ class EvidenceRetriever:
                     retrieval_method="tfidf",
                     injection_flag=chunk.injection_flag,
                     content_hash=chunk.content_hash,
+                    evidence_type=chunk.evidence_type,
+                    evidence_type_reason=chunk.evidence_type_reason,
+                    document_date=chunk.document_date,
+                    date_source=chunk.date_source,
+                    age_days=chunk.age_days,
+                    freshness_status=chunk.freshness_status,
+                    quality_flags=list(chunk.quality_flags),
                 )
             )
         return matches
@@ -164,6 +171,13 @@ class HybridEvidenceRetriever:
                     retrieval_method="hybrid_rrf",
                     injection_flag=chunk.injection_flag,
                     content_hash=chunk.content_hash,
+                    evidence_type=chunk.evidence_type,
+                    evidence_type_reason=chunk.evidence_type_reason,
+                    document_date=chunk.document_date,
+                    date_source=chunk.date_source,
+                    age_days=chunk.age_days,
+                    freshness_status=chunk.freshness_status,
+                    quality_flags=list(chunk.quality_flags),
                 )
             )
         return matches

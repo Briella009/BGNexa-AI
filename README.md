@@ -4,7 +4,7 @@
 
 BGNexa AI is a source-traceable evidence intelligence platform for cybersecurity, privacy and regulatory readiness across Nigerian and international frameworks.
 
-**Current release: v0.4.2**
+**Current release: v0.4.3**
 
 The project currently supports:
 
@@ -48,6 +48,8 @@ A document mentioning a control topic is not automatically treated as proof that
 - Prompt-injection detection and automated-review blocking
 - Provisional readiness **plus separate resolved coverage**
 - Human validation with evidence-confirmation guardrails
+- Deterministic evidence-type classification and freshness metadata
+- Automated quality caps: stale-only evidence and policy-only proof for operational requirements cannot resolve as fully supported
 - Assessment-aware evidence-grounded Copilot with citation allow-listing; current scores, control states, human validations and priority gaps are supplied as read-only context for assessment questions
 - Priority remediation/review queue
 - Cross-framework capability map and potential evidence-reuse view
@@ -127,6 +129,28 @@ When external AI mode is enabled, relevant evidence may be sent to the configure
 | `review_required` | Scope/evidence cannot safely be resolved automatically |
 | `not_applicable` | Explicit non-AI applicability logic determines the control is out of scope |
 
+## Evidence quality and freshness
+
+BGNexa now records evidence quality separately from retrieval relevance. Each uploaded source is conservatively classified as one of:
+
+- documented intent (policy, procedure, standard, runbook);
+- operational record;
+- technical evidence;
+- audit/test evidence;
+- regulatory filing;
+- contractual evidence;
+- training evidence; or
+- unknown.
+
+Where an explicit document date can be extracted from a labelled field such as `Approved`, `Effective`, `Issued`, `Reviewed` or `Date`, or from reliable PDF/DOCX metadata, the app also exposes a general freshness signal:
+
+- `current`: 0-365 days old;
+- `aging`: 366-730 days old;
+- `stale`: more than 730 days old;
+- `unknown`: no reliable date, or a future-dated document.
+
+These thresholds are a product-level evidence-age heuristic, **not** a substitute for framework-specific review, retention, recertification or regulatory deadlines. Unknown dates are never invented. A stale-only evidence set cannot produce an automated `supported` result, and policy/procedure evidence cannot by itself prove an operational requirement where the control expects records, logs, tests, configurations, filings or similar implementation proof.
+
 ## Scoring model
 
 The dashboard intentionally shows two values:
@@ -192,6 +216,7 @@ Uploaded documents are treated as untrusted data. The system:
 │   ├── gdpr.py
 │   ├── evaluation.py
 │   ├── evidence.py
+│   ├── evidence_quality.py
 │   ├── framework_loader.py
 │   ├── provenance.py
 │   ├── report.py
@@ -216,7 +241,7 @@ Uploaded documents are treated as untrusted data. The system:
 
 Current deterministic checkpoint:
 
-- **62 automated tests passing**
+- **76 automated tests passing**
 - **7 framework packs**
 - **213 seeded controls/outcomes**
 - **106 NIST CSF 2.0 Subcategories**
@@ -248,7 +273,7 @@ See `docs/source_verification_2026-08-19.md`, `docs/regulatory_notes.md`, `docs/
 ## Roadmap
 
 - Real anonymised policy corpus evaluation, including false-support/false-gap measurement
-- Evidence freshness, expiry and superseded-document handling
+- Framework-specific evidence expiry/supersession rules and superseded-document handling
 - Framework-version diffing and update alerts
 - More granular GDPR/NIST/CBN crosswalk review with human-approved mappings
 - Cryptographically signed reviewer attestations/identity integration

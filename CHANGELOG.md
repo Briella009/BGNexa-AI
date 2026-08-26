@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.4.3
+
+- Added deterministic evidence-type classification for documented intent, operational records, technical evidence, audit/test evidence, regulatory filings, contractual evidence, training evidence and unknown artefacts.
+- Added explicit document-date extraction from labelled content fields plus PDF/DOCX metadata fallback.
+- Added general evidence freshness signals: current (<=365 days), aging (366-730), stale (>730), and unknown.
+- Added deterministic automated-review caps so stale-only evidence cannot resolve as fully supported and policy/procedure-only evidence cannot prove operational requirements that expect implementation artefacts.
+- Added evidence-quality metadata to AI reviewer context, Copilot context, framework-result details, CSV exports, executive HTML, and tamper-evident JSON snapshots.
+- Added an Evidence quality snapshot to the Streamlit dashboard with source-level freshness counts and a detailed evidence register.
+- Expanded automated regression coverage from 69 to 76 tests.
+
 ## v0.4.2
 
 - Made the Evidence-grounded Copilot assessment-aware without changing the assessment engine, scoring, Groq provider, exports, prompt-injection safeguards, or human-validation workflow.

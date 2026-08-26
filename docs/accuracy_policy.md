@@ -12,7 +12,7 @@ BGNexa AI is designed to be conservative. A polished answer is less important th
 6. **AI findings require human review.** Even `supported` AI findings are provisional evidence judgements.
 7. **Unresolved controls cannot inflate readiness.** `review_required` controls are excluded from the resolved-score numerator and denominator; coverage is reported separately.
 8. **Framework text is versioned and traceable.** Every framework and control records a source locator, verification status, and last-verified date.
-9. **Unverified source detail is visible.** The CBN DMB/PSB 2024 seed pack remains explicitly marked as pending paragraph-level direct-authority verification.
+9. **Source-verification status is visible.** Directly verified CBN packs retain authority-file verification metadata and source-page mappings; any future preview/unverified pack must remain explicitly labelled.
 10. **ISO copyright is respected.** The public pack uses original clause-level summaries and references, not licensed ISO/IEC 27001 or Annex A text.
 11. **Human support decisions require evidence confirmation.** A reviewer cannot resolve a finding as supported/partial without cited evidence and an explicit confirmation step.
 12. **Review tasks are not confirmed gaps.** `review_required` may reflect insufficient assessment coverage and is labelled separately from `not_evidenced`.
@@ -20,6 +20,7 @@ BGNexa AI is designed to be conservative. A polished answer is less important th
 14. **Snapshots are tamper-evident, not identity-signed.** SHA-256 detects changed snapshot content but does not authenticate the reviewer.
 15. **External AI is opt-in and visible.** Local retrieval/manual review is the default. Enabling semantic embeddings or AI review sends relevant evidence to the configured provider and must be authorised by the organisation.
 16. **Profile changes invalidate reliance.** Material organisation-scope or framework-selection changes mark the existing assessment stale and disable validation/export until rerun.
+17. **Evidence quality is separate from retrieval relevance.** Evidence type, explicit document date, age and freshness are surfaced independently. Unknown dates are never invented. Stale-only evidence cannot establish a fully supported automated result, and policy/procedure intent cannot by itself prove an operational requirement that expects implementation artefacts.
 
 ## Scoring
 

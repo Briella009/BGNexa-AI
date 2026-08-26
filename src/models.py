@@ -14,6 +14,24 @@ class AssessmentStatus(str, Enum):
     NOT_APPLICABLE = "not_applicable"
 
 
+class EvidenceType(str, Enum):
+    DOCUMENTED_INTENT = "documented_intent"
+    OPERATIONAL_RECORD = "operational_record"
+    TECHNICAL_EVIDENCE = "technical_evidence"
+    AUDIT_TEST_EVIDENCE = "audit_test_evidence"
+    REGULATORY_FILING = "regulatory_filing"
+    CONTRACTUAL_EVIDENCE = "contractual_evidence"
+    TRAINING_EVIDENCE = "training_evidence"
+    UNKNOWN = "unknown"
+
+
+class FreshnessStatus(str, Enum):
+    CURRENT = "current"
+    AGING = "aging"
+    STALE = "stale"
+    UNKNOWN = "unknown"
+
+
 class FrameworkSource(BaseModel):
     authority: str
     title: str
@@ -60,6 +78,13 @@ class EvidenceChunk(BaseModel):
     page: int | None = None
     injection_flag: bool = False
     content_hash: str | None = None
+    evidence_type: EvidenceType = EvidenceType.UNKNOWN
+    evidence_type_reason: str | None = None
+    document_date: str | None = None
+    date_source: str | None = None
+    age_days: int | None = None
+    freshness_status: FreshnessStatus = FreshnessStatus.UNKNOWN
+    quality_flags: list[str] = Field(default_factory=list)
 
 
 class EvidenceMatch(BaseModel):
@@ -73,6 +98,13 @@ class EvidenceMatch(BaseModel):
     lexical_score: float | None = None
     semantic_score: float | None = None
     retrieval_method: str = "tfidf"
+    evidence_type: EvidenceType = EvidenceType.UNKNOWN
+    evidence_type_reason: str | None = None
+    document_date: str | None = None
+    date_source: str | None = None
+    age_days: int | None = None
+    freshness_status: FreshnessStatus = FreshnessStatus.UNKNOWN
+    quality_flags: list[str] = Field(default_factory=list)
 
 
 class AssessmentResult(BaseModel):
@@ -83,6 +115,8 @@ class AssessmentResult(BaseModel):
     evidence: list[EvidenceMatch] = Field(default_factory=list)
     recommendation: str | None = None
     evidence_strength: str = "none"
+    evidence_quality_flags: list[str] = Field(default_factory=list)
+    evidence_quality_note: str | None = None
     ai_assessed: bool = False
     requires_human_review: bool = True
     human_validated: bool = False

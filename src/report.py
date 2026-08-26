@@ -23,6 +23,11 @@ def results_dataframe(framework: Framework, results: list[AssessmentResult]) -> 
                 "title": control.title,
                 "status": result.status.value,
                 "evidence_strength": result.evidence_strength,
+                "evidence_types": "; ".join(sorted({e.evidence_type.value for e in result.evidence})),
+                "evidence_freshness": "; ".join(sorted({e.freshness_status.value for e in result.evidence})),
+                "evidence_dates": "; ".join(sorted({e.document_date for e in result.evidence if e.document_date})),
+                "evidence_quality_flags": "; ".join(result.evidence_quality_flags),
+                "evidence_quality_note": result.evidence_quality_note or "",
                 "human_validated": result.human_validated,
                 "reviewer": result.reviewer or "",
                 "reviewed_at": result.reviewed_at or "",
@@ -38,6 +43,32 @@ def results_dataframe(framework: Framework, results: list[AssessmentResult]) -> 
             }
         )
     return pd.DataFrame(rows)
+
+
+def evidence_quality_dataframe(bundle: dict[str, dict[str, Any]]) -> pd.DataFrame:
+    """Return one row per unique evidence source observed in the current assessment."""
+    by_source: dict[str, dict[str, Any]] = {}
+    for item in bundle.values():
+        for result in item["results"]:
+            for evidence in result.evidence:
+                row = by_source.setdefault(
+                    evidence.source_name,
+                    {
+                        "source": evidence.source_name,
+                        "evidence_type": evidence.evidence_type.value,
+                        "document_date": evidence.document_date or "",
+                        "age_days": evidence.age_days,
+                        "freshness": evidence.freshness_status.value,
+                        "quality_flags": set(),
+                    },
+                )
+                row["quality_flags"].update(evidence.quality_flags)
+    rows = []
+    for row in by_source.values():
+        rows.append({**row, "quality_flags": "; ".join(sorted(row["quality_flags"]))})
+    if not rows:
+        return pd.DataFrame(columns=["source", "evidence_type", "document_date", "age_days", "freshness", "quality_flags"])
+    return pd.DataFrame(rows).sort_values(["freshness", "source"]).reset_index(drop=True)
 
 
 def priority_gaps_dataframe(bundle: dict[str, dict[str, Any]]) -> pd.DataFrame:
@@ -108,6 +139,9 @@ def build_executive_html(bundle: dict[str, dict[str, Any]], organisation_name: s
             f"<td>{score.supported}</td><td>{score.partial}</td><td>{score.not_evidenced}</td><td>{score.review_required}</td></tr>"
         )
 
+    quality = evidence_quality_dataframe(bundle)
+    quality_counts = quality["freshness"].value_counts().to_dict() if not quality.empty else {}
+
     gaps = priority_gaps_dataframe(bundle)
     gap_rows = []
     for _, row in gaps.head(15).iterrows():
@@ -147,6 +181,10 @@ h2{{margin-top:34px}} footer{{margin-top:40px;padding-top:14px;border-top:1px so
 <h2>Framework summary</h2>
 <table><thead><tr><th>Framework</th><th>Type</th><th>Provisional readiness</th><th>Resolved coverage</th><th>Supported</th><th>Partial</th><th>Not evidenced</th><th>Review required</th></tr></thead>
 <tbody>{''.join(framework_rows)}</tbody></table>
+<h2>Evidence quality</h2>
+<p class="muted">Freshness is a general evidence-age signal: current <=365 days, aging 366-730 days, stale >730 days. Framework-specific review/retention rules still take precedence.</p>
+<table><thead><tr><th>Current sources</th><th>Aging sources</th><th>Stale sources</th><th>Undated / unknown</th></tr></thead>
+<tbody><tr><td>{quality_counts.get('current', 0)}</td><td>{quality_counts.get('aging', 0)}</td><td>{quality_counts.get('stale', 0)}</td><td>{quality_counts.get('unknown', 0)}</td></tr></tbody></table>
 <h2>Priority gaps</h2>
 <table><thead><tr><th>Priority</th><th>Framework</th><th>Reference</th><th>Control</th><th>Recommended next step</th></tr></thead>
 <tbody>{''.join(gap_rows) if gap_rows else '<tr><td colspan="5">No unresolved gaps in the current assessment set.</td></tr>'}</tbody></table>

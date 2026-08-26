@@ -111,6 +111,8 @@ def build_assessment_snapshot(
                         "status": result.status.value,
                         "rationale": result.rationale,
                         "evidence_strength": result.evidence_strength,
+                        "evidence_quality_flags": result.evidence_quality_flags,
+                        "evidence_quality_note": result.evidence_quality_note,
                         "evidence": [
                             {
                                 "chunk_id": e.chunk_id,
@@ -118,6 +120,12 @@ def build_assessment_snapshot(
                                 "page": e.page,
                                 "content_hash": e.content_hash,
                                 "retrieval_method": e.retrieval_method,
+                                "evidence_type": e.evidence_type.value,
+                                "document_date": e.document_date,
+                                "date_source": e.date_source,
+                                "age_days": e.age_days,
+                                "freshness_status": e.freshness_status.value,
+                                "quality_flags": e.quality_flags,
                             }
                             for e in result.evidence
                         ],
@@ -132,7 +140,7 @@ def build_assessment_snapshot(
         )
 
     payload = {
-        "snapshot_schema": "readiness-copilot/v1",
+        "snapshot_schema": "readiness-copilot/v2",
         "created_at": created_at,
         "organisation_profile": deepcopy(organisation_profile),
         "frameworks": frameworks,
