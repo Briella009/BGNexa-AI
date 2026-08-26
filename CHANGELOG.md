@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.4.4
+
+- Added a document-level evidence source registry so every supplied source remains visible even when no framework control retrieves it.
+- Added full-document SHA-256, source size, file extension, parse status and source-level quality metadata; the tamper-evident snapshot schema is now `readiness-copilot/v3` and carries source provenance independently of retrieved chunks.
+- Added explicit `YYYY-MM-DD` filename-date fallback after labelled content dates, fixing TXT/Markdown evidence that was incorrectly shown as undated despite a traceable date in the filename.
+- Prioritised `Record date`, `Effective / record date` and `Assessment date` ahead of incidental review dates for freshness calculations.
+- Hardened evidence-type classification so policy/procedure identity remains documented intent, while explicit operational records are not flattened into policy intent.
+- Added composite evidence-type tags for mixed artefacts such as training records that also contain internal-audit test results.
+- Prevented negative limitation text such as “does not include a registration certificate” from falsely classifying an artefact as a regulatory filing.
+- Added `indexed_not_retrieved`, `parsed_no_text` and `parse_error` visibility to the evidence register, plus a dedicated evidence-register CSV export.
+- Added source-provenance propagation through retrieval matches, assessment exports and Copilot/AI evidence context.
+- Expanded automated regression coverage from 76 to 84 tests.
+
 ## v0.4.3
 
 - Added deterministic evidence-type classification for documented intent, operational records, technical evidence, audit/test evidence, regulatory filings, contractual evidence, training evidence and unknown artefacts.

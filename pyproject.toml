@@ -1,6 +1,6 @@
 [project]
 name = "bgnexa-ai"
-version = "0.4.3"
+version = "0.4.4"
 description = "Evidence-backed multi-framework cybersecurity and privacy readiness copilot."
 requires-python = ">=3.10"
 
