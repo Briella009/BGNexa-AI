@@ -19,7 +19,7 @@ from src.evidence import parse_bytes, parse_path
 from src.framework_loader import load_frameworks
 from src.llm import can_use_llm, llm_model_name, llm_provider
 from src.models import AssessmentResult, AssessmentStatus, HumanValidation
-from src.report import build_executive_html, priority_gaps_dataframe, results_dataframe
+from src.report import build_executive_html, evidence_quality_dataframe, priority_gaps_dataframe, results_dataframe
 from src.retriever import HybridEvidenceRetriever
 from src.review import apply_human_validation, build_assessment_snapshot
 from src.scoring import calculate_score
@@ -572,6 +572,24 @@ if bundle:
     if st.session_state.get("semantic_error"):
         st.warning(f"Semantic retrieval fell back safely to lexical retrieval: {st.session_state['semantic_error']}")
 
+    quality_df = evidence_quality_dataframe(bundle)
+    if not quality_df.empty:
+        st.subheader("Evidence quality snapshot")
+        freshness_counts = quality_df["freshness"].value_counts().to_dict()
+        quality_cols = st.columns(4)
+        quality_cols[0].metric("Current sources", freshness_counts.get("current", 0))
+        quality_cols[1].metric("Aging sources", freshness_counts.get("aging", 0))
+        quality_cols[2].metric("Stale sources", freshness_counts.get("stale", 0))
+        quality_cols[3].metric("Undated / unknown", freshness_counts.get("unknown", 0))
+        st.caption(
+            "General evidence-age signal only: current <=365 days, aging 366-730 days, stale >730 days. "
+            "Framework-specific review, retention and recertification rules still take precedence."
+        )
+        if freshness_counts.get("stale", 0):
+            st.warning("Stale evidence is present. BGNexa will not allow stale-only evidence to establish a supported automated result.")
+        with st.expander("Show evidence type and freshness register", expanded=False):
+            st.dataframe(quality_df, use_container_width=True, hide_index=True)
+
     gaps = priority_gaps_dataframe(bundle)
     st.subheader("Priority remediation queue")
     if gaps.empty:
@@ -596,6 +614,8 @@ if bundle:
                         "Control": control.title,
                         "Status": status_label(result.status),
                         "Evidence": result.evidence_strength,
+                        "Evidence type": ", ".join(sorted({m.evidence_type.value for m in result.evidence})) or "none",
+                        "Freshness": ", ".join(sorted({m.freshness_status.value for m in result.evidence})) or "none",
                         "AI": "Yes" if result.ai_assessed else "No",
                         "Human validated": "Yes" if result.human_validated else "No",
                         "Human review": "Yes" if result.requires_human_review else "No",
@@ -612,6 +632,10 @@ if bundle:
                     st.write(f"**Assessment:** {result.rationale}")
                     if result.recommendation:
                         st.write(f"**Recommendation:** {result.recommendation}")
+                    if result.evidence_quality_note:
+                        st.caption(f"Evidence quality: {result.evidence_quality_note}")
+                    if result.evidence_quality_flags:
+                        st.warning("Evidence-quality flags: " + ", ".join(result.evidence_quality_flags))
                     if result.human_validated:
                         st.success(f"Human validated by {result.reviewer} at {result.reviewed_at}")
                         st.write(f"**Reviewer note:** {result.reviewer_note}")
@@ -625,13 +649,21 @@ if bundle:
                                 score_parts.append(f"lexical {match.lexical_score:.3f}")
                             if match.semantic_score is not None:
                                 score_parts.append(f"semantic {match.semantic_score:.3f}")
-                            st.caption(f"{match.source_name}{location} | {' | '.join(score_parts)}{flag}")
+                            quality_parts = [f"type {match.evidence_type.value}", f"freshness {match.freshness_status.value}"]
+                            if match.document_date:
+                                quality_parts.append(f"document date {match.document_date}")
+                            if match.age_days is not None and match.age_days >= 0:
+                                quality_parts.append(f"age {match.age_days} days")
+                            st.caption(
+                                f"{match.source_name}{location} | {' | '.join(score_parts)} | {' | '.join(quality_parts)}{flag}"
+                            )
                             st.code(match.excerpt, language="text")
 
     st.subheader("Human validation")
     st.caption(
-        "A person can resolve automated or retrieval-only findings. Supported/partial decisions require explicit evidence confirmation; "
-        "not-applicable decisions remain controlled by the organisation profile rather than reviewer override."
+        "A person can resolve automated or retrieval-only findings. Supported/partial decisions require explicit evidence confirmation, "
+        "including consideration of evidence type and freshness; not-applicable decisions remain controlled by the organisation profile "
+        "rather than reviewer override."
     )
     review_options = []
     review_lookup = {}
@@ -667,7 +699,9 @@ if bundle:
                 ],
                 index=3,
             )
-            evidence_confirmed = st.checkbox("I inspected and confirm the cited evidence supports this decision")
+            evidence_confirmed = st.checkbox(
+                "I inspected the cited evidence, including its type and freshness, and confirm it supports this decision"
+            )
             reviewer_note = st.text_area("Reviewer rationale / note")
             submitted = st.form_submit_button("Apply human validation")
         if submitted:
@@ -814,6 +848,8 @@ if bundle:
 - **Review required** means applicability or evidence judgement is unresolved, or automated review was deliberately blocked.
 - **Not applicable** is assigned only by explicit profile/applicability rules, never by the LLM or reviewer override.
 - **Human validated** records a reviewer decision and rationale in the assessment snapshot.
+- **Evidence type** distinguishes documented intent from operational records, technical evidence, audit/test evidence, regulatory filings, contractual evidence and training evidence.
+- **Freshness** is a general evidence-age signal. Stale-only evidence cannot establish a supported automated result; framework-specific review and retention rules still take precedence.
 """
         )
 
