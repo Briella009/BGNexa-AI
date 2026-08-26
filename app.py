@@ -713,8 +713,8 @@ if bundle:
 
     st.subheader("Evidence-grounded Copilot")
     st.caption(
-        "Ask about uploaded evidence, gaps, or relevant framework requirements. The Copilot only receives retrieved evidence and selected "
-        "framework summaries; flagged prompt-injection passages are excluded."
+        "Ask about uploaded evidence, current assessment results, gaps, or relevant framework requirements. The Copilot receives retrieved "
+        "evidence, the current assessment state, and selected framework summaries; flagged prompt-injection passages are excluded."
     )
     question = st.text_input("Ask the Copilot", placeholder="Which evidence supports our incident response readiness?")
     ask = st.button("Ask Copilot", disabled=not question.strip())
@@ -731,6 +731,7 @@ if bundle:
                         evidence_hits,
                         [item["framework"] for item in bundle.values()],
                         use_ai=use_ai,
+                        assessment_bundle=bundle,
                     )
                     st.session_state["last_copilot_answer"] = answer
                     st.session_state["last_copilot_hits"] = evidence_hits

@@ -4,7 +4,7 @@
 
 BGNexa AI is a source-traceable evidence intelligence platform for cybersecurity, privacy and regulatory readiness across Nigerian and international frameworks.
 
-**Current release: v0.4.0**
+**Current release: v0.4.2**
 
 The project currently supports:
 
@@ -48,7 +48,7 @@ A document mentioning a control topic is not automatically treated as proof that
 - Prompt-injection detection and automated-review blocking
 - Provisional readiness **plus separate resolved coverage**
 - Human validation with evidence-confirmation guardrails
-- Evidence-grounded Copilot with citation allow-listing
+- Assessment-aware evidence-grounded Copilot with citation allow-listing; current scores, control states, human validations and priority gaps are supplied as read-only context for assessment questions
 - Priority remediation/review queue
 - Cross-framework capability map and potential evidence-reuse view
 - CSV, executive HTML and tamper-evident JSON snapshot export
