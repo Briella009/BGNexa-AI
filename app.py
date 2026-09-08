@@ -23,6 +23,7 @@ from src.report import build_executive_html, evidence_quality_dataframe, priorit
 from src.retriever import HybridEvidenceRetriever
 from src.review import apply_human_validation, build_assessment_snapshot
 from src.scoring import calculate_score
+from src.ui import apply_product_ui, info_card, render_flow, render_hero
 
 
 ROOT = Path(__file__).resolve().parent
@@ -31,6 +32,7 @@ SAMPLE_ROOT = ROOT / "sample_data"
 
 load_dotenv(ROOT / ".env")
 st.set_page_config(page_title="BGNexa AI", page_icon="🛡️", layout="wide")
+apply_product_ui()
 
 
 @st.cache_resource
@@ -191,15 +193,28 @@ def find_result(bundle, framework_id: str, control_id: str):
 
 frameworks = get_frameworks()
 
-st.title("BGNexa AI")
-st.caption("Evidence-backed readiness for Nigerian and international cybersecurity/privacy frameworks")
+render_hero(
+    "Evidence intelligence for real assurance work",
+    "Map authorised organisational evidence to cybersecurity and privacy requirements, surface what is missing, preserve human judgement, and carry the result into a structured assurance workplan.",
+    badge="Public beta · v0.5.1",
+)
+render_flow(active_step=1)
+
+value_cols = st.columns(3)
+with value_cols[0]:
+    st.markdown(info_card("Evidence first", "A policy mention is not treated as operating evidence. Source type, freshness, provenance and retrieval remain visible."), unsafe_allow_html=True)
+with value_cols[1]:
+    st.markdown(info_card("Human governed", "Applicability and final assurance judgement stay with qualified reviewers. AI is a reviewer aid, not an auditor or regulator."), unsafe_allow_html=True)
+with value_cols[2]:
+    st.markdown(info_card("Audit/GRC ready", "Move from readiness to evidence requests, control tests, findings, management actions, retest and closure in the Assurance Workspace."), unsafe_allow_html=True)
 
 st.info(
-    "This tool measures evidence-backed readiness. It does not issue a legal-compliance determination, ISO certification, "
-    "regulatory approval, or audit opinion. Automated findings remain subject to qualified human review."
+    "BGNexa measures evidence-backed readiness and supports assurance work. It does not issue a legal-compliance determination, ISO certification, regulator approval, or audit opinion."
 )
 
 with st.sidebar:
+    st.markdown("### BGNexa AI")
+    st.caption("Scope the organisation and choose the framework packs you actually want to assess.")
     st.header("Organisation profile")
     organisation_name = st.text_input("Organisation name", value="Demo Organisation")
     operates_in_nigeria = st.checkbox("Operates in Nigeria", value=True)
@@ -281,19 +296,12 @@ with st.sidebar:
                     "Public Service",
                 ],
             )
-            dcpmi_count_raw = st.text_input(
-                "Data subjects processed in last 6 months",
-                value="",
-                placeholder="e.g. 1250",
-            )
+            dcpmi_count_raw = st.text_input("Data subjects processed in last 6 months", value="", placeholder="e.g. 1250")
             commercial_ict_device_service = st.checkbox(
-                "Provides commercial ICT services on another person's data-capable device",
-                value=False,
+                "Provides commercial ICT services on another person's data-capable device", value=False
             )
             sensitive_count_raw = st.text_input(
-                "Sensitive-data subjects processed commercially (processor only)",
-                value="",
-                placeholder="Optional",
+                "Sensitive-data subjects processed commercially (processor only)", value="", placeholder="Optional"
             )
             if st.button("Run DCPMI triage", use_container_width=True):
                 try:
@@ -324,6 +332,7 @@ with st.sidebar:
                     st.caption(f"Basis: {item}")
                 for item in triage.ambiguities:
                     st.caption(f"Review: {item}")
+
     cbn_regulated_type = st.selectbox(
         "CBN regulatory category",
         ["Not CBN-regulated / Unknown", "OFI", "DMB/PSB"],
@@ -347,7 +356,7 @@ with st.sidebar:
     )
     with st.expander("Article 3 scope triage", expanded=False):
         st.caption(
-            "Non-binding triage only. It checks the explicit Article 3 territorial-scope triggers and does not change the confirmed field above."
+            "Non-binding triage only. It checks explicit Article 3 territorial-scope triggers and does not change the confirmed field above."
         )
         eu_establishment = st.selectbox("Processing in context of an EU establishment", ["Unknown", "Yes", "No"], index=0)
         offers_eu = st.selectbox("Offers goods/services to people in the EU", ["Unknown", "Yes", "No"], index=0)
@@ -373,7 +382,7 @@ with st.sidebar:
     include_gdpr = st.checkbox(
         "Include GDPR readiness",
         value=gdpr_scope_status == "Yes",
-        help="If scope is Unknown, GDPR controls can still be selected but they will remain review-required until scope is confirmed.",
+        help="If scope is Unknown, GDPR controls can still be selected but they remain review-required until scope is confirmed.",
     )
     if include_gdpr:
         st.caption("Conditional GDPR obligations remain human-confirmed rather than AI-inferred.")
@@ -403,15 +412,15 @@ with st.sidebar:
     if semantic_available:
         st.caption(f"Embedding model: {os.getenv('OPENAI_EMBEDDING_MODEL', 'text-embedding-3-small')}")
     else:
-        st.caption("No API key detected: retrieval uses the deterministic TF-IDF fallback.")
+        st.caption("No embedding key detected: retrieval uses the deterministic TF-IDF fallback.")
 
     ai_available = can_use_llm()
     use_ai = st.toggle("Use AI evidence reviewer", value=False, disabled=not ai_available)
     if ai_available:
         provider = llm_provider()
-        st.caption(f"Generation provider: {provider}. Reasoning model: {llm_model_name()}. Structured output is used.")
+        st.caption(f"Generation provider: {provider}. Model: {llm_model_name()}. Structured output is used.")
     else:
-        st.caption("No supported generation API key detected. Retrieved candidates remain review-required until a person validates them.")
+        st.caption("No supported generation key detected. Retrieved candidates remain review-required until a person validates them.")
 
     if use_semantic_retrieval or use_ai:
         providers = []
@@ -420,7 +429,7 @@ with st.sidebar:
         if use_ai and llm_provider():
             providers.append(f"{llm_provider()} generation")
         st.warning(
-            "External AI mode is enabled. Relevant organisational evidence will be sent to the configured provider(s): "
+            "External AI mode is enabled. Relevant organisational evidence will be sent to: "
             + ", ".join(providers)
             + ". Use only evidence you are authorised to process through those providers."
         )
@@ -455,7 +464,8 @@ with st.expander("Source and verification status", expanded=False):
     else:
         st.write("Select at least one framework pack.")
 
-st.subheader("Evidence")
+st.markdown("## Evidence intake")
+st.caption("Use fictional samples for a safe tour, or upload organisational evidence that you are authorised to process.")
 col1, col2 = st.columns([1, 2])
 with col1:
     use_samples = st.checkbox("Use fictional sample policies", value=True)
@@ -471,9 +481,6 @@ with col2:
 run = st.button("Run readiness assessment", type="primary", disabled=not selected_frameworks)
 
 if run:
-    # A new ingestion attempt invalidates the previous assessment. This prevents a
-    # failed/empty upload from leaving an older bundle on screen as if it belonged
-    # to the newly supplied evidence set.
     st.session_state.pop("assessment_bundle", None)
     st.session_state.pop("evidence_retriever", None)
     chunks, source_records, parse_errors = build_chunks(uploaded_files, use_samples, include_injection_test)
@@ -486,11 +493,7 @@ if run:
         st.error("No readable evidence was provided. Add sample policies or upload evidence files.")
         if source_records:
             st.caption("Supplied sources remain registered below even though no readable chunks were available for assessment.")
-            st.dataframe(
-                evidence_quality_dataframe({}, source_records=source_records),
-                use_container_width=True,
-                hide_index=True,
-            )
+            st.dataframe(evidence_quality_dataframe({}, source_records=source_records), use_container_width=True, hide_index=True)
     else:
         with st.spinner("Retrieving and assessing evidence..."):
             retriever = build_retriever(chunks, use_semantic_retrieval)
@@ -515,6 +518,7 @@ if run:
         st.session_state["retrieval_mode"] = retriever.mode
         st.session_state["semantic_error"] = retriever.semantic_error
         st.session_state["assessment_profile"] = {
+            "organisation_name": organisation_name,
             "operates_in_nigeria": operates_in_nigeria,
             "processing_role": processing_role,
             "dcpmi_status": dcpmi_status,
@@ -533,7 +537,9 @@ if run:
 
 bundle = st.session_state.get("assessment_bundle")
 if bundle:
+    render_flow(active_step=3)
     current_material_profile = {
+        "organisation_name": organisation_name,
         "operates_in_nigeria": operates_in_nigeria,
         "processing_role": processing_role,
         "dcpmi_status": dcpmi_status,
@@ -554,10 +560,11 @@ if bundle:
     if assessment_stale:
         st.warning(
             "The organisation profile or selected framework packs changed after this assessment was run. "
-            "The displayed findings still reflect the previous run. Rerun the assessment before validating or relying on exports."
+            "The displayed findings still reflect the previous run. Rerun before validating or relying on exports."
         )
+
     st.divider()
-    st.subheader("Readiness dashboard")
+    st.markdown("## Readiness dashboard")
     framework_type_summary = ", ".join(
         sorted({item["framework"].framework_type.replace("_", " ") for item in bundle.values()})
     )
@@ -582,8 +589,7 @@ if bundle:
 
     retrieval_mode = st.session_state.get("retrieval_mode", "lexical_fallback")
     st.caption(
-        f"Retrieval mode: {retrieval_mode}. Provisional readiness uses only resolved applicable controls; coverage shows how much "
-        "applicable control weight has actually been resolved."
+        f"Retrieval mode: {retrieval_mode}. Provisional readiness uses only resolved applicable controls; coverage shows how much applicable control weight has actually been resolved."
     )
     if st.session_state.get("semantic_error"):
         st.warning(f"Semantic retrieval fell back safely to lexical retrieval: {st.session_state['semantic_error']}")
@@ -600,9 +606,7 @@ if bundle:
         quality_cols[3].metric("Stale sources", freshness_counts.get("stale", 0))
         quality_cols[4].metric("Undated / unknown", freshness_counts.get("unknown", 0))
         st.caption(
-            "General evidence-age signal only: current <=365 days, aging 366-730 days, stale >730 days. "
-            "Framework-specific review, retention and recertification rules still take precedence. Every supplied source remains "
-            "registered here even when retrieval does not use it for a control."
+            "General evidence-age signal only: current <=365 days, aging 366-730 days, stale >730 days. Framework-specific review, retention and recertification rules still take precedence."
         )
         if freshness_counts.get("stale", 0):
             st.warning("Stale evidence is present. BGNexa will not allow stale-only evidence to establish a supported automated result.")
@@ -638,15 +642,8 @@ if bundle:
                         "Status": status_label(result.status),
                         "Evidence": result.evidence_strength,
                         "Evidence type": ", ".join(
-                            sorted(
-                                {
-                                    tag.value
-                                    for match in result.evidence
-                                    for tag in (match.evidence_type_tags or [match.evidence_type])
-                                }
-                            )
-                        )
-                        or "none",
+                            sorted({tag.value for match in result.evidence for tag in (match.evidence_type_tags or [match.evidence_type])})
+                        ) or "none",
                         "Freshness": ", ".join(sorted({m.freshness_status.value for m in result.evidence})) or "none",
                         "AI": "Yes" if result.ai_assessed else "No",
                         "Human validated": "Yes" if result.human_validated else "No",
@@ -693,16 +690,12 @@ if bundle:
                                 quality_parts.append(f"age {match.age_days} days")
                             if match.source_hash:
                                 quality_parts.append(f"source SHA-256 {match.source_hash[:12]}…")
-                            st.caption(
-                                f"{match.source_name}{location} | {' | '.join(score_parts)} | {' | '.join(quality_parts)}{flag}"
-                            )
+                            st.caption(f"{match.source_name}{location} | {' | '.join(score_parts)} | {' | '.join(quality_parts)}{flag}")
                             st.code(match.excerpt, language="text")
 
     st.subheader("Human validation")
     st.caption(
-        "A person can resolve automated or retrieval-only findings. Supported/partial decisions require explicit evidence confirmation, "
-        "including consideration of evidence type and freshness; not-applicable decisions remain controlled by the organisation profile "
-        "rather than reviewer override."
+        "A person can resolve automated or retrieval-only findings. Supported/partial decisions require explicit evidence confirmation; not-applicable decisions remain controlled by the organisation profile."
     )
     review_options = []
     review_lookup = {}
@@ -720,12 +713,9 @@ if bundle:
 
     if review_options:
         selected_review = st.selectbox(
-            "Control to validate",
-            options=[key for key, _ in review_options],
-            format_func=lambda key: dict(review_options)[key],
+            "Control to validate", options=[key for key, _ in review_options], format_func=lambda key: dict(review_options)[key]
         )
         selected_fid, selected_cid = review_lookup[selected_review]
-        _, _, current_result = find_result(bundle, selected_fid, selected_cid)
         with st.form("human_validation_form", clear_on_submit=False):
             reviewer = st.text_input("Reviewer name")
             final_status = st.selectbox(
@@ -774,11 +764,7 @@ if bundle:
     reuse_rows = evidence_reuse_opportunities(selected_bundle_frameworks, limit=10)
     if reuse_rows:
         st.write("**Highest-overlap evidence areas**")
-        st.dataframe(
-            pd.DataFrame(reuse_rows)[["capability", "framework_count", "control_count", "frameworks"]],
-            use_container_width=True,
-            hide_index=True,
-        )
+        st.dataframe(pd.DataFrame(reuse_rows)[["capability", "framework_count", "control_count", "frameworks"]], use_container_width=True, hide_index=True)
         with st.expander("Show complete capability crosswalk", expanded=False):
             st.dataframe(pd.DataFrame(capability_crosswalk(selected_bundle_frameworks)), use_container_width=True, hide_index=True)
     else:
@@ -786,8 +772,7 @@ if bundle:
 
     st.subheader("Evidence-grounded Copilot")
     st.caption(
-        "Ask about uploaded evidence, current assessment results, gaps, or relevant framework requirements. The Copilot receives retrieved "
-        "evidence, the current assessment state, and selected framework summaries; flagged prompt-injection passages are excluded."
+        "Ask about uploaded evidence, current assessment results, gaps, or relevant framework requirements. The Copilot receives retrieved evidence and current assessment state; flagged prompt-injection passages are excluded."
     )
     question = st.text_input("Ask the Copilot", placeholder="Which evidence supports our incident response readiness?")
     ask = st.button("Ask Copilot", disabled=not question.strip())
@@ -847,11 +832,7 @@ if bundle:
             file_name="evidence_source_register.csv",
             mime="text/csv",
         )
-        executive_html = build_executive_html(
-            bundle,
-            organisation_name=organisation_name,
-            source_records=source_records,
-        )
+        executive_html = build_executive_html(bundle, organisation_name=organisation_name, source_records=source_records)
         export_cols[2].download_button(
             "Download executive HTML",
             data=executive_html.encode("utf-8"),
@@ -887,9 +868,9 @@ if bundle:
             file_name="readiness_snapshot.json",
             mime="application/json",
         )
-        st.caption(
-            f"Snapshot SHA-256: {snapshot['sha256']}. This digest is tamper-evident, not a cryptographic identity signature."
-        )
+        st.caption(f"Snapshot SHA-256: {snapshot['sha256']}. This digest is tamper-evident, not a cryptographic identity signature.")
+
+        st.success("Assessment ready for assurance work. Open **Assurance Workspace** from the left navigation to assign owners, request evidence, test controls and track actions.")
 
     with st.expander("How to interpret this result"):
         st.markdown(
@@ -907,5 +888,5 @@ if bundle:
 
 st.divider()
 st.caption(
-    "Research build. Regulatory packs are versioned and source-traceable; qualified legal, privacy, regulatory, cybersecurity and audit review remains necessary for real-world reliance."
+    "Public beta research build. Regulatory packs are versioned and source-traceable; qualified legal, privacy, regulatory, cybersecurity and audit review remains necessary for real-world reliance."
 )
