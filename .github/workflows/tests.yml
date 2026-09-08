@@ -2,17 +2,33 @@ name: tests
 
 on:
   push:
+    branches:
+      - main
+      - "v0.*"
   pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bgnexa-tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
+          cache-dependency-path: |
+            requirements-core.txt
+            requirements.txt
       - name: Install core and test dependencies
         run: |
           python -m pip install --upgrade pip
