@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from .evidence_quality import assessment_quality_guardrails, evidence_quality_summary
-from .llm import assess_with_llm, can_use_llm
+from .llm import LLMTemporarilyUnavailable, assess_with_llm, can_use_llm
 from .models import AssessmentResult, AssessmentStatus, Control, EvidenceMatch
 
 
@@ -40,7 +40,32 @@ def assess_control(framework_id: str, control: Control, matches: list[EvidenceMa
         )
 
     if use_ai and can_use_llm():
-        decision = assess_with_llm(control, matches)
+        try:
+            decision = assess_with_llm(control, matches)
+        except LLMTemporarilyUnavailable as exc:
+            wait_note = (
+                f" Provider cooldown: about {exc.retry_after_seconds}s."
+                if exc.retry_after_seconds
+                else ""
+            )
+            return AssessmentResult(
+                control_id=control.control_id,
+                framework_id=framework_id,
+                status=AssessmentStatus.REVIEW_REQUIRED,
+                rationale=(
+                    "Relevant evidence candidates were found, but the external AI reviewer is temporarily unavailable. "
+                    "BGNexa preserved the evidence and deferred the judgement to human review rather than retrying repeatedly."
+                    + wait_note
+                ),
+                evidence=matches,
+                recommendation="Review the cited evidence manually or retry AI review after the provider cooldown.",
+                evidence_strength="weak",
+                evidence_quality_flags=sorted({*inherited_flags, "ai_provider_temporarily_unavailable"}),
+                evidence_quality_note=quality_note,
+                ai_assessed=False,
+                requires_human_review=True,
+            )
+
         proposed_status = decision.status.value
         guarded_status, guard_flags, guard_note = assessment_quality_guardrails(control, matches, proposed_status)
         rationale = decision.rationale

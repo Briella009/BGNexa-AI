@@ -1,87 +1,86 @@
 # BGNexa AI
 
-**Turn evidence into readiness.**
+**Turn evidence into readiness — and readiness into assurance work.**
 
-BGNexa AI is a source-traceable evidence intelligence platform for cybersecurity, privacy and regulatory readiness across Nigerian and international frameworks.
+BGNexa AI is an open-source, source-traceable evidence intelligence and assurance workspace for cybersecurity, privacy and regulatory readiness. It is designed for GRC teams, internal auditors, cybersecurity assurance teams, privacy teams and control owners who need to move from uploaded evidence to a defensible review trail.
 
-**Current release: v0.4.4**
+**Current development release: v0.5.0**
 
-The project currently supports:
+> **Important:** BGNexa reports evidence-backed readiness and supports assurance workflows. It does **not** determine legal compliance, issue an audit opinion, certify ISO/IEC 27001 conformity, provide regulator approval, or replace qualified legal, privacy, cybersecurity, regulatory or audit judgement.
 
-- Nigeria Data Protection Act 2023 - selected operational readiness provisions
-- NDPC GAID 2025 - selected implementation provisions with DCPMI applicability guardrails
-- CBN Risk-Based Cybersecurity Framework for Other Financial Institutions (OFIs), 2022 - 21 directly verified selected controls
-- CBN Risk-Based Cybersecurity Framework for DMBs & PSBs, 2024 - 30 directly verified selected controls
-- ISO/IEC 27001:2022 + Amendment 1:2024 - clause-level readiness summaries without redistributing ISO text
-- NIST Cybersecurity Framework (CSF) 2.0 - complete 106-subcategory Core outcome pack
-- EU GDPR - 18 selected high-value organisational readiness obligations with conservative Article 3 applicability handling
+## What BGNexa does
 
-> **Important:** this project reports evidence-backed readiness. It does not determine legal compliance, certify ISO/IEC 27001 conformity, provide regulator approval, or replace qualified legal/privacy/cybersecurity/audit review.
+BGNexa separates problems that basic compliance chatbots often mix together:
 
-## Why this project is different
+1. **Applicability** — deterministic organisation/profile rules decide what can be assessed; the LLM cannot declare a control out of scope.
+2. **Evidence ingestion** — PDF, DOCX, TXT and Markdown evidence is parsed, hashed and registered.
+3. **Evidence retrieval** — local TF-IDF retrieval works without an API key; optional semantic retrieval can be enabled separately.
+4. **Evidence judgement** — optional structured-output AI can review retrieved evidence, but quality guardrails and human review remain in control.
+5. **Evidence quality** — documented intent is separated from operational, technical, audit/test, filing, contractual and training evidence; stale-only evidence cannot establish automated support.
+6. **Readiness scoring** — provisional readiness is shown separately from resolved coverage so unresolved work cannot inflate the score.
+7. **Human validation** — reviewers can resolve findings with named rationale and evidence confirmation.
+8. **Assurance execution** — the v0.5 Assurance Workspace converts the current assessment into a traceable workplan for internal-audit/GRC follow-up.
 
-The engine separates six problems that basic compliance chatbots often mix together:
+## Assurance Workspace (v0.5)
 
-1. framework applicability;
-2. evidence retrieval;
-3. AI evidence judgement;
-4. uncertainty and human review;
-5. readiness scoring;
-6. cross-framework evidence reuse.
+The new Assurance Workspace is designed to help a company operationalise the assessment rather than stop at a dashboard.
 
-A document mentioning a control topic is not automatically treated as proof that the requirement is satisfied. Legal/regulatory scope is kept outside the LLM.
+It creates one work item per applicable control and supports:
 
-## Core features
+- control owner and assurance owner assignment;
+- evidence-request registers;
+- suggested test objectives and test procedures;
+- workflow states from open through remediation/retest/closure;
+- test-result recording;
+- sample references;
+- findings and severity **only when a user records them** — readiness gaps are not silently converted into audit findings;
+- management responses, action owners and target dates;
+- reviewer notes and closure evidence;
+- an append-only **session** change log for workspace edits;
+- CSV exports for workplans, evidence requests, findings/actions and the session audit trail;
+- a tamper-evident assurance JSON snapshot linked to the readiness-assessment fingerprint and snapshot hash.
 
-- Framework-specific applicability instead of a generic compliance checklist
-- NDPA + NDPC GAID with non-binding Schedule 7 DCPMI triage, tier-aware applicability and registration-exemption handling
-- Separate CBN OFI and DMB/PSB framework packs
-- Direct source-page verification metadata for both CBN packs; source PDFs are not redistributed
-- ISO/IEC 27001 clause-level readiness without publishing copyrighted standard text
-- Complete NIST CSF 2.0 Core outcome surface (106 Subcategories)
-- GDPR Article 3 territorial-scope triage kept separate from confirmed legal scope
-- Human-confirmed GDPR conditional applicability for RoPA, DPIA, DPO, processor relationships and international transfers
-- PDF, DOCX, TXT and Markdown evidence ingestion
-- Hybrid retrieval: local TF-IDF plus optional semantic embeddings with reciprocal-rank fusion
-- Safe lexical fallback if embeddings are unavailable
-- Optional structured-output AI evidence reviewer
-- Prompt-injection detection and automated-review blocking
-- Provisional readiness **plus separate resolved coverage**
-- Human validation with evidence-confirmation guardrails
-- Deterministic evidence-type classification and freshness metadata
-- Document-level evidence registry: every supplied source remains visible even when no control retrieves it
-- SHA-256 provenance, file size, parse status and source-format metadata for every supplied evidence document
-- Filename date fallback for evidence named with an explicit `YYYY-MM-DD` date when content does not expose a reliable document date
-- Composite evidence-type tags so operational artefacts can retain training/audit/technical signals without being flattened into policy intent
-- Automated quality caps: stale-only evidence and policy-only proof for operational requirements cannot resolve as fully supported
-- Assessment-aware evidence-grounded Copilot with citation allow-listing; current scores, control states, human validations and priority gaps are supplied as read-only context for assessment questions
-- Priority remediation/review queue
-- Cross-framework capability map and potential evidence-reuse view
-- CSV, executive HTML and tamper-evident JSON snapshot export
-- Authority-domain and verification-tier provenance audit
-- Deterministic retrieval and security regression suite
-- GitHub Actions quality gates
+The public beta is intentionally session-based. It is not yet a multi-user audit-management system and does not claim cryptographic reviewer identity, immutable server audit logging or production tenant isolation.
 
-## Framework types stay separate
+## Supported framework packs
 
-The product deliberately labels each pack by source type:
+BGNexa currently includes:
 
-| Pack | Type |
-|---|---|
-| NDPA 2023 | Law |
-| NDPC GAID 2025 | Regulatory implementation guidance |
-| CBN OFI 2022 | Regulatory framework |
-| CBN DMB/PSB 2024 | Regulatory framework |
-| ISO/IEC 27001 | International standard |
-| NIST CSF 2.0 | Voluntary framework |
-| GDPR | Law |
+- **Nigeria Data Protection Act 2023** — selected operational readiness provisions;
+- **NDPC GAID 2025** — selected implementation provisions with conservative DCPMI guardrails;
+- **CBN Risk-Based Cybersecurity Framework for OFIs, 2022** — selected directly verified controls;
+- **CBN Risk-Based Cybersecurity Framework for DMBs & PSBs, 2024** — selected directly verified controls;
+- **ISO/IEC 27001:2022 + Amendment 1:2024** — project-authored clause-level readiness summaries without redistributing ISO text;
+- **NIST Cybersecurity Framework 2.0** — full Core outcome surface;
+- **EU GDPR** — selected high-value organisational readiness obligations with conservative Article 3 applicability handling.
 
-A readiness percentage inside one pack is therefore **not** treated as interchangeable with another pack and is never described as certification or legal compliance.
+Framework types remain visibly separate. A law, regulatory framework, implementation guide, voluntary framework and international standard are not treated as interchangeable scoring systems.
 
+## Evidence and trust guardrails
 
-## Free-tier AI option (Groq)
+BGNexa is deliberately conservative:
 
-BGNexa can run without any API key in deterministic retrieval/manual-review mode. For optional generation, it also supports Groq through its OpenAI-compatible API. When only Groq is configured, generation can be enabled while semantic embeddings stay on the local TF-IDF fallback.
+- uploaded evidence is **untrusted data**;
+- prompt-injection-like passages are flagged and blocked from automated evidence judgement;
+- a document merely mentioning a topic is not proof that the requirement is satisfied;
+- policy/procedure evidence does not automatically prove operating effectiveness;
+- unknown dates are not invented;
+- stale-only evidence cannot establish an automated `supported` result;
+- applicability remains outside the LLM;
+- `not_applicable` cannot be selected by the AI reviewer or by a reviewer override;
+- `review_required` remains unresolved review rather than a confirmed deficiency;
+- human-validated results remain distinct from AI proposals;
+- all supplied documents remain visible in the evidence registry even when retrieval does not use them.
+
+## AI provider behaviour
+
+BGNexa works without an API key in deterministic retrieval/manual-review mode.
+
+Optional generation supports OpenAI or Groq. External-AI mode only sends the evidence selected for the request to the configured provider. Do not submit evidence you are not authorised to process externally.
+
+The v0.5 AI layer also includes a provider circuit breaker. If a shared beta provider returns a rate-limit or transient connectivity/service error, BGNexa pauses immediate follow-on calls and safely falls back to human review instead of repeatedly exhausting the same quota.
+
+Example environment configuration:
 
 ```env
 AI_PROVIDER=groq
@@ -89,7 +88,58 @@ GROQ_API_KEY=your_key_here
 GROQ_MODEL=openai/gpt-oss-20b
 ```
 
-Never commit real API keys. On Streamlit Community Cloud, store them in **App settings → Secrets**. External-AI mode sends only the retrieved evidence selected for the request to the configured generation provider.
+or
+
+```env
+AI_PROVIDER=openai
+OPENAI_API_KEY=your_key_here
+OPENAI_MODEL=gpt-5.6
+OPENAI_EMBEDDING_MODEL=text-embedding-3-small
+```
+
+Never commit real API keys. Use deployment secret storage.
+
+## Readiness states
+
+| State | Meaning |
+|---|---|
+| `supported` | Evidence supports the readiness requirement, subject to the recorded review state |
+| `partially_supported` | Evidence covers a material subset of the requirement |
+| `not_evidenced` | Sufficient evidence was not found or a reviewer confirmed the evidence gap |
+| `review_required` | Scope or evidence judgement cannot safely be resolved automatically |
+| `not_applicable` | Explicit non-AI applicability logic determines that the control is outside the applicable set |
+
+## Scoring
+
+The dashboard intentionally shows two different values:
+
+**Provisional readiness** = evidence-weight earned / resolved applicable weight.
+
+**Resolved coverage** = resolved applicable weight / all applicable weight.
+
+This prevents a small resolved subset from being presented as a reassuring overall result.
+
+## Evidence quality
+
+Every supplied source is classified conservatively into evidence modes such as:
+
+- documented intent;
+- operational record;
+- technical evidence;
+- audit/test evidence;
+- regulatory filing;
+- contractual evidence;
+- training evidence;
+- unknown.
+
+BGNexa also exposes a general freshness signal:
+
+- `current`: 0–365 days;
+- `aging`: 366–730 days;
+- `stale`: more than 730 days;
+- `unknown`: no reliable date or a future-dated source.
+
+These thresholds are product-level evidence-age signals, not replacements for framework-specific review, retention, recertification or regulatory deadlines.
 
 ## Quick start
 
@@ -101,195 +151,72 @@ cp .env.example .env
 streamlit run app.py
 ```
 
-The app works without an API key. Without AI review, retrieved candidates stay `review_required` until a person validates them. Without embeddings, retrieval safely uses local TF-IDF.
+The app works without an API key. Without AI review, retrieved candidates remain `review_required` until a person validates them.
 
-Core checks can run without Streamlit or the OpenAI SDK:
+Core quality checks:
 
 ```bash
 pip install -r requirements-core.txt
 pytest -q
 python scripts/audit_framework_sources.py --strict
 python scripts/run_evals.py --strict
+python scripts/smoke_stage2.py
 python scripts/smoke_stage4.py
 ```
 
-For optional AI review/semantic retrieval:
-
-```text
-OPENAI_API_KEY=...
-OPENAI_MODEL=gpt-5.6
-OPENAI_EMBEDDING_MODEL=text-embedding-3-small
-```
-
-When external AI mode is enabled, relevant evidence may be sent to the configured provider. Do not submit evidence you are not authorised to process externally.
-
-## Assessment states
-
-| State | Meaning |
-|---|---|
-| `supported` | Evidence supports the requirement, subject to human validation |
-| `partially_supported` | Evidence covers a material subset of the requirement |
-| `not_evidenced` | Sufficient evidence was not found or a reviewer confirmed the gap |
-| `review_required` | Scope/evidence cannot safely be resolved automatically |
-| `not_applicable` | Explicit non-AI applicability logic determines the control is out of scope |
-
-## Evidence quality and freshness
-
-BGNexa now records evidence quality separately from retrieval relevance. Each uploaded source is conservatively classified as one of:
-
-- documented intent (policy, procedure, standard, runbook);
-- operational record;
-- technical evidence;
-- audit/test evidence;
-- regulatory filing;
-- contractual evidence;
-- training evidence; or
-- unknown.
-
-Where an explicit document date can be extracted from a labelled field such as `Record date`, `Assessment date`, `Approved`, `Effective`, `Issued`, `Reviewed` or `Date`, the app exposes a general freshness signal. If content does not expose a reliable date, an explicit `YYYY-MM-DD` date in the filename is used as a traceable fallback; PDF/DOCX metadata remains a later fallback.
-
-- `current`: 0-365 days old;
-- `aging`: 366-730 days old;
-- `stale`: more than 730 days old;
-- `unknown`: no reliable date, or a future-dated document.
-
-These thresholds are a product-level evidence-age heuristic, **not** a substitute for framework-specific review, retention, recertification or regulatory deadlines. Unknown dates are never invented. Filename-derived dates are visibly marked with `filename:date`. A stale-only evidence set cannot produce an automated `supported` result, and policy/procedure evidence cannot by itself prove an operational requirement where the control expects records, logs, tests, configurations, filings or similar implementation proof.
-
-The evidence register is document-level rather than retrieval-only. A parsed source that is not selected by retrieval is shown as `indexed_not_retrieved`; an unreadable source is shown as `parsed_no_text` or `parse_error`. This prevents an uploaded document from silently disappearing simply because it was not relevant to the selected controls. The tamper-evident JSON snapshot includes the source-level provenance records, and the UI exposes a separate evidence-register CSV export.
-
-## Scoring model
-
-The dashboard intentionally shows two values:
-
-**Provisional readiness** = evidence-weight earned / resolved applicable weight.
-
-**Resolved coverage** = resolved applicable weight / all applicable weight.
-
-`review_required` controls do not inflate readiness. If applicability is unresolved, the app exposes that uncertainty rather than producing an artificially reassuring score.
-
-## Applicability guardrails
-
-### Nigeria / NDPC
-
-The app distinguishes controller, processor and mixed roles. DCPMI status and tier are confirmed profile fields. Schedule 7 triage is advisory only and cannot silently change legal applicability.
-
-### CBN
-
-OFIs use the 2022 pack. DMBs/PSBs use the 2024 pack. The application does not merge those regimes into one generic CBN score.
-
-### GDPR
-
-Article 3 territorial scope is a confirmed human/legal input. A separate triage helper can identify explicit Article 3 indicators, but the AI cannot convert that triage into a legal scope determination. Conditional obligations such as Article 30 RoPA, Article 35 DPIA, Article 37 DPO and Chapter V transfers also remain explicit applicability decisions.
-
-### ISO
-
-The public repository uses project-authored clause-level summaries and official ISO references. It does not include the ISO standard or Annex A control text.
-
-## Cross-framework evidence reuse
-
-Controls use shared capability tags such as `risk_assessment`, `incident_response`, `governance`, `data_security`, `access_control` and `third_party_risk`.
-
-The dashboard ranks high-overlap capability areas to help a team ask: **can one evidence set support review across multiple frameworks?** This is an efficiency hint only, not a declaration that requirements are equivalent.
-
-## AI security
-
-Uploaded documents are treated as untrusted data. The system:
-
-- flags common prompt-injection patterns;
-- excludes flagged passages from Copilot evidence context;
-- blocks unsafe automated evidence judgement;
-- never delegates legal/regulatory applicability to the LLM;
-- uses structured outputs for evidence assessment;
-- keeps human validation and reviewer rationale in the snapshot.
-
-## Repository layout
+## Repository structure
 
 ```text
 .
-├── app.py
-├── frameworks/
-│   ├── eu/
-│   ├── international/
-│   ├── nigeria/
-│   └── source_registry.yaml
+├── app.py                         # readiness application
+├── pages/
+│   └── 01_Assurance_Workspace.py # internal-audit/GRC workbench
+├── frameworks/                    # source-traceable framework packs
 ├── src/
 │   ├── applicability.py
-│   ├── authority_verify.py
 │   ├── assessor.py
+│   ├── assurance.py
 │   ├── copilot.py
-│   ├── crosswalk.py
-│   ├── dcpmi.py
-│   ├── gdpr.py
-│   ├── evaluation.py
 │   ├── evidence.py
 │   ├── evidence_quality.py
-│   ├── framework_loader.py
-│   ├── provenance.py
+│   ├── llm.py
 │   ├── report.py
 │   ├── retriever.py
 │   ├── review.py
-│   ├── scoring.py
-│   └── security.py
-├── scripts/
-│   ├── audit_framework_sources.py
-│   ├── run_evals.py
-│   ├── smoke_stage2.py
-│   ├── smoke_stage3.py
-│   ├── smoke_stage4.py
-│   └── verify_authority_pdf.py
-├── sample_data/
+│   └── scoring.py
 ├── evals/
+├── scripts/
 ├── tests/
 └── docs/
 ```
 
-## Stage 4 quality gate
+## Public-beta boundary
 
-Current deterministic checkpoint:
+The public Streamlit build is suitable for demonstration and controlled beta testing with non-sensitive or appropriately authorised evidence. It is **not** yet a production SaaS for confidential multi-tenant customer evidence.
 
-- **76 automated tests passing**
-- **7 framework packs**
-- **213 seeded controls/outcomes**
-- **106 NIST CSF 2.0 Subcategories**
-- **18 selected GDPR readiness controls**
-- **21 directly verified CBN OFI controls**
-- **30 directly verified CBN DMB/PSB controls**
-- **66 golden retrieval cases**
-- **Recall@1: 98.48%**
-- **Recall@3: 100%**
-- **MRR: 0.9924**
-- **0 provenance errors**
-- **0 provenance warnings**
-- prompt-injection/Copilot evidence-exclusion checks passing
+Before a hosted production edition, BGNexa still needs authentication/SSO, tenant isolation, encrypted persistence, secure retention/deletion controls, durable server-side audit logging, malware/file validation, deployment-specific rate limits, stronger identity/sign-off, privacy controls and deployment threat modelling.
 
-The retrieval metrics are measured on synthetic repository fixtures. They are regression metrics, **not** a claim of 100% real-world assessment accuracy.
-
-## Source verification status
-
-- NDPA 2023: selected provisions traced to NDPC-published Act material.
-- NDPC GAID 2025: selected implementation provisions traced to NDPC-published GAID material.
-- CBN OFI 2022: correct 43-page image-only authority document privately supplied, fully rendered/reviewed, source hash recorded, and 21 seeded controls linked to PDF pages. The source is marked confidential and is not redistributed.
-- CBN DMB/PSB 2024: 61-page authority PDF privately supplied and directly reviewed; 30 seeded controls link to PDF pages. The PDF is not redistributed.
-- ISO/IEC 27001: official ISO reference metadata only in the public pack; no licensed standard text is included. A previously supplied gap-assessment workbook remains a private secondary aid, not authority text.
-- NIST CSF 2.0: complete Core outcome pack derived from the final NIST CSF 2.0 publication and source-traceable identifiers.
-- GDPR: selected organisational readiness controls traced to the official EUR-Lex regulation; not an exhaustive legal checklist.
-
-See `docs/source_verification_2026-08-19.md`, `docs/regulatory_notes.md`, `docs/accuracy_policy.md` and `docs/stage4.md`.
+See `SECURITY.md` before using real organisational evidence.
 
 ## Roadmap
 
-- Real anonymised policy corpus evaluation, including false-support/false-gap measurement
-- Framework-specific evidence expiry/supersession rules and superseded-document handling
-- Framework-version diffing and update alerts
-- More granular GDPR/NIST/CBN crosswalk review with human-approved mappings
-- Cryptographically signed reviewer attestations/identity integration
-- DOCX/PDF board-ready reports
-- Multi-tenant hosted edition with encrypted storage and audit logs
+Near-term product direction:
+
+- persistent projects/engagements and reviewer workpapers;
+- durable evidence-request and findings workflows;
+- role-based access and SSO;
+- framework version-diff and change alerts;
+- human-approved cross-framework mappings;
+- real anonymised policy/evidence corpus evaluation, including false-support and false-gap measurement;
+- framework-specific evidence expiry/supersession rules;
+- board/audit-committee-ready DOCX/PDF reports;
+- API/integrations for GRC, ticketing and evidence stores;
+- multi-tenant hosted edition with encrypted storage and durable audit logs.
 
 ## Security
 
-See `SECURITY.md` before using real organisational evidence or exposing the application externally.
+See `SECURITY.md`. Please do not place exploitable vulnerabilities, secrets, customer evidence, API keys or sensitive assessment exports in public GitHub issues.
 
 ## License
 
-MIT for the software. Third-party laws, regulations and standards retain their own applicable rights and terms. ISO standards are not included in this repository.
+MIT for the software. Third-party laws, regulations and standards retain their own rights and terms. ISO standards are not included in this repository.
