@@ -2,11 +2,35 @@
 
 **Turn evidence into readiness — and readiness into assurance work.**
 
+[![Tests](https://github.com/Briella009/BGNexa-AI/actions/workflows/tests.yml/badge.svg)](https://github.com/Briella009/BGNexa-AI/actions/workflows/tests.yml)
+[![Release](https://img.shields.io/github/v/release/Briella009/BGNexa-AI)](https://github.com/Briella009/BGNexa-AI/releases)
+[![License](https://img.shields.io/github/license/Briella009/BGNexa-AI)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+
+**[Run locally](#try-bgnexa-in-2-minutes)** · [Architecture](docs/architecture.md) · [Accuracy policy](docs/accuracy_policy.md) · [Contributing](CONTRIBUTING.md)
+
 BGNexa AI is an open-source, source-traceable evidence intelligence and assurance workspace for cybersecurity, privacy and regulatory readiness. It is designed for GRC teams, internal auditors, cybersecurity assurance teams, privacy teams and control owners who need to move from uploaded evidence to a defensible review trail.
 
 **Current development release: v0.5.0**
 
 > **Important:** BGNexa reports evidence-backed readiness and supports assurance workflows. It does **not** determine legal compliance, issue an audit opinion, certify ISO/IEC 27001 conformity, provide regulator approval, or replace qualified legal, privacy, cybersecurity, regulatory or audit judgement.
+
+## Try BGNexa in 2 minutes
+
+BGNexa can run without an API key in deterministic retrieval/manual-review mode.
+
+```bash
+git clone https://github.com/Briella009/BGNexa-AI.git
+cd BGNexa-AI
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Start with non-sensitive sample/demo evidence. The public-beta code is not a production multi-tenant evidence platform.
+
+If BGNexa solves a problem you care about, **star it to follow releases**, **fork it to test new framework/evidence workflows**, or contribute through [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What BGNexa does
 
