@@ -4,10 +4,11 @@
 
 [![Tests](https://github.com/Briella009/BGNexa-AI/actions/workflows/tests.yml/badge.svg)](https://github.com/Briella009/BGNexa-AI/actions/workflows/tests.yml)
 [![Release](https://img.shields.io/github/v/release/Briella009/BGNexa-AI)](https://github.com/Briella009/BGNexa-AI/releases)
+[![Live Beta](https://img.shields.io/badge/Live%20Beta-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://bgnexa-ai.streamlit.app/)
 [![License](https://img.shields.io/github/license/Briella009/BGNexa-AI)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 
-**[Run locally](#try-bgnexa-in-2-minutes)** · [Releases](https://github.com/Briella009/BGNexa-AI/releases) · [Architecture](docs/architecture.md) · [Accuracy policy](docs/accuracy_policy.md) · [Contributing](CONTRIBUTING.md)
+**[Try the live beta](https://bgnexa-ai.streamlit.app/)** · [Run locally](#try-bgnexa-in-2-minutes) · [Releases](https://github.com/Briella009/BGNexa-AI/releases) · [Architecture](docs/architecture.md) · [Accuracy policy](docs/accuracy_policy.md) · [Contributing](CONTRIBUTING.md)
 
 BGNexa AI is an open-source, source-traceable evidence intelligence and assurance workspace for cybersecurity, privacy and regulatory readiness. It is designed for GRC teams, internal auditors, cybersecurity assurance teams, privacy teams and control owners who need to move from uploaded evidence to a defensible review trail.
 
