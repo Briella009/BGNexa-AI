@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.5.1
+
+- Polished the public-beta product interface and clarified the Scope → Evidence → Assess → Assure journey.
+- Added public-beta guidance and stronger Streamlit CI coverage.
+- Added clearer onboarding, repository navigation, and contributor guidance.
+- Kept the public-beta boundary explicit: BGNexa is not yet a production multi-tenant evidence platform.
+
+## v0.5.0
+
+- Added the Assurance Workspace for internal-audit and GRC follow-up.
+- Added control and assurance ownership, evidence requests, test procedures, workflow status, findings/actions, reviewer notes, and closure evidence.
+- Added CSV exports for workplans, evidence requests, findings/actions, and the session change trail.
+- Added tamper-evident assurance JSON snapshots linked to assessment fingerprints.
+- Added provider circuit-breaking so rate-limit/transient AI-provider failures fall back safely to human review.
+- Preserved the distinction between readiness gaps and user-recorded audit findings.
+
 ## v0.4.4
 
 - Added a document-level evidence source registry so every supplied source remains visible even when no framework control retrieves it.
