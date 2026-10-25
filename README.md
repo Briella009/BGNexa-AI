@@ -7,11 +7,11 @@
 [![License](https://img.shields.io/github/license/Briella009/BGNexa-AI)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 
-**[Run locally](#try-bgnexa-in-2-minutes)** · [Architecture](docs/architecture.md) · [Accuracy policy](docs/accuracy_policy.md) · [Contributing](CONTRIBUTING.md)
+**[Run locally](#try-bgnexa-in-2-minutes)** · [Releases](https://github.com/Briella009/BGNexa-AI/releases) · [Architecture](docs/architecture.md) · [Accuracy policy](docs/accuracy_policy.md) · [Contributing](CONTRIBUTING.md)
 
 BGNexa AI is an open-source, source-traceable evidence intelligence and assurance workspace for cybersecurity, privacy and regulatory readiness. It is designed for GRC teams, internal auditors, cybersecurity assurance teams, privacy teams and control owners who need to move from uploaded evidence to a defensible review trail.
 
-**Current development release: v0.5.0**
+**Current development release: v0.5.1**
 
 > **Important:** BGNexa reports evidence-backed readiness and supports assurance workflows. It does **not** determine legal compliance, issue an audit opinion, certify ISO/IEC 27001 conformity, provide regulator approval, or replace qualified legal, privacy, cybersecurity, regulatory or audit judgement.
 
