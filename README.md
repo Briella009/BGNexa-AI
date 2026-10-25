@@ -10,6 +10,14 @@
 
 **[Try the live beta](https://bgnexa-ai.streamlit.app/)** · [Run locally](#try-bgnexa-in-2-minutes) · [Releases](https://github.com/Briella009/BGNexa-AI/releases) · [Architecture](docs/architecture.md) · [Accuracy policy](docs/accuracy_policy.md) · [Contributing](CONTRIBUTING.md)
 
+<p align="center">
+  <a href="https://bgnexa-ai.streamlit.app/">
+    <img src="assets/screenshots/bgnexa-demo.gif" alt="BGNexa AI public beta showing the evidence-first workflow, readiness dashboard, evidence quality, and priority remediation queue" width="100%" />
+  </a>
+</p>
+
+<p align="center"><em>Real v0.5.1 public-beta UI captured from the repository app using fictional sample policies.</em></p>
+
 BGNexa AI is an open-source, source-traceable evidence intelligence and assurance workspace for cybersecurity, privacy and regulatory readiness. It is designed for GRC teams, internal auditors, cybersecurity assurance teams, privacy teams and control owners who need to move from uploaded evidence to a defensible review trail.
 
 **Current development release: v0.5.1**
