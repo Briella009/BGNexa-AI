@@ -14,6 +14,19 @@ The most useful contributions are small, reviewable changes that strengthen evid
 - improve deterministic retrieval/evaluation;
 - fix bugs with a reproducible test case.
 
+## Starter pull requests
+
+Good first contributions include:
+
+- add one evidence-quality or freshness edge-case test;
+- add one safe synthetic/demo evidence fixture;
+- improve accessibility or onboarding documentation;
+- improve a framework-source/provenance validation test without adding copyrighted standards text;
+- add a deterministic retrieval regression case;
+- improve export/report clarity with tests.
+
+Prefer one small, auditable improvement per PR.
+
 ## Before you start
 
 1. Fork the repository.
