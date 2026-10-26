@@ -41,6 +41,17 @@ Start with non-sensitive sample/demo evidence. The public-beta code is not a pro
 
 If BGNexa solves a problem you care about, **star it to follow releases**, **fork it to test new framework/evidence workflows**, or contribute through [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Independent technical reviews and contributions
+
+Independent security, GRC, privacy, AI-assurance and software-engineering reviews are welcome, including findings that challenge assumptions or identify limitations. **Please share only your first-hand observations** from using the public beta with fictional/synthetic data, running a local test, or inspecting documented source code.
+
+- **[Submit an independent technical review (GitHub Issue form)](https://github.com/Briella009/BGNexa-AI/issues/new?template=independent-technical-review.yml)** — describe what you tested, results, strengths, limitations and improvement suggestions. The reviewer authors their own public issue; reviews are not directly posted into this README.
+- **[See public GitHub reviews and issues](https://github.com/Briella009/BGNexa-AI/issues?q=is%3Aissue+label%3Aindependent-review)** — reviews will be labelled when validated as genuine review submissions.
+- **[Contribute code, tests, documentation or accessibility improvements](CONTRIBUTING.md)** — fork the repository and open a focused pull request with test evidence.
+- **[Report security concerns responsibly](SECURITY.md)** — never place exploitable vulnerabilities, confidential evidence, personal data or credentials in public issues.
+
+Reviewers can focus on evidence provenance and quality, readiness and applicability rules, human oversight of AI-assisted assessment, or usability and security of the public beta. Both positive and negative findings help improve the project. A GitHub star, fork or LinkedIn post alone is not a technical validation.
+
 ## What BGNexa does
 
 BGNexa separates problems that basic compliance chatbots often mix together:
