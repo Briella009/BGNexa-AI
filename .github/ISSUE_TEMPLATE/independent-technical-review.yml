@@ -1,0 +1,93 @@
+name: Independent technical review
+description: Publish a balanced, first-hand technical evaluation of BGNexa AI using safe sample data.
+title: "[Independent review] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for evaluating BGNexa AI. Share only what you actually tested or inspected. Positive observations, limitations, and negative results are equally welcome. No positive endorsement is expected.
+        
+        Please use fictional, synthetic, or explicitly authorised non-sensitive evidence only. Do not publish credentials, client data, confidential standards text or exploitable vulnerability details. See [SECURITY.md](https://github.com/Briella009/BGNexa-AI/blob/main/SECURITY.md) for security reporting.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary reviewer perspective
+      options:
+        - "GRC, audit and ISO 27001"
+        - "Privacy and regulatory governance"
+        - "AI assurance and security"
+        - "Software engineering, UX and accessibility"
+        - "Other"
+    validations:
+      required: true
+  - type: input
+    id: reviewer_context
+    attributes:
+      label: Professional context (optional)
+      description: State your area of expertise and, if you wish, link a public professional profile. You need not name an employer.
+      placeholder: "e.g. GRC practitioner; public profile URL"
+  - type: dropdown
+    id: review_method
+    attributes:
+      label: Review method
+      options:
+        - "Hands-on public beta using fictional or synthetic evidence"
+        - "Local installation and practical testing"
+        - "Source code, tests and architecture inspection"
+        - "Documentation and framework provenance review only"
+        - "Combination of the above"
+    validations:
+      required: true
+  - type: input
+    id: version_date
+    attributes:
+      label: Review date and version / commit (if known)
+      placeholder: "e.g. 2026-10-29, v0.5.1"
+    validations:
+      required: true
+  - type: textarea
+    id: scenarios
+    attributes:
+      label: What did you test or examine?
+      description: Provide a short scenario and reproducible steps or the exact files you inspected. Do not claim hands-on testing if you only read documents.
+      placeholder: |
+        I used fictional evidence to review...
+        Steps:
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: observations
+    attributes:
+      label: Observed results and substantiated strengths
+      description: What actually worked? What outputs or behaviours support your assessment? Say if the result could not be reproduced.
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations, unexpected results and improvement suggestions
+      description: Include reproducible issues or state that no issue was observed in the limited scope tested; do not assume untested functionality works.
+    validations:
+      required: true
+  - type: textarea
+    id: overall
+    attributes:
+      label: Independent conclusion (optional)
+      description: Who might benefit from the project, for what limited use case, and what further validation would you recommend?
+  - type: input
+    id: external_post
+    attributes:
+      label: LinkedIn or independently published review URL (optional)
+      placeholder: "https://www.linkedin.com/posts/..."
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Responsible submission
+      options:
+        - label: I included no confidential, personal, customer or employer data or exploitable vulnerability details.
+          required: true
+        - label: This reflects my own observations, including any reservations; I was not required to make a positive claim.
+          required: true
