@@ -46,7 +46,7 @@ If BGNexa solves a problem you care about, **star it to follow releases**, **for
 Independent security, GRC, privacy, AI-assurance and software-engineering reviews are welcome, including findings that challenge assumptions or identify limitations. **Please share only your first-hand observations** from using the public beta with fictional/synthetic data, running a local test, or inspecting documented source code.
 
 - **[Submit an independent technical review (GitHub Issue form)](https://github.com/Briella009/BGNexa-AI/issues/new?template=independent-technical-review.yml)** — describe what you tested, results, strengths, limitations and improvement suggestions. The reviewer authors their own public issue; reviews are not directly posted into this README.
-- **[See public GitHub reviews and issues](https://github.com/Briella009/BGNexa-AI/issues?q=is%3Aissue+label%3Aindependent-review)** — reviews will be labelled when validated as genuine review submissions.
+- **[Browse independently submitted reviews](https://github.com/Briella009/BGNexa-AI/issues?q=is%3Aissue+%22Independent+review%22)** — each review remains linked to its original GitHub author and discussion.
 - **[Contribute code, tests, documentation or accessibility improvements](CONTRIBUTING.md)** — fork the repository and open a focused pull request with test evidence.
 - **[Report security concerns responsibly](SECURITY.md)** — never place exploitable vulnerabilities, confidential evidence, personal data or credentials in public issues.
 
