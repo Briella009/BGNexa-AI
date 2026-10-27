@@ -208,6 +208,17 @@ python scripts/smoke_stage2.py
 python scripts/smoke_stage4.py
 ```
 
+## Verification evidence
+
+The repository keeps different kinds of evidence separate:
+
+| Evidence type | Current repository evidence | Interpretation |
+|---|---|---|
+| **Automated tests and synthetic regression evaluation** | [GitHub Actions test workflow](.github/workflows/tests.yml), [`tests/`](tests/), [`scripts/run_evals.py`](scripts/run_evals.py), and the committed [Stage 4 result snapshot](evals/results/latest.md) | CI runs unit tests, provenance checks, deterministic retrieval evaluation, prompt-injection guardrail checks and smoke tests. The committed result snapshot was generated **19 August 2026** and is historical; it is not an external-dataset or production-performance result. |
+| **External-dataset evaluation infrastructure** | No dedicated external-dataset benchmark pipeline is currently committed. The present [`evals/`](evals/) assets are project-controlled golden cases and synthetic/deterministic fixtures. | Do not describe the current evaluation harness as independent real-world validation. |
+| **Completed external-dataset results** | None committed. | No external-corpus accuracy, adoption, certification or production-performance claim is made. |
+| **Independently executed practitioner reviews** | [Review #15](https://github.com/Briella009/BGNexa-AI/issues/15) and [review #16](https://github.com/Briella009/BGNexa-AI/issues/16) were authored from independent GitHub accounts. #15 covers the published assurance/GRC workflow and public-beta design; #16 is explicitly a documentation/framework-provenance review. | These are practitioner reviews, not organisational audits, adoption evidence, certification, or external-dataset benchmarks. |
+
 ## Repository structure
 
 ```text
@@ -260,6 +271,15 @@ Near-term product direction:
 ## Security
 
 See `SECURITY.md`. Please do not place exploitable vulnerabilities, secrets, customer evidence, API keys or sensitive assessment exports in public GitHub issues.
+
+## Author and maintainer
+
+**Blessing Ezeobioha** — project maintainer.
+
+- GitHub: [@Briella009](https://github.com/Briella009)
+- ORCID: [0009-0005-9972-9380](https://orcid.org/0009-0005-9972-9380)
+
+Contributions remain attributed to their original authors through Git history and pull requests; this maintainer attribution does not claim sole authorship of every component.
 
 ## License
 
